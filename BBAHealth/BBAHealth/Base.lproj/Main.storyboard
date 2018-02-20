@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--BBA Health-->
         <scene sceneID="BUm-ez-Ist">
             <objects>
                 <viewController id="ZUb-Zc-Rkq" customClass="ViewController" customModule="BBAHealth" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gsr-GE-fOS">
-                                <rect key="frame" x="0.0" y="32" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="58" width="375" height="667"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -31,7 +31,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lLZ-zi-PWI"/>
                     </view>
-                    <navigationItem key="navigationItem" id="yWK-ij-5aA"/>
+                    <navigationItem key="navigationItem" title="BBA Health" largeTitleDisplayMode="always" id="yWK-ij-5aA"/>
                     <connections>
                         <outlet property="scrollView" destination="Gsr-GE-fOS" id="9Sr-o2-Dkw"/>
                     </connections>
@@ -45,8 +45,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MSe-Jm-xIj" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VOd-aw-ku0">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="VOd-aw-ku0">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
