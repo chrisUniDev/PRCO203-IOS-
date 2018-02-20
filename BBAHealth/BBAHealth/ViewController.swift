@@ -38,7 +38,8 @@ class ViewController: UIViewController {
             scrollView.contentSize.height = scrollView.frame.height * CGFloat(i + 1)
             scrollView.addSubview(buttonView)
            
-            buttonView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
+            buttonView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: (view.frame.width - 330)/2).isActive = true
+            //buttonView.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
 
             buttonView.layer.cornerRadius = 14
             buttonView.layer.masksToBounds = true
