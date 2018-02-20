@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     let imageWidth: CGFloat = 330
     let imageHeight: CGFloat = 400
-    let buttonSepationPadding: CGFloat = 60
+    let buttonSepationPadding: CGFloat = 460
     
     
     override func viewDidLoad() {
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
             buttonView.setImage(imageArray[i], for: .normal)
             buttonView.contentMode = .scaleAspectFit
             
-            let yPosition = imageHeight + buttonSepationPadding * CGFloat(i)
+            let yPosition = buttonSepationPadding * CGFloat(i)
             buttonView.frame = CGRect(x: 0, y: yPosition, width: imageWidth, height: imageHeight)
             
             scrollView.contentSize.height = scrollView.frame.height * CGFloat(i + 1)
