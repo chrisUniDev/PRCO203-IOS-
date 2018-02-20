@@ -24,7 +24,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         scrollView.frame = view.frame
-        imageArray = [#imageLiteral(resourceName: "InfoView_TitleImage_1"),#imageLiteral(resourceName: "InfoView_TitleImage_2")]
+        
+        imageArray = [#imageLiteral(resourceName: "InfoView_TitleImage_1"),#imageLiteral(resourceName: "InfoView_TitleImage_1"),#imageLiteral(resourceName: "InfoView_TitleImage_1"),#imageLiteral(resourceName: "InfoView_TitleImage_1"),#imageLiteral(resourceName: "InfoView_TitleImage_1"),#imageLiteral(resourceName: "InfoView_TitleImage_1"),#imageLiteral(resourceName: "InfoView_TitleImage_1"),#imageLiteral(resourceName: "InfoView_TitleImage_1")]
       
         for i in 0..<imageArray.count {
             
@@ -36,14 +37,16 @@ class ViewController: UIViewController {
             let yPosition = buttonSepationPadding * CGFloat(i)
             buttonView.frame = CGRect(x: 0, y: yPosition, width: imageWidth, height: imageHeight)
             
-            scrollView.contentSize.height = scrollView.frame.height * CGFloat(i + 1)
+            scrollView.contentSize.height = scrollView.frame.height + (buttonSepationPadding * CGFloat(i))
             scrollView.addSubview(buttonView)
-           
+            
             buttonView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: (view.frame.width - imageWidth)/2).isActive = true
 
             buttonView.layer.cornerRadius = 14
             buttonView.layer.masksToBounds = true
         }
+        
+        scrollView.contentSize.height = scrollView.contentSize.height - 160
     }
 
     override func didReceiveMemoryWarning() {

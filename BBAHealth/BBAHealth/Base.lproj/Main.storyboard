@@ -19,15 +19,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gsr-GE-fOS">
-                                <rect key="frame" x="0.0" y="58" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="725"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Gsr-GE-fOS" firstAttribute="centerY" secondItem="lLZ-zi-PWI" secondAttribute="centerY" id="D3z-ru-8ol"/>
+                            <constraint firstItem="Gsr-GE-fOS" firstAttribute="centerY" secondItem="lLZ-zi-PWI" secondAttribute="centerY" constant="-29" id="D3z-ru-8ol"/>
                             <constraint firstItem="Gsr-GE-fOS" firstAttribute="width" secondItem="5zC-il-A5r" secondAttribute="width" id="KZf-HW-Alq"/>
                             <constraint firstItem="Gsr-GE-fOS" firstAttribute="centerX" secondItem="lLZ-zi-PWI" secondAttribute="centerX" id="TRb-cg-HMC"/>
-                            <constraint firstItem="Gsr-GE-fOS" firstAttribute="height" secondItem="5zC-il-A5r" secondAttribute="height" id="wHL-UV-ARZ"/>
+                            <constraint firstItem="Gsr-GE-fOS" firstAttribute="height" secondItem="5zC-il-A5r" secondAttribute="height" constant="58" id="wHL-UV-ARZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lLZ-zi-PWI"/>
                     </view>
@@ -45,9 +45,16 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MSe-Jm-xIj" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="VOd-aw-ku0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" largeTitles="YES" id="VOd-aw-ku0">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
