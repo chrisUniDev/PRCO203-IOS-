@@ -18,14 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gsr-GE-fOS">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gsr-GE-fOS">
+                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Gsr-GE-fOS" firstAttribute="centerY" secondItem="lLZ-zi-PWI" secondAttribute="centerY" id="D3z-ru-8ol"/>
+                            <constraint firstItem="Gsr-GE-fOS" firstAttribute="width" secondItem="5zC-il-A5r" secondAttribute="width" id="KZf-HW-Alq"/>
+                            <constraint firstItem="Gsr-GE-fOS" firstAttribute="centerX" secondItem="lLZ-zi-PWI" secondAttribute="centerX" id="TRb-cg-HMC"/>
+                            <constraint firstItem="Gsr-GE-fOS" firstAttribute="height" secondItem="5zC-il-A5r" secondAttribute="height" id="wHL-UV-ARZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lLZ-zi-PWI"/>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="Gsr-GE-fOS" id="9Sr-o2-Dkw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fU4-Vy-zVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
