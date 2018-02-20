@@ -26,17 +26,25 @@ class ViewController: UIViewController {
       
         for i in 0..<imageArray.count {
             
-            let imageView = UIImageView()
-            imageView.image = imageArray[i]
-            imageView.contentMode = .scaleAspectFit
-            let yPosition = self.view.frame.height * CGFloat(i)
-            imageView.frame = CGRect(x: 0, y: yPosition, width: self.scrollView.frame.width, height: self.scrollView.frame.height)
+            
+            let buttonView = UIButton()
+            
+            buttonView.setImage(imageArray[i], for: .normal)
+            buttonView.contentMode = .scaleAspectFit
+            
+            let yPosition = 460 * CGFloat(i)
+            buttonView.frame = CGRect(x: 0, y: yPosition, width: 330, height: 400)
             
             scrollView.contentSize.height = scrollView.frame.height * CGFloat(i + 1)
-            scrollView.addSubview(imageView)
+            scrollView.addSubview(buttonView)
+           
+            buttonView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
+
+            buttonView.layer.cornerRadius = 14
+            buttonView.layer.masksToBounds = true
             
             
-            
+  
         }
         
         
@@ -52,4 +60,6 @@ class ViewController: UIViewController {
 
 
 }
+
+
 

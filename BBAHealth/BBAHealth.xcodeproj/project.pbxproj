@@ -14,6 +14,7 @@
 		835DA682203C7CCF007F89BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835DA680203C7CCF007F89BC /* LaunchScreen.storyboard */; };
 		835DA68D203C7CCF007F89BC /* BBAHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DA68C203C7CCF007F89BC /* BBAHealthTests.swift */; };
 		835DA698203C7CCF007F89BC /* BBAHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DA697203C7CCF007F89BC /* BBAHealthUITests.swift */; };
+		835DA6A6203C9F92007F89BC /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DA6A5203C9F92007F89BC /* CustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		835DA693203C7CCF007F89BC /* BBAHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBAHealthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		835DA697203C7CCF007F89BC /* BBAHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBAHealthUITests.swift; sourceTree = "<group>"; };
 		835DA699203C7CCF007F89BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		835DA6A5203C9F92007F89BC /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomView.swift; path = "../../../Test Project/Test Project/CustomView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				835DA677203C7CCF007F89BC /* AppDelegate.swift */,
 				835DA679203C7CCF007F89BC /* ViewController.swift */,
+				835DA6A5203C9F92007F89BC /* CustomView.swift */,
 				835DA67B203C7CCF007F89BC /* Main.storyboard */,
 				835DA67E203C7CCF007F89BC /* Assets.xcassets */,
 				835DA680203C7CCF007F89BC /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				835DA6A6203C9F92007F89BC /* CustomView.swift in Sources */,
 				835DA67A203C7CCF007F89BC /* ViewController.swift in Sources */,
 				835DA678203C7CCF007F89BC /* AppDelegate.swift in Sources */,
 			);

@@ -37,7 +37,47 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fU4-Vy-zVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="704.79999999999995" y="30.134932533733135"/>
+            <point key="canvasLocation" x="937" y="62"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VDm-VY-4xd">
+            <objects>
+                <viewController id="eg6-CJ-2Rg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aAW-Qh-rLk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="InfoView_TitleImage_1" translatesAutoresizingMaskIntoConstraints="NO" id="VRc-kg-QKQ">
+                                <rect key="frame" x="73" y="0.0" width="229" height="289"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cny-Cg-4mg">
+                                <rect key="frame" x="85" y="317" width="205" height="241"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="InfoView_TitleImage_2"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="BJA-ef-JQ4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vBA-G1-7A9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1575" y="62"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="InfoView_TitleImage_1" width="330" height="400"/>
+        <image name="InfoView_TitleImage_2" width="330" height="400"/>
+    </resources>
 </document>
