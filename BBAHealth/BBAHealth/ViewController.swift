@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     
     var imageArray = [UIImage]()
+    var buttonArray = [UIButton]() //access all buttons through here...
     
     let imageWidth: CGFloat = 330
     let imageHeight: CGFloat = 400
@@ -25,8 +26,7 @@ class ViewController: UIViewController {
         scrollView.frame = view.frame
         
         imageArray = [#imageLiteral(resourceName: "InfoView_TitleImage_1"),#imageLiteral(resourceName: "InfoView_TitleImage_2"),#imageLiteral(resourceName: "InfoView_TitleImage_1"),#imageLiteral(resourceName: "InfoView_TitleImage_2"),#imageLiteral(resourceName: "InfoView_TitleImage_1"),#imageLiteral(resourceName: "InfoView_TitleImage_2"),#imageLiteral(resourceName: "InfoView_TitleImage_1"),#imageLiteral(resourceName: "InfoView_TitleImage_2")]
-        
-        createButtons(buttons: imageArray)
+        buttonArray = createButtons(images: imageArray)
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,29 +35,39 @@ class ViewController: UIViewController {
     }
     
     
-    private func createButtons(buttons: [UIImage]){
+    private func createButtons(images: [UIImage]) -> [UIButton]{
         
-        for i in 0..<buttons.count {
+        var tempButtonArray = [UIButton]()
+        
+        for i in 0..<images.count {
             
-            let buttonView = UIButton()
+            let button = UIButton()
             
-            buttonView.setImage(buttons[i], for: .normal)
-            buttonView.contentMode = .scaleAspectFit
+            //adds the image to the button
+            button.setImage(images[i], for: .normal)
+            button.contentMode = .scaleAspectFit
             
+            //sizes and positions the button in the view
             let yPosition = buttonSepationPadding * CGFloat(i)
-            buttonView.frame = CGRect(x: 0, y: yPosition, width: imageWidth, height: imageHeight)
+            button.frame = CGRect(x: 0, y: yPosition, width: imageWidth, height: imageHeight)
             
+            //resizes the scrollview
             scrollView.contentSize.height = scrollView.frame.height + (buttonSepationPadding * CGFloat(i))
-            scrollView.addSubview(buttonView)
+            scrollView.addSubview(button)
             
-            buttonView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: (view.frame.width - imageWidth)/2).isActive = true
+            //Centers the button horizontally
+            button.leftAnchor.constraint(equalTo: view.leftAnchor, constant: (view.frame.width - imageWidth)/2).isActive = true
             
-            //Creates the corners on each button image
-            buttonView.layer.cornerRadius = 14
-            buttonView.layer.masksToBounds = true
+            //Creates the corners on the button image
+            button.layer.cornerRadius = 14
+            button.layer.masksToBounds = true
+            
+            tempButtonArray.append(button)
         }
         //Removes unwanted bottom white space
         scrollView.contentSize.height = scrollView.contentSize.height - 160
+        
+        return tempButtonArray
     }
 }
 
