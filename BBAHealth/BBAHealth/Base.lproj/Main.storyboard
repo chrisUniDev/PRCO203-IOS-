@@ -31,7 +31,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lLZ-zi-PWI"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="more" id="5pf-z4-oMN"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Tab_HomePage_Icon" id="5pf-z4-oMN"/>
                     <navigationItem key="navigationItem" title="BBA Health" largeTitleDisplayMode="always" id="yWK-ij-5aA"/>
                     <connections>
                         <outlet property="scrollView" destination="Gsr-GE-fOS" id="9Sr-o2-Dkw"/>
@@ -41,12 +41,60 @@
             </objects>
             <point key="canvasLocation" x="1615.2" y="61.619190404797607"/>
         </scene>
-        <!--Item-->
+        <!--Map-->
+        <scene sceneID="ICY-zH-jZJ">
+            <objects>
+                <viewController title="Map" id="95R-7s-8a7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SHq-uU-qk5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="W7t-nK-dJ4"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="ic_near_me" id="efl-Pj-8At"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6C3-Ug-P2V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="848"/>
+        </scene>
+        <!--Recorder-->
+        <scene sceneID="Hgr-5D-938">
+            <objects>
+                <viewController title="Recorder" id="F8x-eM-HCa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DNQ-HV-ZtL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lDi-WN-YpW"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Record" image="ic_fiber_manual_record" id="7KT-hN-JHi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ad-1k-N9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="851" y="845"/>
+        </scene>
+        <!--JourneyTracker-->
+        <scene sceneID="WFh-oQ-dnv">
+            <objects>
+                <viewController title="JourneyTracker" id="l6J-sA-0ka" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n4f-cY-vXq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="HnA-R5-afq"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Journey Tracker" image="ic_track_changes" id="cwu-dA-czc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Bt-y1-T6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1531" y="840"/>
+        </scene>
+        <!--Info-->
         <scene sceneID="SXL-cL-g9m">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z3t-2W-Xr6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MSe-Jm-xIj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="5Fk-IH-nvE"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="Tab_HomePage_Icon" id="5Fk-IH-nvE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" largeTitles="YES" id="VOd-aw-ku0">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -79,6 +127,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="MSe-Jm-xIj" kind="relationship" relationship="viewControllers" id="TLE-cK-g16"/>
+                        <segue destination="95R-7s-8a7" kind="relationship" relationship="viewControllers" id="bqH-Jn-hwD"/>
+                        <segue destination="F8x-eM-HCa" kind="relationship" relationship="viewControllers" id="zzM-ig-CUT"/>
+                        <segue destination="l6J-sA-0ka" kind="relationship" relationship="viewControllers" id="UNO-rI-Ucj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hP9-6A-A0n" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -86,4 +137,10 @@
             <point key="canvasLocation" x="175" y="62"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Tab_HomePage_Icon" width="24" height="24"/>
+        <image name="ic_fiber_manual_record" width="24" height="24"/>
+        <image name="ic_near_me" width="24" height="24"/>
+        <image name="ic_track_changes" width="24" height="24"/>
+    </resources>
 </document>
