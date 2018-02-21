@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomePageViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     
