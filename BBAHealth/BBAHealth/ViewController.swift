@@ -13,7 +13,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
    
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let mainMenu = ["Treatment Plan Infomation", "InfoView_TitleImage_2"]
+    let mainMenu = ["Treatment Plan Infomation", "Side Effects Of RadioTherapy", "Treatment Plan Infomation", "Side Effects Of RadioTherapy", "Treatment Plan Infomation"]
     
     var imageToPass = UIImage()
     var titleToPass = ""
