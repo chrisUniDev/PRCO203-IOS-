@@ -37,7 +37,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9ee-jh-otz" customClass="DesignableImageView" customModule="BBAHealth" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="400"/>
+                                                    <rect key="frame" x="-0.5" y="0.0" width="330" height="400"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="330" id="5A3-la-8gv"/>
                                                         <constraint firstAttribute="height" constant="400" id="r6T-Ai-QIk"/>
@@ -48,10 +48,10 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yg-dI-sUo">
-                                                    <rect key="frame" x="26" y="39" width="284" height="40"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="treatment Plan Infomation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yg-dI-sUo">
+                                                    <rect key="frame" x="26" y="53" width="284" height="40"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -59,8 +59,8 @@
                                         <constraints>
                                             <constraint firstItem="5yg-dI-sUo" firstAttribute="leading" secondItem="0bc-Oc-ugO" secondAttribute="leadingMargin" constant="18" id="4ve-VL-VuM"/>
                                             <constraint firstItem="9ee-jh-otz" firstAttribute="leading" secondItem="0bc-Oc-ugO" secondAttribute="leading" id="5tB-3h-S2n"/>
-                                            <constraint firstItem="5yg-dI-sUo" firstAttribute="top" secondItem="0bc-Oc-ugO" secondAttribute="topMargin" constant="31" id="9Bo-RW-o9l"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="5yg-dI-sUo" secondAttribute="bottom" constant="313" id="LMt-DD-Agb"/>
+                                            <constraint firstItem="5yg-dI-sUo" firstAttribute="top" secondItem="0bc-Oc-ugO" secondAttribute="topMargin" constant="45" id="9Bo-RW-o9l"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="5yg-dI-sUo" secondAttribute="bottom" constant="299" id="LMt-DD-Agb"/>
                                             <constraint firstItem="9ee-jh-otz" firstAttribute="top" secondItem="0bc-Oc-ugO" secondAttribute="top" id="Og5-lq-e9r"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="5yg-dI-sUo" secondAttribute="trailing" constant="12" id="mDy-cE-Kb0"/>
                                             <constraint firstAttribute="bottom" secondItem="9ee-jh-otz" secondAttribute="bottom" id="rP4-ao-kyS"/>
@@ -86,11 +86,62 @@
                     <navigationItem key="navigationItem" title="BBA Health" id="Uqc-a1-YOO"/>
                     <connections>
                         <outlet property="collectionView" destination="YRm-bY-lVG" id="NER-2p-Ru2"/>
+                        <segue destination="XnW-Zg-LkQ" kind="show" identifier="DetialViewController" action="showDetailViewController:sender:" id="k3d-RS-Pww"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kUE-AT-vSy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1748" y="61.619190404797607"/>
+        </scene>
+        <!--Detial View Controller-->
+        <scene sceneID="y0B-dG-9he">
+            <objects>
+                <viewController storyboardIdentifier="DetialViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XnW-Zg-LkQ" customClass="DetialViewController" customModule="BBAHealth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1g3-RW-Wxf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vIz-1b-QZV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Jy-jy-wzy">
+                                <rect key="frame" x="324" y="29" width="36" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ic_cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="XnW-Zg-LkQ" eventType="touchUpInside" id="H53-wm-2pi"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3jN-1f-U1E">
+                                <rect key="frame" x="16" y="417" width="344" height="230"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R31-EK-zPj">
+                                <rect key="frame" x="16" y="78" width="303" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="VLO-AV-41f"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imgImage" destination="vIz-1b-QZV" id="cUT-9D-mve"/>
+                        <outlet property="lblName" destination="R31-EK-zPj" id="i2B-xE-nul"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hYM-lz-uVx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2448.8000000000002" y="61.619190404797607"/>
         </scene>
         <!--Map-->
         <scene sceneID="ICY-zH-jZJ">
@@ -192,6 +243,7 @@
     </scenes>
     <resources>
         <image name="Tab_HomePage_Icon" width="24" height="24"/>
+        <image name="ic_cancel" width="24" height="24"/>
         <image name="ic_fiber_manual_record" width="24" height="24"/>
         <image name="ic_near_me" width="24" height="24"/>
         <image name="ic_track_changes" width="24" height="24"/>
