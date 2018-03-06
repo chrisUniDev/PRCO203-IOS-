@@ -18,6 +18,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var imageToPass = UIImage()
     var titleToPass = ""
     
+    
+    
     override func viewDidLoad() {
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -30,6 +32,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         UIApplication.shared.isStatusBarHidden = false
     }
+    
+    
+
     
     
    

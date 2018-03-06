@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecorderPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+class RecorderPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource{
     
     
     var pageControl = UIPageControl()
@@ -46,7 +46,7 @@ class RecorderPageViewController: UIPageViewController, UIPageViewControllerDele
         self.pageControl.numberOfPages = orderedViewControllers.count
         self.pageControl.currentPage = 0
         self.pageControl.tintColor = UIColor.black
-        self.pageControl.pageIndicatorTintColor = UIColor.black
+        self.pageControl.pageIndicatorTintColor = UIColor.darkGray
         self.pageControl.currentPageIndicatorTintColor = UIColor.white
         self.pageControl.isUserInteractionEnabled = false
         self.view.addSubview(pageControl)
@@ -111,13 +111,13 @@ class RecorderPageViewController: UIPageViewController, UIPageViewControllerDele
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        self.tabBarController?.tabBar.barStyle = UIBarStyle.black
         UIApplication.shared.statusBarStyle = .lightContent
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        self.tabBarController?.tabBar.barStyle = UIBarStyle.default
         UIApplication.shared.statusBarStyle = .default
     }
     
