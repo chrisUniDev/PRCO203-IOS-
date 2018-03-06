@@ -191,10 +191,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CXg-5o-LEF">
-                                <rect key="frame" x="0.0" y="178" width="375" height="489"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="536"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Taunton_Map" translatesAutoresizingMaskIntoConstraints="NO" id="44r-ZM-Vzo" customClass="DesignableImageView" customModule="BBAHealth" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="489"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="536"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="14"/>
@@ -216,26 +216,46 @@
                                     <outlet property="delegate" destination="95R-7s-8a7" id="984-Eg-3l8"/>
                                 </connections>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urB-bO-nI8">
-                                <rect key="frame" x="16" y="56" width="146" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="37"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="B7F-lC-QHj">
-                                <rect key="frame" x="127" y="125" width="121" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Map"/>
-                                    <segment title="Sat"/>
-                                </segments>
-                            </segmentedControl>
+                            <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPH-6M-T8x" customClass="DesignableBlur" customModule="BBAHealth" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="475" width="375" height="192"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zeo-J6-0aS">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="192"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="B7F-lC-QHj">
+                                            <rect key="frame" x="83" y="16" width="209" height="29"/>
+                                            <segments>
+                                                <segment title="Hospital"/>
+                                                <segment title="Beacon Center"/>
+                                            </segments>
+                                        </segmentedControl>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SiO-wr-T0P">
+                                            <rect key="frame" x="129" y="81" width="117" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="How to get here?"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="B7F-lC-QHj" firstAttribute="top" secondItem="zeo-J6-0aS" secondAttribute="top" constant="16" id="hRL-5N-9T5"/>
+                                        <constraint firstItem="B7F-lC-QHj" firstAttribute="centerX" secondItem="zeo-J6-0aS" secondAttribute="centerX" id="iky-PU-wPq"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="CXg-5o-LEF" firstAttribute="top" secondItem="SHq-uU-qk5" secondAttribute="top" constant="178" id="6qL-TI-hUa"/>
-                            <constraint firstAttribute="bottom" secondItem="CXg-5o-LEF" secondAttribute="bottom" id="hd7-pD-YrU"/>
+                            <constraint firstItem="CXg-5o-LEF" firstAttribute="top" secondItem="SHq-uU-qk5" secondAttribute="top" id="6qL-TI-hUa"/>
+                            <constraint firstItem="bPH-6M-T8x" firstAttribute="leading" secondItem="CXg-5o-LEF" secondAttribute="leading" id="Lb7-m5-Epm"/>
+                            <constraint firstAttribute="bottom" secondItem="bPH-6M-T8x" secondAttribute="bottom" id="boH-Uq-iBZ"/>
+                            <constraint firstItem="bPH-6M-T8x" firstAttribute="trailing" secondItem="CXg-5o-LEF" secondAttribute="trailing" id="geE-W2-Xwd"/>
+                            <constraint firstItem="bPH-6M-T8x" firstAttribute="top" secondItem="W7t-nK-dJ4" secondAttribute="top" constant="455" id="gl3-NQ-beo"/>
+                            <constraint firstAttribute="bottom" secondItem="CXg-5o-LEF" secondAttribute="bottom" constant="131" id="hd7-pD-YrU"/>
                             <constraint firstItem="CXg-5o-LEF" firstAttribute="trailing" secondItem="W7t-nK-dJ4" secondAttribute="trailing" id="jcv-7C-63j"/>
                             <constraint firstItem="CXg-5o-LEF" firstAttribute="leading" secondItem="W7t-nK-dJ4" secondAttribute="leading" id="m0B-XT-zFr"/>
                         </constraints>
@@ -249,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6C3-Ug-P2V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-583" y="840"/>
+            <point key="canvasLocation" x="-583.20000000000005" y="839.73013493253382"/>
         </scene>
         <!--Record-->
         <scene sceneID="axe-PB-uvf">

@@ -16,6 +16,7 @@ class MapViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         self.scrollview.minimumZoomScale = 1.0
         self.scrollview.maximumZoomScale = 6.0
+        self.scrollview.zoomScale = 1.65
         // Do any additional setup after loading the view.
     }
 
