@@ -131,7 +131,7 @@
                         <viewLayoutGuide key="safeArea" id="WP5-uQ-z12"/>
                     </view>
                     <navigationItem key="navigationItem" title="RadioTherapy" id="Uqc-a1-YOO">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="jbJ-HE-s9T">
+                        <barButtonItem key="rightBarButtonItem" id="jbJ-HE-s9T">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ugU-05-0bh">
                                 <rect key="frame" x="335" y="10" width="24" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -292,7 +292,7 @@
         <!--Page1-->
         <scene sceneID="30I-dN-fr0">
             <objects>
-                <viewController storyboardIdentifier="Page1" title="Page1" id="wQH-ac-uCJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Page1" title="Page1" id="wQH-ac-uCJ" customClass="recordViewController" customModule="BBAHealth" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xAs-uT-Yk8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
