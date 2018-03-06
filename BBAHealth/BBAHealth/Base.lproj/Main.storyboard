@@ -10,6 +10,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--BBA Health-->
         <scene sceneID="Gq3-EG-ubC">
@@ -180,34 +185,129 @@
         <!--Map-->
         <scene sceneID="ICY-zH-jZJ">
             <objects>
-                <viewController title="Map" id="95R-7s-8a7" sceneMemberID="viewController">
+                <viewController title="Map" id="95R-7s-8a7" customClass="MapViewController" customModule="BBAHealth" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SHq-uU-qk5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CXg-5o-LEF">
+                                <rect key="frame" x="0.0" y="178" width="375" height="489"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Taunton_Map" translatesAutoresizingMaskIntoConstraints="NO" id="44r-ZM-Vzo" customClass="DesignableImageView" customModule="BBAHealth" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="489"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="14"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="44r-ZM-Vzo" secondAttribute="trailing" id="1Wb-Ke-vfq"/>
+                                    <constraint firstItem="44r-ZM-Vzo" firstAttribute="centerX" secondItem="CXg-5o-LEF" secondAttribute="centerX" id="BsC-ht-gCx"/>
+                                    <constraint firstItem="44r-ZM-Vzo" firstAttribute="centerY" secondItem="CXg-5o-LEF" secondAttribute="centerY" id="YIf-fT-QWA"/>
+                                    <constraint firstItem="44r-ZM-Vzo" firstAttribute="top" secondItem="CXg-5o-LEF" secondAttribute="top" id="YhI-C2-yLH"/>
+                                    <constraint firstItem="44r-ZM-Vzo" firstAttribute="centerX" secondItem="CXg-5o-LEF" secondAttribute="centerX" id="bJX-An-09H"/>
+                                    <constraint firstAttribute="bottom" secondItem="44r-ZM-Vzo" secondAttribute="bottom" id="dQd-CT-LKV"/>
+                                    <constraint firstItem="44r-ZM-Vzo" firstAttribute="centerY" secondItem="CXg-5o-LEF" secondAttribute="centerY" id="gDg-ne-HPh"/>
+                                    <constraint firstItem="44r-ZM-Vzo" firstAttribute="leading" secondItem="CXg-5o-LEF" secondAttribute="leading" id="hTU-YE-JAP"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="95R-7s-8a7" id="984-Eg-3l8"/>
+                                </connections>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urB-bO-nI8">
+                                <rect key="frame" x="16" y="56" width="146" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="B7F-lC-QHj">
+                                <rect key="frame" x="127" y="125" width="121" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Map"/>
+                                    <segment title="Sat"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CXg-5o-LEF" firstAttribute="top" secondItem="SHq-uU-qk5" secondAttribute="top" constant="178" id="6qL-TI-hUa"/>
+                            <constraint firstAttribute="bottom" secondItem="CXg-5o-LEF" secondAttribute="bottom" id="hd7-pD-YrU"/>
+                            <constraint firstItem="CXg-5o-LEF" firstAttribute="trailing" secondItem="W7t-nK-dJ4" secondAttribute="trailing" id="jcv-7C-63j"/>
+                            <constraint firstItem="CXg-5o-LEF" firstAttribute="leading" secondItem="W7t-nK-dJ4" secondAttribute="leading" id="m0B-XT-zFr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="W7t-nK-dJ4"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="ic_near_me" id="efl-Pj-8At"/>
+                    <connections>
+                        <outlet property="imageView" destination="44r-ZM-Vzo" id="dxz-5J-BaK"/>
+                        <outlet property="scrollview" destination="CXg-5o-LEF" id="20w-Ip-qyw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6C3-Ug-P2V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="174" y="848"/>
+            <point key="canvasLocation" x="-583" y="840"/>
         </scene>
-        <!--Recorder-->
-        <scene sceneID="Hgr-5D-938">
+        <!--Record-->
+        <scene sceneID="axe-PB-uvf">
             <objects>
-                <viewController title="Recorder" id="F8x-eM-HCa" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DNQ-HV-ZtL">
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Adv-58-R2o" customClass="RecorderPageViewController" customModule="BBAHealth" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Record" image="ic_fiber_manual_record" id="O0b-1F-QgM"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kiW-RM-WxU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="1617"/>
+        </scene>
+        <!--Page1-->
+        <scene sceneID="30I-dN-fr0">
+            <objects>
+                <viewController storyboardIdentifier="Page1" title="Page1" id="wQH-ac-uCJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xAs-uT-Yk8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBx-xy-YHC">
+                                <rect key="frame" x="16" y="62" width="172" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="37"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="lDi-WN-YpW"/>
+                        <viewLayoutGuide key="safeArea" id="Ocb-fG-Wgl"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Record" image="ic_fiber_manual_record" id="7KT-hN-JHi"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8ad-1k-N9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="POL-oB-8Tx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="851" y="845"/>
+            <point key="canvasLocation" x="-169" y="2293"/>
+        </scene>
+        <!--Page2-->
+        <scene sceneID="XP4-hC-Oec">
+            <objects>
+                <viewController storyboardIdentifier="Page2" title="Page2" id="IGv-YQ-RTH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="121-X6-SqP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recorded" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEC-ll-jiu">
+                                <rect key="frame" x="16" y="65" width="172" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="37"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="oCg-Nu-TOZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PQt-Eh-y9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="614" y="2293"/>
         </scene>
         <!--JourneyTracker-->
         <scene sceneID="WFh-oQ-dnv">
@@ -223,7 +323,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Bt-y1-T6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1531" y="840"/>
+            <point key="canvasLocation" x="910" y="840"/>
         </scene>
         <!--Info-->
         <scene sceneID="SXL-cL-g9m">
@@ -266,7 +366,7 @@
                     <connections>
                         <segue destination="MSe-Jm-xIj" kind="relationship" relationship="viewControllers" id="TLE-cK-g16"/>
                         <segue destination="95R-7s-8a7" kind="relationship" relationship="viewControllers" id="bqH-Jn-hwD"/>
-                        <segue destination="F8x-eM-HCa" kind="relationship" relationship="viewControllers" id="zzM-ig-CUT"/>
+                        <segue destination="Adv-58-R2o" kind="relationship" relationship="viewControllers" id="ne0-f9-KcD"/>
                         <segue destination="l6J-sA-0ka" kind="relationship" relationship="viewControllers" id="UNO-rI-Ucj"/>
                     </connections>
                 </tabBarController>
@@ -277,6 +377,7 @@
     </scenes>
     <resources>
         <image name="Tab_HomePage_Icon" width="24" height="24"/>
+        <image name="Taunton_Map" width="1500" height="1015"/>
         <image name="ic_cancel" width="48" height="48"/>
         <image name="ic_fiber_manual_record" width="24" height="24"/>
         <image name="ic_near_me" width="24" height="24"/>
