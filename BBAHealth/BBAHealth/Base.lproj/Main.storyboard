@@ -16,7 +16,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--BBA Health-->
+        <!--RadioTherapy-->
         <scene sceneID="Gq3-EG-ubC">
             <objects>
                 <viewController id="Y91-up-xSH" customClass="ViewController" customModule="BBAHealth" customModuleProvider="target" sceneMemberID="viewController">
@@ -130,7 +130,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WP5-uQ-z12"/>
                     </view>
-                    <navigationItem key="navigationItem" title="BBA Health" id="Uqc-a1-YOO"/>
+                    <navigationItem key="navigationItem" title="RadioTherapy" id="Uqc-a1-YOO">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="jbJ-HE-s9T">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ugU-05-0bh">
+                                <rect key="frame" x="335" y="10" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ic_settings"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="YRm-bY-lVG" id="NER-2p-Ru2"/>
                         <segue destination="XnW-Zg-LkQ" kind="show" identifier="DetialViewController" action="showDetailViewController:sender:" id="k3d-RS-Pww"/>
@@ -401,6 +409,7 @@
         <image name="ic_cancel" width="48" height="48"/>
         <image name="ic_fiber_manual_record" width="24" height="24"/>
         <image name="ic_near_me" width="24" height="24"/>
+        <image name="ic_settings" width="24" height="24"/>
         <image name="ic_track_changes" width="24" height="24"/>
     </resources>
 </document>
