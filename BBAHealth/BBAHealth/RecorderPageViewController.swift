@@ -48,6 +48,7 @@ class RecorderPageViewController: UIPageViewController, UIPageViewControllerDele
         self.pageControl.tintColor = UIColor.black
         self.pageControl.pageIndicatorTintColor = UIColor.black
         self.pageControl.currentPageIndicatorTintColor = UIColor.white
+        self.pageControl.isUserInteractionEnabled = false
         self.view.addSubview(pageControl)
     }
     
