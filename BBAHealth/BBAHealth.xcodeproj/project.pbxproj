@@ -20,6 +20,7 @@
 		835DA68D203C7CCF007F89BC /* BBAHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DA68C203C7CCF007F89BC /* BBAHealthTests.swift */; };
 		835DA698203C7CCF007F89BC /* BBAHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DA697203C7CCF007F89BC /* BBAHealthUITests.swift */; };
 		835DA6A6203C9F92007F89BC /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DA6A5203C9F92007F89BC /* CustomView.swift */; };
+		83966EB020505612005A6264 /* TableViewControllertest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83966EAF20505612005A6264 /* TableViewControllertest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		835DA697203C7CCF007F89BC /* BBAHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBAHealthUITests.swift; sourceTree = "<group>"; };
 		835DA699203C7CCF007F89BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		835DA6A5203C9F92007F89BC /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomView.swift; path = "../../../Test Project/Test Project/CustomView.swift"; sourceTree = "<group>"; };
+		83966EAF20505612005A6264 /* TableViewControllertest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllertest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				835C2032204CBE3B009D2DC4 /* MapViewController.swift */,
 				835C202E204C7094009D2DC4 /* DetialViewController.swift */,
 				8351237A204EFE58007D901A /* recordViewController.swift */,
+				83966EAF20505612005A6264 /* TableViewControllertest.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				835C202F204C7094009D2DC4 /* DetialViewController.swift in Sources */,
+				83966EB020505612005A6264 /* TableViewControllertest.swift in Sources */,
 				835C2033204CBE3B009D2DC4 /* MapViewController.swift in Sources */,
 				832B6BDF204C587400790D7C /* ViewController.swift in Sources */,
 				8351237B204EFE58007D901A /* recordViewController.swift in Sources */,

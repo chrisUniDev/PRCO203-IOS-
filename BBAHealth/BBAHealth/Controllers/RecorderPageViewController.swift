@@ -25,6 +25,7 @@ class RecorderPageViewController: UIPageViewController, UIPageViewControllerDele
         self.dataSource = self
         self.delegate = self
         
+    
         
         
         // This sets up the first view that will show up on our page control
@@ -40,6 +41,10 @@ class RecorderPageViewController: UIPageViewController, UIPageViewControllerDele
         // Do any additional setup after loading the view.
     }
     
+
+    
+    
+    
     func configurePageControl() {
         // The total number of pages that are available is based on how many available colors we have.
         pageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - 150,width: UIScreen.main.bounds.width,height: 150))
@@ -49,6 +54,7 @@ class RecorderPageViewController: UIPageViewController, UIPageViewControllerDele
         self.pageControl.pageIndicatorTintColor = UIColor.darkGray
         self.pageControl.currentPageIndicatorTintColor = UIColor.white
         self.pageControl.isUserInteractionEnabled = false
+        
         self.view.addSubview(pageControl)
     }
     
