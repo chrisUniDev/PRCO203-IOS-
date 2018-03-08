@@ -430,14 +430,25 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsr-cL-aPD">
+                                <rect key="frame" x="133" y="179" width="108" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start Recording"/>
+                                <connections>
+                                    <action selector="record:" destination="wQH-ac-uCJ" eventType="touchUpInside" id="L4h-tp-a2Y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="Ocb-fG-Wgl"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonLabel" destination="hsr-cL-aPD" id="ltQ-Mm-Q4N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="POL-oB-8Tx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-262" y="1549"/>
+            <point key="canvasLocation" x="-263.19999999999999" y="1548.5757121439281"/>
         </scene>
         <!--Recorded-->
         <scene sceneID="P3r-pB-XMI">

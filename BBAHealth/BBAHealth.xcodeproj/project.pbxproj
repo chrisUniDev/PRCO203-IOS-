@@ -21,6 +21,7 @@
 		835DA698203C7CCF007F89BC /* BBAHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DA697203C7CCF007F89BC /* BBAHealthUITests.swift */; };
 		835DA6A6203C9F92007F89BC /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DA6A5203C9F92007F89BC /* CustomView.swift */; };
 		83966EB020505612005A6264 /* TableViewControllertest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83966EAF20505612005A6264 /* TableViewControllertest.swift */; };
+		83966EB22050602F005A6264 /* Recordings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83966EB12050602F005A6264 /* Recordings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		835DA699203C7CCF007F89BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		835DA6A5203C9F92007F89BC /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomView.swift; path = "../../../Test Project/Test Project/CustomView.swift"; sourceTree = "<group>"; };
 		83966EAF20505612005A6264 /* TableViewControllertest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllertest.swift; sourceTree = "<group>"; };
+		83966EB12050602F005A6264 /* Recordings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recordings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				835DA677203C7CCF007F89BC /* AppDelegate.swift */,
 				835DA6A5203C9F92007F89BC /* CustomView.swift */,
 				835DA67B203C7CCF007F89BC /* Main.storyboard */,
+				83966EB12050602F005A6264 /* Recordings.swift */,
 				83512378204EF1B6007D901A /* Controllers */,
 				83512379204EF1ED007D901A /* Cells */,
 				835DA67E203C7CCF007F89BC /* Assets.xcassets */,
@@ -305,6 +308,7 @@
 				83512377204EABCC007D901A /* RecorderPageViewController.swift in Sources */,
 				832B6BDD204C57F100790D7C /* CollectionViewCell.swift in Sources */,
 				835DA678203C7CCF007F89BC /* AppDelegate.swift in Sources */,
+				83966EB22050602F005A6264 /* Recordings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
