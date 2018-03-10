@@ -430,10 +430,10 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsr-cL-aPD">
-                                <rect key="frame" x="133" y="179" width="108" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsr-cL-aPD">
+                                <rect key="frame" x="77" y="223" width="220" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start Recording"/>
+                                <state key="normal" image="recordButton"/>
                                 <connections>
                                     <action selector="record:" destination="wQH-ac-uCJ" eventType="touchUpInside" id="L4h-tp-a2Y"/>
                                 </connections>
@@ -453,7 +453,6 @@
         <!--Recorded-->
         <scene sceneID="P3r-pB-XMI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n6i-1t-93C" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="x8o-Tg-WC9" customClass="RecordedTableViewController" customModule="BBAHealth" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Q5N-TU-Os9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -478,20 +477,21 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Recorded" largeTitleDisplayMode="always" id="yxc-gH-o8L"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n6i-1t-93C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1026" y="1549"/>
         </scene>
-        <!--JourneyTracker-->
+        <!--Journey-->
         <scene sceneID="WFh-oQ-dnv">
             <objects>
-                <viewController title="JourneyTracker" id="l6J-sA-0ka" sceneMemberID="viewController">
+                <viewController title="Journey" id="l6J-sA-0ka" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n4f-cY-vXq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="HnA-R5-afq"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Journey Tracker" image="ic_track_changes" id="cwu-dA-czc"/>
+                    <tabBarItem key="tabBarItem" title="Journey" image="ic_track_changes" id="cwu-dA-czc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Bt-y1-T6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -540,6 +540,7 @@
                         <segue destination="95R-7s-8a7" kind="relationship" relationship="viewControllers" id="bqH-Jn-hwD"/>
                         <segue destination="Adv-58-R2o" kind="relationship" relationship="viewControllers" id="ne0-f9-KcD"/>
                         <segue destination="l6J-sA-0ka" kind="relationship" relationship="viewControllers" id="UNO-rI-Ucj"/>
+                        <segue destination="2yb-UK-SwE" kind="relationship" relationship="viewControllers" id="VWs-uQ-pTa"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hP9-6A-A0n" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -549,7 +550,6 @@
         <!--Navigation Controller-->
         <scene sceneID="JL4-Dn-ZUY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EK5-E3-wau" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="Page2" automaticallyAdjustsScrollViewInsets="NO" id="MPH-3s-1II" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="drN-2t-TCu">
@@ -561,8 +561,25 @@
                         <segue destination="x8o-Tg-WC9" kind="relationship" relationship="rootViewController" id="oOp-IC-XAz"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EK5-E3-wau" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="375" y="1549"/>
+        </scene>
+        <!--Support-->
+        <scene sceneID="UwH-c0-3oZ">
+            <objects>
+                <viewController title="Support" id="2yb-UK-SwE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sVq-7F-zRK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bMR-K4-eyr"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Support" image="ic_people" id="A7Z-HL-qTm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fg6-Jk-6Wu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1628" y="840"/>
         </scene>
     </scenes>
     <resources>
@@ -571,7 +588,9 @@
         <image name="ic_cancel" width="48" height="48"/>
         <image name="ic_fiber_manual_record" width="24" height="24"/>
         <image name="ic_near_me" width="24" height="24"/>
+        <image name="ic_people" width="24" height="24"/>
         <image name="ic_settings" width="24" height="24"/>
         <image name="ic_track_changes" width="24" height="24"/>
+        <image name="recordButton" width="110" height="110"/>
     </resources>
 </document>

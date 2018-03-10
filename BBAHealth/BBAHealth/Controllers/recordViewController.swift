@@ -18,6 +18,8 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
     var audioRecorder: AVAudioRecorder!
     var auidoPlayer: AVAudioPlayer!
     
+    var pulse: Pulsing!
+    
     var numberOfRecord: Int = 0
     
     override func viewDidLoad() {
@@ -37,6 +39,15 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
             }
         }
     }
+    
+   
+    
+    func addPulse(numberOfPulses: Float){
+        pulse = Pulsing(numberOfPulses: numberOfPulses, radius: 150, position: buttonLabel.center)
+        pulse.animationDuration = 0.8
+        pulse.backgroundColor = UIColor.red.cgColor
+        self.view.layer.insertSublayer(pulse, below: buttonLabel.layer)
+    }
 
 
 
@@ -55,8 +66,9 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
                 audioRecorder = try AVAudioRecorder(url: fileName, settings: setting)
                 audioRecorder.delegate = self
                 audioRecorder.record()
-               
-                buttonLabel.setTitle("Stop Recording", for: .normal)
+                buttonLabel.setImage(#imageLiteral(resourceName: "stopRecoringButton"), for: .normal)
+                addPulse(numberOfPulses: Float.infinity)
+                //buttonLabel.setTitle("Stop Recording", for: .normal)
             }catch{
                 displayAlert(title: "Opps!", message: "Recording failed")
               
@@ -65,12 +77,11 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
             //stop audio recording
             audioRecorder.stop()
             audioRecorder = nil
-            
-            
+            addPulse(numberOfPulses: 0)
             //myTableView.reloadData()
             UserDefaults.standard.set(numberOfRecord, forKey: "myNumber")
-            
-            buttonLabel.setTitle("Start Recording", for: .normal)
+            buttonLabel.setImage(#imageLiteral(resourceName: "recordButton"), for: .normal)
+            //buttonLabel.setTitle("Start Recording", for: .normal)
         }
     }
     
