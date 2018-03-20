@@ -950,7 +950,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sEO-7F-2O3">
-                                <rect key="frame" x="0.0" y="130" width="375" height="537"/>
+                                <rect key="frame" x="0.0" y="130" width="375" height="257"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nE8-Qp-qZb">
                                     <size key="itemSize" width="321" height="117"/>
@@ -978,20 +978,11 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beacon Centre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZY-4M-Yk2">
-                                                    <rect key="frame" x="40" y="20" width="177" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstItem="tAo-yG-ljR" firstAttribute="top" secondItem="C5P-gx-PyE" secondAttribute="top" id="9sc-sy-TXg"/>
                                             <constraint firstItem="tAo-yG-ljR" firstAttribute="leading" secondItem="C5P-gx-PyE" secondAttribute="leading" id="Abl-Bc-lWU"/>
-                                            <constraint firstItem="vZY-4M-Yk2" firstAttribute="leading" secondItem="C5P-gx-PyE" secondAttribute="leadingMargin" constant="32" id="LtX-XH-3jy"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="vZY-4M-Yk2" secondAttribute="trailing" constant="96" id="crW-hJ-N1l"/>
-                                            <constraint firstItem="vZY-4M-Yk2" firstAttribute="top" secondItem="C5P-gx-PyE" secondAttribute="topMargin" constant="12" id="hwM-pS-c31"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
@@ -1009,7 +1000,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="imageCell" destination="tAo-yG-ljR" id="XAL-j8-zS5"/>
-                                            <outlet property="lblTitleCell" destination="vZY-4M-Yk2" id="6sx-R7-guR"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1018,12 +1008,33 @@
                                     <outlet property="delegate" destination="ZDr-dC-0YP" id="zqz-7p-f1U"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Other Support" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRJ-a6-W3x">
+                                <rect key="frame" x="16" y="403" width="119" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Beacon Telephone:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIK-Jv-fvt">
+                                <rect key="frame" x="16" y="448" width="172" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="01823 344202" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wL-q7-QGr">
+                                <rect key="frame" x="233" y="446" width="126" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="sEO-7F-2O3" firstAttribute="leading" secondItem="y6W-tG-1v7" secondAttribute="leading" id="4aC-nE-DEf"/>
                             <constraint firstAttribute="trailing" secondItem="sEO-7F-2O3" secondAttribute="trailing" id="8AX-Zy-ymh"/>
-                            <constraint firstAttribute="bottom" secondItem="sEO-7F-2O3" secondAttribute="bottom" id="FNI-dV-B8s"/>
+                            <constraint firstAttribute="bottom" secondItem="sEO-7F-2O3" secondAttribute="bottom" constant="280" id="FNI-dV-B8s"/>
                             <constraint firstItem="sEO-7F-2O3" firstAttribute="top" secondItem="Fno-3L-HIO" secondAttribute="top" constant="14" id="bOH-dc-9Fq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fno-3L-HIO"/>

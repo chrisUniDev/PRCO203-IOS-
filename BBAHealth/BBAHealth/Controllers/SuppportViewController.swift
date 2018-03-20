@@ -12,7 +12,7 @@ import UIKit
 
 class SuppportViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    let supportArray = ["SupportBlank1"]
+    let supportArray = ["SupportBlank1","NHSSupport"]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return supportArray.count
@@ -22,7 +22,7 @@ class SuppportViewController: UIViewController, UICollectionViewDelegate, UIColl
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCell", for: indexPath) as! SupportCollectionViewCell
         
         cell.imageCell.image = UIImage(named: supportArray[indexPath.row])
-        cell.lblTitleCell.text = "Beacon Center"
+        //cell.lblTitleCell.text = "Beacon Center"
         
         return cell
     }
