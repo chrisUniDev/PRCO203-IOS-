@@ -9,33 +9,57 @@
 import UIKit
 import AVFoundation
 
+
 class recordViewController: UIViewController, AVAudioRecorderDelegate {
 
+
+    var recordings : Recordings?
+    
     @IBOutlet weak var buttonLabel: UIButton!
     //@IBOutlet weak var myTableView: UITableView!
     
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
-    var auidoPlayer: AVAudioPlayer!
+    
+    var pulse: Pulsing!
     
     var numberOfRecord: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
         recordingSession = AVAudioSession.sharedInstance()
+        do {
+            try recordingSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
+            try recordingSession.setActive(true)
+            recordingSession.requestRecordPermission() { (hasPermission) in
+                if hasPermission
+                {
+                    print ("ACCEPTED")
+                }
+            }
+        } catch {
+        
+        }
+        // Do any additional setup after loading the view.
+        
+     
+   
         
         if let number: Int = UserDefaults.standard.object(forKey: "myNumber") as? Int{
             numberOfRecord = number
         }
         
-        AVAudioSession.sharedInstance().requestRecordPermission { (hasPermission) in
-            if hasPermission
-            {
-                print ("ACCEPTED")
-            }
-        }
+      
+    }
+    
+   
+    
+    func addPulse(numberOfPulses: Float){
+        pulse = Pulsing(numberOfPulses: numberOfPulses, radius: 150, position: buttonLabel.center)
+        pulse.animationDuration = 0.8
+        pulse.backgroundColor = UIColor.red.cgColor
+        self.view.layer.insertSublayer(pulse, below: buttonLabel.layer)
     }
 
 
@@ -44,7 +68,7 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
         
         if audioRecorder == nil{
             numberOfRecord += 1
-            Recordings.numberOfRecordings = numberOfRecord
+            recordings?.numberOfRecordings = (recordings?.numberOfRecordings)! + 1
             let fileName = getDirectory().appendingPathComponent("\(numberOfRecord).m4a")
             
             let setting = [AVFormatIDKey: Int(kAudioFormatMPEG4AAC), AVSampleRateKey: 12000, AVNumberOfChannelsKey: 1, AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue]
@@ -54,9 +78,12 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
             do{
                 audioRecorder = try AVAudioRecorder(url: fileName, settings: setting)
                 audioRecorder.delegate = self
+                try recordingSession.setActive(true)
+                try recordingSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
                 audioRecorder.record()
-               
-                buttonLabel.setTitle("Stop Recording", for: .normal)
+                buttonLabel.setImage(#imageLiteral(resourceName: "stopRecoringButton"), for: .normal)
+                addPulse(numberOfPulses: Float.infinity)
+                //buttonLabel.setTitle("Stop Recording", for: .normal)
             }catch{
                 displayAlert(title: "Opps!", message: "Recording failed")
               
@@ -64,14 +91,75 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
         }else{
             //stop audio recording
             audioRecorder.stop()
+            do{
+            try recordingSession.setActive(false)
+            try recordingSession.setCategory(AVAudioSessionCategoryPlayback)
+            }catch{
+                
+            }
             audioRecorder = nil
-            
-            
+            addPulse(numberOfPulses: 0)
             //myTableView.reloadData()
             UserDefaults.standard.set(numberOfRecord, forKey: "myNumber")
-            
-            buttonLabel.setTitle("Start Recording", for: .normal)
+            buttonLabel.setImage(#imageLiteral(resourceName: "recordButton"), for: .normal)
+            //buttonLabel.setTitle("Start Recording", for: .normal)
+            createAlert()
         }
+    }
+    
+    func createAlert(){
+        //1. Create the alert controller.
+        let alert = UIAlertController(title: "Name of Recording", message: "Enter a name", preferredStyle: .alert)
+        
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextField { (textField) in
+            textField.text = ""
+        }
+        
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
+            print("Text field: \(String(describing: textField?.text))")
+            
+            
+            let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as NSURL
+            let documentsPath = documentsUrl.path
+            let fileManager = FileManager.default
+            
+            do{
+                if let documentPath = documentsPath{
+                    let fileNames = try fileManager.contentsOfDirectory(atPath: "\(documentPath)")
+                   
+                    for fileName in fileNames {
+                        
+                        if (fileName == fileNames.last)
+                        {
+                            let filePathName = "\(documentPath)/\(fileName)"
+                            var name = ""
+                            if let newName = textField?.text{
+                                name = newName + ".m4a"
+                            }
+                            let newFilePathName = "\(documentPath)/\(name)"
+                            try FileManager.default.moveItem(atPath: filePathName, toPath: newFilePathName)
+                        }
+              
+                    }
+                    let files = try fileManager.contentsOfDirectory(atPath: "\(documentPath)")
+                    print("all files in cache after deleting recordings: \(files)")
+                }
+            }catch{
+                
+            }
+            
+  
+            
+            
+            
+            
+        }))
+        
+        // 4. Present the alert.
+        self.present(alert, animated: true, completion: nil)
     }
     
     func getDirectory() -> URL
