@@ -29,7 +29,7 @@ class RecordedTableViewController: UITableViewController, AVAudioRecorderDelegat
         
         if let number: Int = UserDefaults.standard.object(forKey: "myNumber") as? Int{
             if recordings?.numberOfRecordings != 0{
-                recordings?.numberOfRecordings = number - 1
+                recordings?.numberOfRecordings = (recordings?.numberOfRecordings)! - 1
             }else{
                 recordings?.numberOfRecordings = number
             }

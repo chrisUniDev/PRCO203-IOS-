@@ -23,6 +23,7 @@
 		835DA68D203C7CCF007F89BC /* BBAHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DA68C203C7CCF007F89BC /* BBAHealthTests.swift */; };
 		835DA698203C7CCF007F89BC /* BBAHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DA697203C7CCF007F89BC /* BBAHealthUITests.swift */; };
 		835DA6A6203C9F92007F89BC /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DA6A5203C9F92007F89BC /* CustomView.swift */; };
+		8390A32A2061291D0000C9EF /* JourneyTrackerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390A3292061291D0000C9EF /* JourneyTrackerVC.swift */; };
 		83966EB020505612005A6264 /* TableViewControllertest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83966EAF20505612005A6264 /* TableViewControllertest.swift */; };
 		83966EB42052C304005A6264 /* Pulsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83966EB32052C304005A6264 /* Pulsing.swift */; };
 /* End PBXBuildFile section */
@@ -70,6 +71,7 @@
 		835DA697203C7CCF007F89BC /* BBAHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBAHealthUITests.swift; sourceTree = "<group>"; };
 		835DA699203C7CCF007F89BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		835DA6A5203C9F92007F89BC /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomView.swift; path = "../../../Test Project/Test Project/CustomView.swift"; sourceTree = "<group>"; };
+		8390A3292061291D0000C9EF /* JourneyTrackerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyTrackerVC.swift; sourceTree = "<group>"; };
 		83966EAF20505612005A6264 /* TableViewControllertest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllertest.swift; sourceTree = "<group>"; };
 		83966EB32052C304005A6264 /* Pulsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulsing.swift; sourceTree = "<group>"; };
 		9AF69F929CDDF29992DDC902 /* Pods-BBAHealthUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBAHealthUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BBAHealthUITests/Pods-BBAHealthUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				835DA677203C7CCF007F89BC /* AppDelegate.swift */,
 				835DA6A5203C9F92007F89BC /* CustomView.swift */,
 				835DA67B203C7CCF007F89BC /* Main.storyboard */,
+				8390A3292061291D0000C9EF /* JourneyTrackerVC.swift */,
 				83966EB32052C304005A6264 /* Pulsing.swift */,
 				83512378204EF1B6007D901A /* Controllers */,
 				83512379204EF1ED007D901A /* Cells */,
@@ -507,6 +510,7 @@
 				83512377204EABCC007D901A /* RecorderPageViewController.swift in Sources */,
 				832B6BDD204C57F100790D7C /* CollectionViewCell.swift in Sources */,
 				835DA678203C7CCF007F89BC /* AppDelegate.swift in Sources */,
+				8390A32A2061291D0000C9EF /* JourneyTrackerVC.swift in Sources */,
 				83966EB42052C304005A6264 /* Pulsing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
