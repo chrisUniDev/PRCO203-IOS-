@@ -8,7 +8,14 @@
 
 import UIKit
 
-class RecorderPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource{
+class Recordings {
+    var numberOfRecordings = 0
+}
+
+
+class RecorderPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+    
+    var recordings = Recordings()
     
     
     var pageControl = UIPageControl()
@@ -16,8 +23,14 @@ class RecorderPageViewController: UIPageViewController, UIPageViewControllerDele
     // MARK: UIPageViewControllerDataSource
     
     lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newVc(viewController: "Page1"),
-                self.newVc(viewController: "Page2")]
+        let vc1 = self.newVc(viewController: "Page1") as! UINavigationController
+        let vc11 = vc1.viewControllers.first as! recordViewController
+        let vc2 = self.newVc(viewController: "Page2") as! UINavigationController
+        let vc21 = vc2.viewControllers.first as! RecordedTableViewController
+        vc11.recordings = recordings
+        vc21.recordings = recordings
+        
+        return [vc1, vc2]
     }()
     
     override func viewDidLoad() {

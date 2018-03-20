@@ -10,25 +10,32 @@ import UIKit
 import AVFoundation
 
 class RecordedTableViewController: UITableViewController, AVAudioRecorderDelegate {
+    
+    var recordings : Recordings?
 
     var auidoPlayer: AVAudioPlayer!
+    var recordingSession: AVAudioSession!
     
     //var numberOfRecordings: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+         recordingSession = AVAudioSession.sharedInstance()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        
         if let number: Int = UserDefaults.standard.object(forKey: "myNumber") as? Int{
-            Recordings.numberOfRecordings = number
-           
+            if recordings?.numberOfRecordings != 0{
+                recordings?.numberOfRecordings = number - 1
+            }else{
+                recordings?.numberOfRecordings = number
+            }
+            
         }
+   
         
   
     }
@@ -36,10 +43,8 @@ class RecordedTableViewController: UITableViewController, AVAudioRecorderDelegat
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
-        print("here")
-    
-       
-        print(Recordings.numberOfRecordings)
+        
+        print(recordings?.numberOfRecordings)
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,13 +56,31 @@ class RecordedTableViewController: UITableViewController, AVAudioRecorderDelegat
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Recordings.numberOfRecordings
+        return (recordings?.numberOfRecordings)!
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = String(indexPath.row + 1)
-        cell.textLabel?.textColor = UIColor.white
+
+        let fileManager = FileManager.default
+        let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as NSURL
+        let documentsPath = documentsUrl.path
+        
+        do {
+            if let documentPath = documentsPath
+            {
+                let files = try fileManager.contentsOfDirectory(atPath: "\(documentPath)")
+                print("all files in cache after deleting recordings: \(files)")
+                
+                cell.textLabel?.text = String("\(files[indexPath.row])")
+                //cell.textLabel?.text = String("rrr")
+                cell.textLabel?.textColor = UIColor.white
+                    
+                
+            }
+        }catch{
+            
+        }
         return cell
     }
 
@@ -76,16 +99,13 @@ class RecordedTableViewController: UITableViewController, AVAudioRecorderDelegat
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            //Recordings.audioNames.remove(at: indexPath.row)
             
             
             deleteRecording(num: indexPath.row)
-            //try? FileManager.default.removeItem(at: getDirectory().appendingPathComponent("\(indexPath.row+1).m4a"))
             
-            Recordings.numberOfRecordings -= 1
-            //UserDefaults.standard.removeObject(forKey: "myNumber")
-            UserDefaults.standard.set(Recordings.numberOfRecordings, forKey: "myNumber")
+            recordings?.numberOfRecordings -= 1
             tableView.deleteRows(at: [indexPath], with: .fade)
+            UserDefaults.standard.set(recordings?.numberOfRecordings, forKey: "myNumber")
             tableView.reloadData()
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -93,69 +113,37 @@ class RecordedTableViewController: UITableViewController, AVAudioRecorderDelegat
     }
     
     func deleteRecording(num: Int){
-        
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let documentDirectory = paths[0]
 
+        let fileManager = FileManager.default
+        let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as NSURL
+        let documentsPath = documentsUrl.path
         
-        
-       
-        let filemanger = FileManager.default
         do {
-            let files = try filemanger.contentsOfDirectory(at: documentDirectory,
-                                                            includingPropertiesForKeys: nil,
-                                                            options: .skipsHiddenFiles)
-            //                let files = try fileManager.contentsOfDirectory(at: documentsDirectory)
-            
-            
-           
-            
-            var recordings = files.filter({ (name: URL) -> Bool in
-                return name.pathExtension == "m4a"
-                //                    return name.hasSuffix("m4a")
-            })
-            
-            
-            
-      
-            try filemanger.replaceItemAt(recordings[num], withItemAt: recordings[num - 1])
-       
-         
-            /*
-            
-            do{
-                print("Recoding count" + "\(recordings.count)")
-                print(num)
-                try filemanger.removeItem(at: recordings[num])
+            if let documentPath = documentsPath
+            {
+                let fileNames = try fileManager.contentsOfDirectory(atPath: "\(documentPath)")
+                print("all files in cache: \(fileNames)")
                 
-          
-            }catch{
+                var i = 0
+                for fileName in fileNames {
+                    
+                    if (i == num)
+                    {
+                        let filePathName = "\(documentPath)/\(fileName)"
+                        try fileManager.removeItem(atPath: filePathName)
+                    }
+                    i = i + 1
+                }
                 
-            }*/
+                let files = try fileManager.contentsOfDirectory(atPath: "\(documentPath)")
+                print("all files in cache after deleting recordings: \(files)")
+            }
             
-            
-            
-        }catch{
-            
+        } catch {
+            print("Could not clear temp folder: \(error)")
         }
     }
-    
 
-    
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-        let recordings = Recordings.audioNames[fromIndexPath.row]
-        Recordings.audioNames.remove(at: fromIndexPath.row)
-        Recordings.audioNames.insert(recordings, at: to.row)
-    }
-    
-
-    
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
     
     func getDirectory() -> URL
     {
@@ -167,17 +155,26 @@ class RecordedTableViewController: UITableViewController, AVAudioRecorderDelegat
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let path = getDirectory().appendingPathComponent("\(indexPath.row + 1).m4a")
+        let fileManager = FileManager.default
+        let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as NSURL
+        let documentsPath = documentsUrl.path
+
         do{
+            if let documentPath = documentsPath
+            {
+                
+                let files = try fileManager.contentsOfDirectory(atPath: "\(documentPath)")
+                  let path = getDirectory().appendingPathComponent("\(files[indexPath.row])")
+                
             auidoPlayer = try AVAudioPlayer(contentsOf: path)
+            try recordingSession.setCategory(AVAudioSessionCategoryPlayback)
+            auidoPlayer.prepareToPlay()
             auidoPlayer.play()
+            }
             
         }catch{
             
         }
     }
-    
-
-
 
 }
