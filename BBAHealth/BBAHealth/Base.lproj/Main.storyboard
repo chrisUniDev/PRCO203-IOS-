@@ -490,6 +490,22 @@
                                     <action selector="record:" destination="wQH-ac-uCJ" eventType="touchUpInside" id="L4h-tp-a2Y"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qGX-lk-CNA" customClass="SwiftSiriWaveformView" customModule="SwiftSiriWaveformView">
+                                <rect key="frame" x="41" y="390" width="292" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="waveColor">
+                                        <color key="value" red="0.074509803920000006" green="0.49803921569999998" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="amplitude">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="idleAmplitude">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ocb-fG-Wgl"/>
@@ -521,7 +537,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Record" id="EU9-x8-khI"/>
                     <connections>
+                        <outlet property="audioView" destination="qGX-lk-CNA" id="T9x-il-edW"/>
                         <outlet property="buttonLabel" destination="hsr-cL-aPD" id="ltQ-Mm-Q4N"/>
+                        <outlet property="stopWatchlbl" destination="2P7-6i-gbm" id="KNp-ne-w9s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="POL-oB-8Tx" userLabel="First Responder" sceneMemberID="firstResponder"/>
