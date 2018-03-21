@@ -12,6 +12,8 @@ import AVFoundation
 class RecordedTableViewController: UITableViewController, AVAudioRecorderDelegate {
     
     var recordings : Recordings?
+    
+    let cellSpacingHeight: CGFloat = 5
 
     var auidoPlayer: AVAudioPlayer!
     var recordingSession: AVAudioSession!
@@ -53,10 +55,21 @@ class RecordedTableViewController: UITableViewController, AVAudioRecorderDelegat
     }
 
     // MARK: - Table view data source
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return cellSpacingHeight
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return (recordings?.numberOfRecordings)!
+    }
+    
+    // Make the background color show through
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.clear
+        return headerView
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -75,12 +88,21 @@ class RecordedTableViewController: UITableViewController, AVAudioRecorderDelegat
                 cell.textLabel?.text = String("\(files[indexPath.row])")
                 //cell.textLabel?.text = String("rrr")
                 cell.textLabel?.textColor = UIColor.white
+                    //UIColor.init(red: 19/255, green: 127/255, blue: 122/255, alpha: 1)
+                
+                cell.layer.borderColor = UIColor.white.cgColor
+                cell.layer.borderWidth = 3
+                cell.layer.cornerRadius = 8
+                cell.clipsToBounds = true
                     
                 
             }
         }catch{
             
         }
+        
+        
+        
         return cell
     }
 

@@ -26,6 +26,7 @@
 		8390A32A2061291D0000C9EF /* JourneyTrackerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390A3292061291D0000C9EF /* JourneyTrackerVC.swift */; };
 		8390A32C2061720F0000C9EF /* SuppportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390A32B2061720F0000C9EF /* SuppportViewController.swift */; };
 		8390A32E206173D20000C9EF /* SupportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390A32D206173D20000C9EF /* SupportCollectionViewCell.swift */; };
+		8390A3302061B3D60000C9EF /* gradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390A32F2061B3D60000C9EF /* gradientView.swift */; };
 		83966EB020505612005A6264 /* TableViewControllertest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83966EAF20505612005A6264 /* TableViewControllertest.swift */; };
 		83966EB42052C304005A6264 /* Pulsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83966EB32052C304005A6264 /* Pulsing.swift */; };
 /* End PBXBuildFile section */
@@ -76,6 +77,7 @@
 		8390A3292061291D0000C9EF /* JourneyTrackerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyTrackerVC.swift; sourceTree = "<group>"; };
 		8390A32B2061720F0000C9EF /* SuppportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppportViewController.swift; sourceTree = "<group>"; };
 		8390A32D206173D20000C9EF /* SupportCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportCollectionViewCell.swift; sourceTree = "<group>"; };
+		8390A32F2061B3D60000C9EF /* gradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gradientView.swift; sourceTree = "<group>"; };
 		83966EAF20505612005A6264 /* TableViewControllertest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllertest.swift; sourceTree = "<group>"; };
 		83966EB32052C304005A6264 /* Pulsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulsing.swift; sourceTree = "<group>"; };
 		9AF69F929CDDF29992DDC902 /* Pods-BBAHealthUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBAHealthUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BBAHealthUITests/Pods-BBAHealthUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				835DA677203C7CCF007F89BC /* AppDelegate.swift */,
 				835DA6A5203C9F92007F89BC /* CustomView.swift */,
 				835DA67B203C7CCF007F89BC /* Main.storyboard */,
+				8390A32F2061B3D60000C9EF /* gradientView.swift */,
 				8390A3292061291D0000C9EF /* JourneyTrackerVC.swift */,
 				83966EB32052C304005A6264 /* Pulsing.swift */,
 				83512378204EF1B6007D901A /* Controllers */,
@@ -513,6 +516,7 @@
 				832B6BDF204C587400790D7C /* ViewController.swift in Sources */,
 				8351237B204EFE58007D901A /* recordViewController.swift in Sources */,
 				835DA6A6203C9F92007F89BC /* CustomView.swift in Sources */,
+				8390A3302061B3D60000C9EF /* gradientView.swift in Sources */,
 				83512377204EABCC007D901A /* RecorderPageViewController.swift in Sources */,
 				8390A32C2061720F0000C9EF /* SuppportViewController.swift in Sources */,
 				832B6BDD204C57F100790D7C /* CollectionViewCell.swift in Sources */,
