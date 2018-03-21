@@ -64,8 +64,8 @@ class RecorderPageViewController: UIPageViewController, UIPageViewControllerDele
         self.pageControl.numberOfPages = orderedViewControllers.count
         self.pageControl.currentPage = 0
         self.pageControl.tintColor = UIColor.black
-        self.pageControl.pageIndicatorTintColor = UIColor.darkGray
-        self.pageControl.currentPageIndicatorTintColor = UIColor.lightGray
+        self.pageControl.pageIndicatorTintColor = UIColor.lightGray
+        self.pageControl.currentPageIndicatorTintColor = UIColor.darkGray
         self.pageControl.isUserInteractionEnabled = false
         
         self.view.addSubview(pageControl)
