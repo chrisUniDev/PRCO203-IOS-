@@ -8,11 +8,26 @@
 
 import UIKit
 import AVFoundation
+import SwiftSiriWaveformView
 
 
 class recordViewController: UIViewController, AVAudioRecorderDelegate {
+    
+    
+    @IBOutlet weak var audioView: SwiftSiriWaveformView!
+    
+    var timer:Timer?
+    var change:CGFloat = 0.01
+    
+    var clockTimer: Timer?
+    var seconds: Int = 0
+    var minutes: Int = 0
+    var hours: Int = 0
+    var fractions: Int = 0
+    
+    var stopWatchString : String = ""
 
-
+    @IBOutlet weak var stopWatchlbl: UILabel!
     var recordings : Recordings?
     
     @IBOutlet weak var buttonLabel: UIButton!
@@ -27,6 +42,7 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.audioView.density = 1
         
         recordingSession = AVAudioSession.sharedInstance()
         do {
@@ -41,17 +57,59 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
         } catch {
         
         }
-        // Do any additional setup after loading the view.
-        
-     
-   
-        
         if let number: Int = UserDefaults.standard.object(forKey: "myNumber") as? Int{
             numberOfRecord = number
         }
-        
-      
     }
+    
+    func startTimer(){
+        if timer == nil{
+            timer = Timer.scheduledTimer(timeInterval: 0.009, target: self, selector: #selector(recordViewController.refreshAudioView(_:)), userInfo: nil, repeats: true)
+        }
+    }
+    
+    func stopTimer(){
+        if timer != nil {
+            timer?.invalidate()
+            timer = nil
+        }
+    }
+    
+    func startClock(){
+        
+        clockTimer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(recordViewController.updateStopWatch), userInfo: nil, repeats: true)
+        fractions = 0
+        seconds = 0
+        hours = 0
+    }
+    
+    func stopClock(){
+        clockTimer?.invalidate()
+    }
+    
+    @objc func updateStopWatch(){
+        fractions += 1
+        if fractions == 100{
+            seconds += 1
+            fractions = 0
+        }
+        
+        if seconds == 60{
+            minutes += 1
+            seconds = 0
+        }
+        if minutes == 60{
+            hours += 1
+            minutes = 0
+        }
+        
+        let secondsString = seconds > 9 ? "\(seconds)" : "0\(seconds)"
+        let minutesString = minutes > 9 ? "\(minutes)" : "0\(minutes)"
+        let hoursString = hours > 9 ? "\(hours)" : "0\(hours)"
+        stopWatchString = "\(hoursString) : \(minutesString) : \(secondsString)"
+        stopWatchlbl.text = stopWatchString
+    }
+    
     
    
     
@@ -60,6 +118,15 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
         pulse.animationDuration = 0.8
         pulse.backgroundColor = UIColor.red.cgColor
         self.view.layer.insertSublayer(pulse, below: buttonLabel.layer)
+    }
+    
+    @objc internal func refreshAudioView(_:Timer) {
+        if self.audioView.amplitude <= self.audioView.idleAmplitude || self.audioView.amplitude > 1.0 {
+            self.change *= -1.0
+        }
+        
+        // Simply set the amplitude to whatever you need and the view will update itself.
+        self.audioView.amplitude += self.change
     }
 
 
@@ -82,8 +149,12 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
                 try recordingSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
                 audioRecorder.record()
                 buttonLabel.setImage(#imageLiteral(resourceName: "stopRecoringButton"), for: .normal)
-                addPulse(numberOfPulses: Float.infinity)
+                //addPulse(numberOfPulses: Float.infinity)
                 //buttonLabel.setTitle("Stop Recording", for: .normal)
+             
+                startTimer()
+                startClock()
+                
             }catch{
                 displayAlert(title: "Opps!", message: "Recording failed")
               
@@ -98,12 +169,14 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
                 
             }
             audioRecorder = nil
-            addPulse(numberOfPulses: 0)
+            //addPulse(numberOfPulses: 0)
             //myTableView.reloadData()
             UserDefaults.standard.set(numberOfRecord, forKey: "myNumber")
             buttonLabel.setImage(#imageLiteral(resourceName: "recordButton"), for: .normal)
             //buttonLabel.setTitle("Start Recording", for: .normal)
             createAlert()
+            stopTimer()
+            stopClock()
         }
     }
     
