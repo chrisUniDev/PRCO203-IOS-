@@ -70,6 +70,7 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
     
     func stopTimer(){
         if timer != nil {
+            self.audioView.amplitude = 0
             timer?.invalidate()
             timer = nil
         }
