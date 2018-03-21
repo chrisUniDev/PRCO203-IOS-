@@ -36,7 +36,6 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
     
-    var pulse: Pulsing!
     
     var numberOfRecord: Int = 0
     
@@ -113,13 +112,7 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
     
     
    
-    
-    func addPulse(numberOfPulses: Float){
-        pulse = Pulsing(numberOfPulses: numberOfPulses, radius: 150, position: buttonLabel.center)
-        pulse.animationDuration = 0.8
-        pulse.backgroundColor = UIColor.red.cgColor
-        self.view.layer.insertSublayer(pulse, below: buttonLabel.layer)
-    }
+
     
     @objc internal func refreshAudioView(_:Timer) {
         if self.audioView.amplitude <= self.audioView.idleAmplitude || self.audioView.amplitude > 1.0 {
@@ -195,7 +188,6 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
             let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
             print("Text field: \(String(describing: textField?.text))")
             
-            
             let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as NSURL
             let documentsPath = documentsUrl.path
             let fileManager = FileManager.default
@@ -224,12 +216,6 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
             }catch{
                 
             }
-            
-  
-            
-            
-            
-            
         }))
         
         // 4. Present the alert.
@@ -249,34 +235,5 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
         alert.addAction(UIAlertAction(title: "dismiss", style: .default, handler: nil))
         present(alert,animated: true,completion: nil)
     }
-    
-    
-    //TableView//
-    /*
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return numberOfRecord
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = String(indexPath.row + 1)
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let path = getDirectory().appendingPathComponent("\(indexPath.row + 1).m4a")
-        do{
-            auidoPlayer = try AVAudioPlayer(contentsOf: path)
-            auidoPlayer.play()
-            print(indexPath.row + 1)
-           
-        }catch{
-            print("NotWorking")
-        }
-    }
- */
-    
-
 
 }
