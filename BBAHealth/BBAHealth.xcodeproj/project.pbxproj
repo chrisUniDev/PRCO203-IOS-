@@ -10,6 +10,7 @@
 		5759448A30A4192822B37CCF /* Pods_BBAHealthUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0387FD6EC1AA0E06E2D147 /* Pods_BBAHealthUITests.framework */; };
 		69059BC34BA30E52A5124354 /* Pods_BBAHealth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E76038BA4F5E4EBBF455F008 /* Pods_BBAHealth.framework */; };
 		74294EDAC755C5A35F7BF11B /* Pods_BBAHealthTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310B240C8AA54FC1EABC217F /* Pods_BBAHealthTests.framework */; };
+		8311A5862063E5840087903F /* OpenEveningVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8311A5852063E5840087903F /* OpenEveningVC.swift */; };
 		832B6BDD204C57F100790D7C /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B6BDC204C57F100790D7C /* CollectionViewCell.swift */; };
 		832B6BDF204C587400790D7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B6BDE204C587400790D7C /* ViewController.swift */; };
 		83512377204EABCC007D901A /* RecorderPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83512376204EABCC007D901A /* RecorderPageViewController.swift */; };
@@ -55,6 +56,7 @@
 		6DA034C19EB54FC8E8A9DB86 /* Pods-BBAHealth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBAHealth.release.xcconfig"; path = "Pods/Target Support Files/Pods-BBAHealth/Pods-BBAHealth.release.xcconfig"; sourceTree = "<group>"; };
 		7498FF11B7C29D308B88C91F /* Pods-BBAHealthUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBAHealthUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BBAHealthUITests/Pods-BBAHealthUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7B930672C4221D8BDC33D524 /* Pods-BBAHealthTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBAHealthTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BBAHealthTests/Pods-BBAHealthTests.release.xcconfig"; sourceTree = "<group>"; };
+		8311A5852063E5840087903F /* OpenEveningVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenEveningVC.swift; sourceTree = "<group>"; };
 		832B6BDC204C57F100790D7C /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		832B6BDE204C587400790D7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		83512376204EABCC007D901A /* RecorderPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderPageViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		83512378204EF1B6007D901A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8311A5852063E5840087903F /* OpenEveningVC.swift */,
 				832B6BDE204C587400790D7C /* ViewController.swift */,
 				8390A32B2061720F0000C9EF /* SuppportViewController.swift */,
 				83512376204EABCC007D901A /* RecorderPageViewController.swift */,
@@ -520,6 +523,7 @@
 				835DA6A6203C9F92007F89BC /* CustomView.swift in Sources */,
 				8390A3302061B3D60000C9EF /* gradientView.swift in Sources */,
 				83512377204EABCC007D901A /* RecorderPageViewController.swift in Sources */,
+				8311A5862063E5840087903F /* OpenEveningVC.swift in Sources */,
 				8390A32C2061720F0000C9EF /* SuppportViewController.swift in Sources */,
 				832B6BDD204C57F100790D7C /* CollectionViewCell.swift in Sources */,
 				835DA678203C7CCF007F89BC /* AppDelegate.swift in Sources */,
