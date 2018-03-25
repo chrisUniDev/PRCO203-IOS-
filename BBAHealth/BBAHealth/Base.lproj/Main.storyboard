@@ -1453,10 +1453,10 @@
             </objects>
             <point key="canvasLocation" x="2740" y="839.73013493253382"/>
         </scene>
-        <!--Table View Controller-->
+        <!--SetupTVC-->
         <scene sceneID="kTr-yG-7yu">
             <objects>
-                <tableViewController storyboardIdentifier="initial2" id="QBA-DO-Dqh" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="initial2" id="QBA-DO-Dqh" customClass="SetupTVC" customModule="BBAHealth" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="static" style="grouped" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="yYZ-Nf-Vov">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
