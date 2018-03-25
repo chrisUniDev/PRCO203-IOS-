@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -58,7 +58,7 @@
 /* Begin PBXFileReference section */
 		038941DFB810EDA2A6FD23F8720821BD /* Pods-BBAHealthTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BBAHealthTests-frameworks.sh"; sourceTree = "<group>"; };
 		072CCA38CEECA74A3AAB961EFC8FE7C2 /* Pods-BBAHealthTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BBAHealthTests.modulemap"; sourceTree = "<group>"; };
-		0A1C5DC8F93D2E3F6147A37EED1AC764 /* Pods_BBAHealthTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BBAHealthTests.framework; path = "Pods-BBAHealthTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A1C5DC8F93D2E3F6147A37EED1AC764 /* Pods_BBAHealthTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BBAHealthTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A87979D2BC245776113B7C3D10A16E0 /* MBCircularProgressBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBCircularProgressBar-umbrella.h"; sourceTree = "<group>"; };
 		19E201A6FC2AC55DCF179ED7538D6238 /* SwiftSiriWaveformView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftSiriWaveformView-umbrella.h"; sourceTree = "<group>"; };
 		1F88C600D7C94421F90AA9FE4219EDD8 /* MBCircularProgressBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBCircularProgressBar.modulemap; sourceTree = "<group>"; };
@@ -72,14 +72,14 @@
 		398834FBE33CEA0A0BF6B193C4304A02 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A0034F73B3DD04D7DCE8348E7DD408A /* Pods-BBAHealthTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BBAHealthTests.release.xcconfig"; sourceTree = "<group>"; };
 		3C7C1190A1BA653D9E77B6DB7433A86B /* Pods-BBAHealthTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BBAHealthTests-resources.sh"; sourceTree = "<group>"; };
-		453595B2BD0F6959403A175C6FF60C7A /* Pods_BBAHealthUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BBAHealthUITests.framework; path = "Pods-BBAHealthUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		453595B2BD0F6959403A175C6FF60C7A /* Pods_BBAHealthUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BBAHealthUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C976476CC8CF7A397236C04B7669A62 /* SwiftSiriWaveformView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftSiriWaveformView-dummy.m"; sourceTree = "<group>"; };
 		555270D13FF35C9B44A81A363493F3EB /* Pods-BBAHealthUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BBAHealthUITests-umbrella.h"; sourceTree = "<group>"; };
 		5580BCCC325464F273D5864014D22D61 /* Pods-BBAHealth-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BBAHealth-acknowledgements.markdown"; sourceTree = "<group>"; };
 		64DFCF52F90A0F6CA09B28CE923AA487 /* Pods-BBAHealthUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BBAHealthUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6F7AB7459D6B32413852BF46B35D235B /* MBCircularProgressBarLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MBCircularProgressBarLayer.m; path = Pod/Classes/MBCircularProgressBarLayer.m; sourceTree = "<group>"; };
-		701C997C1DE40A2E38A9CEE00BC38378 /* Pods_BBAHealth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BBAHealth.framework; path = "Pods-BBAHealth.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		701C997C1DE40A2E38A9CEE00BC38378 /* Pods_BBAHealth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BBAHealth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74E053E21E192DB4ACB59ED441C03269 /* Pods-BBAHealth-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BBAHealth-frameworks.sh"; sourceTree = "<group>"; };
 		75A84DACCCD6B3064F64C975027A668D /* Pods-BBAHealthUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BBAHealthUITests-dummy.m"; sourceTree = "<group>"; };
 		7BA22679F0671D73ECFBAA2487904B18 /* MBCircularProgressBarView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MBCircularProgressBarView.h; path = Pod/Classes/MBCircularProgressBarView.h; sourceTree = "<group>"; };
@@ -88,19 +88,19 @@
 		8864459E3C85B7024D429B446A24BF84 /* MBCircularProgressBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBCircularProgressBar.xcconfig; sourceTree = "<group>"; };
 		8AD184F4C6DFEC430B67906E27B102F5 /* MBCircularProgressBarLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MBCircularProgressBarLayer.h; path = Pod/Classes/MBCircularProgressBarLayer.h; sourceTree = "<group>"; };
 		905B7C969FA34798B8413BB4581DEC9C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9A66D7DE33055E233ED706A320195A36 /* Pods-BBAHealth-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BBAHealth-resources.sh"; sourceTree = "<group>"; };
 		A03AD73D71A57284A3ECA251C836AAA7 /* Pods-BBAHealthUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BBAHealthUITests-resources.sh"; sourceTree = "<group>"; };
 		A673A813119EF5A2417F347B07C0E484 /* MBCircularProgressBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBCircularProgressBar-prefix.pch"; sourceTree = "<group>"; };
 		A732F6BF67D9163026388D4B527C2068 /* Pods-BBAHealthUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BBAHealthUITests-frameworks.sh"; sourceTree = "<group>"; };
 		AC9A411333534FE2D17DDEDAD0D41182 /* SwiftSiriWaveformView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftSiriWaveformView.xcconfig; sourceTree = "<group>"; };
-		B13A4DB821C8B41F833585BA05FC2CA9 /* MBCircularProgressBar.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MBCircularProgressBar.bundle; path = "MBCircularProgressBar-MBCircularProgressBar.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B13A4DB821C8B41F833585BA05FC2CA9 /* MBCircularProgressBar.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MBCircularProgressBar.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C1D02586C7E4AB29C2B7E1FAF36BE2 /* SwiftSiriWaveformView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftSiriWaveformView-prefix.pch"; sourceTree = "<group>"; };
 		B692CB9241B50CB8759AC93D6DB75844 /* Pods-BBAHealthUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BBAHealthUITests.modulemap"; sourceTree = "<group>"; };
-		B79F4638E387A6915A91D78042C10A46 /* SwiftSiriWaveformView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftSiriWaveformView.framework; path = SwiftSiriWaveformView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B79F4638E387A6915A91D78042C10A46 /* SwiftSiriWaveformView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftSiriWaveformView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98D86E6A94AFBA6BE9C48628A81FE8F /* SwiftSiriWaveformView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftSiriWaveformView.modulemap; sourceTree = "<group>"; };
 		C1122D940BAAAD0D629C9940BF2F6FAC /* Pods-BBAHealthTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BBAHealthTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		C14B49493B7356F9D10A293B7204CD59 /* MBCircularProgressBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBCircularProgressBar.framework; path = MBCircularProgressBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C14B49493B7356F9D10A293B7204CD59 /* MBCircularProgressBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBCircularProgressBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4EAA85967FB36EF9DFAE7BDF4A96B17 /* SwiftSiriWaveformView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSiriWaveformView.swift; path = Pod/Classes/SwiftSiriWaveformView.swift; sourceTree = "<group>"; };
 		C6EFC87DF35BC7398D2599F80FBA4978 /* Pods-BBAHealthTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BBAHealthTests-dummy.m"; sourceTree = "<group>"; };
 		C847A9567AD7396885B8EDF03CC70249 /* Pods-BBAHealthUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BBAHealthUITests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -238,7 +238,6 @@
 				37BFB649F3C3AE32C8168B5F8BB81BA3 /* Resources */,
 				0D60B00B2A492127890CE2F5271E4139 /* Support Files */,
 			);
-			name = MBCircularProgressBar;
 			path = MBCircularProgressBar;
 			sourceTree = "<group>";
 		};
@@ -336,7 +335,6 @@
 				C4EAA85967FB36EF9DFAE7BDF4A96B17 /* SwiftSiriWaveformView.swift */,
 				F430F206EB4BEEE93F14C7EC594E080B /* Support Files */,
 			);
-			name = SwiftSiriWaveformView;
 			path = SwiftSiriWaveformView;
 			sourceTree = "<group>";
 		};
@@ -502,6 +500,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					F579AA4D4755DD9570010BC36D0422F7 = {
+						LastSwiftMigration = 0920;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -623,6 +626,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8864459E3C85B7024D429B446A24BF84 /* MBCircularProgressBar.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -817,6 +821,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8864459E3C85B7024D429B446A24BF84 /* MBCircularProgressBar.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -836,6 +841,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
