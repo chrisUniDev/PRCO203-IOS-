@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3C75099371200C6520A74AC80A6011ED"
-               BlueprintName = "SwiftSiriWaveformView"
+               BlueprintIdentifier = "2E03D0814E1E093332D554182C4CF43C"
+               BlueprintName = "IPDFCameraViewController"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "SwiftSiriWaveformView.framework">
+               BuildableName = "IPDFCameraViewController.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
