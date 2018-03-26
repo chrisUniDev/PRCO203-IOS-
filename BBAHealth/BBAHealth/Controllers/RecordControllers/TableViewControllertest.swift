@@ -46,7 +46,7 @@ class RecordedTableViewController: UITableViewController, AVAudioRecorderDelegat
         super.viewWillAppear(animated)
         tableView.reloadData()
         
-        print(recordings?.numberOfRecordings)
+        print(recordings?.numberOfRecordings ?? 0)
     }
 
     override func didReceiveMemoryWarning() {

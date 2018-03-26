@@ -8,7 +8,6 @@ target 'BBAHealth' do
   # Pods for BBAHealth
   pod "MBCircularProgressBar"
   pod "SwiftSiriWaveformView"
-  pod "IPDFCameraViewController"
 
   target 'BBAHealthTests' do
     inherit! :search_paths

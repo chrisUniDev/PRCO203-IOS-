@@ -134,12 +134,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/IPDFCameraViewController/IPDFCameraViewController.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MBCircularProgressBar/MBCircularProgressBar.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftSiriWaveformView/SwiftSiriWaveformView.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/IPDFCameraViewController/IPDFCameraViewController.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MBCircularProgressBar/MBCircularProgressBar.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftSiriWaveformView/SwiftSiriWaveformView.framework"
 fi

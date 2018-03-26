@@ -1,18 +1,15 @@
 PODS:
-  - IPDFCameraViewController (0.0.1)
   - MBCircularProgressBar (0.3.5)
   - SwiftSiriWaveformView (2.4.0)
 
 DEPENDENCIES:
-  - IPDFCameraViewController
   - MBCircularProgressBar
   - SwiftSiriWaveformView
 
 SPEC CHECKSUMS:
-  IPDFCameraViewController: c7e346c760d39ed7a137121bedfcecfde041cde6
   MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
   SwiftSiriWaveformView: baa04ed2089e854af00ea54c38a7700ca43d7ae0
 
-PODFILE CHECKSUM: 570e82418651a0a4dc121795603a6ae608658ac1
+PODFILE CHECKSUM: ae5926a1e741865226b3dc5b58a8fcd947fc5e3d
 
 COCOAPODS: 1.4.0
