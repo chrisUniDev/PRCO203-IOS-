@@ -176,7 +176,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1M-sW-phS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2519" y="-737"/>
+            <point key="canvasLocation" x="2961" y="-695"/>
         </scene>
         <!--Radiotherapy-->
         <scene sceneID="Gq3-EG-ubC">
@@ -1538,6 +1538,10 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bbaHealthLogo" translatesAutoresizingMaskIntoConstraints="NO" id="jzm-Wf-tGQ">
+                                <rect key="frame" x="67" y="178" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.074509803920000006" green="0.49803921569999998" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="m3N-79-San"/>
@@ -1603,6 +1607,7 @@
     <resources>
         <image name="Tab_HomePage_Icon" width="24" height="24"/>
         <image name="Taunton_Map" width="1500" height="1015"/>
+        <image name="bbaHealthLogo" width="773" height="461"/>
         <image name="dots" width="300" height="300"/>
         <image name="ic_cancel" width="48" height="48"/>
         <image name="ic_fiber_manual_record" width="24" height="24"/>
