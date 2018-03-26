@@ -81,12 +81,16 @@ class SetupTVC: UITableViewController {
     }
     
     let beforeArray = ["Bladder","Brain","Breast","Prostate","Cervical","Kidney","Skin","Liver"]
-    let afterArray = [""]
+    var selectedArray : [String] = []
     
     @objc func buttonClicked(sender: UIButton){
-        print("Clicked!!!!!")
-        
-        performSegue(withIdentifier: "StartTab", sender: self)
+    
+        if selectedArray.count == 0 {
+            print("oh dear")
+            createAlert()
+        }else{
+            performSegue(withIdentifier: "StartTab", sender: self)
+        }
         
     }
     /*
@@ -142,7 +146,7 @@ class SetupTVC: UITableViewController {
         
         let headerLabel = UILabel(frame: CGRect(x: 30, y: 0, width:
             tableView.bounds.size.width, height: tableView.bounds.size.height))
-        headerLabel.font = UIFont(name: "Verdana", size: 20)
+        headerLabel.font = UIFont(name: "Verdana", size: 30)
         headerLabel.textColor = UIColor.white
         headerLabel.text = self.tableView(self.tableView, titleForHeaderInSection: section)
         headerLabel.sizeToFit()
@@ -152,19 +156,19 @@ class SetupTVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40
+        return 50
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)?.contentView.backgroundColor = UIColor.clear
         tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
-     
+        selectedArray.append(String((tableView.cellForRow(at: indexPath)?.textLabel?.text)!))
         
     }
     
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)?.accessoryType = .none
-        
+        selectedArray = selectedArray.filter(){$0 != String((tableView.cellForRow(at: indexPath)?.textLabel?.text)!)}
     }
     
 
@@ -212,6 +216,27 @@ class SetupTVC: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func createAlert(){
+        //1. Create the alert controller.
+        let alert = UIAlertController(title: "Please select an option!", message: "Select one or mutliple.", preferredStyle: .alert)
+        
+        //2. Add the text field. You can configure it however you need.
+ 
+        
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in }))
+        
+        // 4. Present the alert.
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func displayAlert(title:String, message:String)
+    {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "dismiss", style: .default, handler: nil))
+        present(alert,animated: true,completion: nil)
+    }
 
 }
 

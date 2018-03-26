@@ -10,6 +10,9 @@ import UIKit
 
 class SetupViewController: UIViewController {
 
+    @IBOutlet weak var logoImageView: DesignableImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +29,27 @@ class SetupViewController: UIViewController {
         
         gradientLayer.frame = self.view.bounds
         self.view.layer.insertSublayer(gradientLayer, at: 0)
+        
+        
+       animateup()
+      
+    }
+    
+    
+    func animateup(){
+        UIView.animate(withDuration: 1.0, delay: 0, animations: ({
+            self.logoImageView.frame.origin.y -= 10
+        }), completion: { (true) in
+            self.aniatmeDown()
+        })
+    }
+    
+    func aniatmeDown(){
+        UIView.animate(withDuration: 1.0, delay: 0, animations: ({
+            self.logoImageView.frame.origin.y += 10
+        }), completion: { (true) in
+            self.animateup()
+        })
     }
     
     override func didReceiveMemoryWarning() {
