@@ -120,7 +120,7 @@ class InitialSetupPageVC: UIPageViewController,  UIPageViewControllerDelegate, U
         override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
             //self.tabBarController?.tabBar.barStyle = UIBarStyle.black
-            //UIApplication.shared.statusBarStyle = .lightContent
+            UIApplication.shared.statusBarStyle = .lightContent
         }
         
         override func viewWillDisappear(_ animated: Bool) {
