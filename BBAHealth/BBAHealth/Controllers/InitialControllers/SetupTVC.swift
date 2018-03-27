@@ -8,12 +8,26 @@
 
 import UIKit
 
-class SetupTVC: UITableViewController {
+class SetupTVC: UITableViewController, CALayerDelegate {
+    
+    @IBOutlet weak var myTableView: UITableView!
+    private var gradient: CAGradientLayer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let button = UIButton(frame: CGRect(origin: CGPoint(x: self.view.frame.width / 2 - 50, y: self.view.frame.size.height - 130), size: CGSize(width: 100, height: 50)))
+        generateWordDict()
+        
+        gradient = CAGradientLayer()
+        gradient.frame = view.bounds
+        gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor]
+        gradient.locations = [0, 0.1, 0.9, 1]
+        
+        let topColour = UIColor(red:(15/255.0), green:(118/255.0), blue:(128/255.0), alpha: 1)
+        let bottomColour = UIColor(red:(19/255.0), green:(127/255.0), blue:(122/255.0), alpha: 1)
+        
+        
+        let button = UIButton(frame: CGRect(origin: CGPoint(x: self.view.frame.width / 2 - 50, y: self.view.frame.size.height - 110), size: CGSize(width: 100, height: 40)))
         button.backgroundColor = UIColor.white
         button.setTitle("Done", for: .normal)
         button.setTitleColor(UIColor(red:(19/255.0), green:(127/255.0), blue:(122/255.0), alpha: 1), for: .normal)
@@ -22,37 +36,24 @@ class SetupTVC: UITableViewController {
         
         button.addTarget(self, action: #selector(self.buttonClicked(sender:)), for: .touchUpInside)
         
+        
+        let bottomView = UIView(frame: CGRect(origin: CGPoint(x: 0, y: self.view.frame.height - 160), size: CGSize(width: self.view.frame.width, height: 200)))
+        bottomView.backgroundColor = bottomColour
+        bottomView.layer.mask = gradient
+        bottomView.isUserInteractionEnabled = false
+        
+        
+        self.navigationController?.view.addSubview(bottomView)
         self.navigationController?.view.addSubview(button)
+        
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        //UITableViewHeaderFooterView.appearance().backgroundColor = UIColor.white
-        
-        
-        let topColour = UIColor(red:(15/255.0), green:(118/255.0), blue:(128/255.0), alpha: 1)
-        let bottomColour = UIColor(red:(19/255.0), green:(127/255.0), blue:(122/255.0), alpha: 1)
-        /*
-        let gradient = CAGradientLayer()
-        
-      
-        
-        
-        gradient.frame = tableView.superview?.bounds ?? CGRect.null
-        gradient.colors = [topColour.cgColor, buttomColour.cgColor]
-        gradient.locations = [0.0, 1.0]
-        //tableView.superview?.layer.mask = gradient
 
-        tableView.superview?.layer.insertSublayer(gradient, at: 0)
-
-        
-        tableView.backgroundColor = UIColor.clear
-       */
         setTableViewBackgroundGradient(sender: self, topColour, bottomColour)
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+   
     
     func setTableViewBackgroundGradient(sender: UITableViewController, _ topColor:UIColor, _ bottomColor:UIColor) {
         
@@ -80,8 +81,30 @@ class SetupTVC: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    let beforeArray = ["Bladder","Brain","Breast","Prostate","Cervical","Kidney","Skin","Liver"]
+    let beforeArray = ["Anal","Adrenortical","Bladder","Bone","Brain","Breast","Carcinoid","Carcinoma","Cervical","Colorectal","Head & Neck","Kidney","Liver","Prostate","Skin","Uterine"]
     var selectedArray : [String] = []
+    
+    let wordsIndextitles = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+    
+    var wordsSelection = [String]()
+    var wordDict = [String:[String]]()
+    
+    func generateWordDict(){
+        for word in beforeArray {
+            let wordKey = String(word.prefix(1))
+            if var wordValues = wordDict[wordKey] {
+                wordValues.append(word)
+                wordDict[wordKey] = wordValues
+            } else {
+                wordDict[wordKey] = [word]
+            }
+        }
+        
+        // 2
+        wordsSelection = [String](wordDict.keys)
+        wordsSelection = wordsSelection.sorted(by: { $0 < $1 })
+    }
+  
     
     @objc func buttonClicked(sender: UIButton){
     
@@ -108,23 +131,33 @@ class SetupTVC: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return wordsSelection.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-
-        return beforeArray.count
-
+        
+        let wordKey = wordsSelection[section]
+        if let wordValues = wordDict[wordKey] {
+            return wordValues.count
+        }
+        
+        //return beforeArray.count
+        return 0
 
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        let wordKey = wordsSelection[indexPath.section]
+        if let wordValues = wordDict[wordKey]{
+             cell.textLabel?.text = wordValues[indexPath.row]
+        }
 
+       
 
-        cell.textLabel?.text = self.beforeArray[indexPath.row]
  
         
         // Configure the cell...
@@ -132,21 +165,30 @@ class SetupTVC: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let beforeHeader = "Select Cancer"
-
-        
-        return beforeHeader
-
+    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return wordsIndextitles
     }
+    /*
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        //let beforeHeader = "Select Cancer"
+        return wordsSelection[section]
+
+    }*/
     
+    override func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+        guard let index = wordsSelection.index(of: title) else{
+            return -1
+        }
+        return index
+    }
+    /*
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
         headerView.backgroundColor = UIColor.clear
         
-        let headerLabel = UILabel(frame: CGRect(x: 30, y: 0, width:
+        let headerLabel = UILabel(frame: CGRect(x: 17, y: -12.5, width:
             tableView.bounds.size.width, height: tableView.bounds.size.height))
-        headerLabel.font = UIFont(name: "Verdana", size: 30)
+        headerLabel.font = UIFont(name: "Verdana", size: 17)
         headerLabel.textColor = UIColor.white
         headerLabel.text = self.tableView(self.tableView, titleForHeaderInSection: section)
         headerLabel.sizeToFit()
@@ -154,20 +196,41 @@ class SetupTVC: UITableViewController {
         
         return headerView
     }
+ */
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
+        return 0.1
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)?.contentView.backgroundColor = UIColor.clear
-        tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
-        selectedArray.append(String((tableView.cellForRow(at: indexPath)?.textLabel?.text)!))
+        let image = UIImage(named: "checkmark.png")
+        let imageView = UIImageView(image: image)
         
+        print(indexPath.row)
+        print(indexPath.section)
+        /*
+        let wordKey = wordsSelection[indexPath.section]
+        if wordDict[wordKey] != nil{
+            cell.accessoryView = imageView
+            
+        }*/
+        
+        
+   
+        //tableView.cellForRow(at: [indexPath.section,indexPath.row])?.accessoryView = imageView
+        tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+        
+        selectedArray.append(String((tableView.cellForRow(at: indexPath)?.textLabel?.text)!))
+        print(selectedArray)
+        
+        
+       
     }
     
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)?.accessoryType = .none
+        
         selectedArray = selectedArray.filter(){$0 != String((tableView.cellForRow(at: indexPath)?.textLabel?.text)!)}
     }
     
