@@ -132,6 +132,7 @@ class SetupTVC: UITableViewController, CALayerDelegate {
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return wordsSelection.count
+        //return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
