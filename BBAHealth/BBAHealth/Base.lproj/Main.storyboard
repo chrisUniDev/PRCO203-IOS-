@@ -602,13 +602,55 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="2Le-i1-2Kb">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap your recording to being playing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJs-24-NVd">
+                                    <rect key="frame" x="15" y="0.0" width="280" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" editingAccessoryType="checkmark" id="jeB-Kl-7he">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" id="jeB-Kl-7he" customClass="RecordTVC" customModule="BBAHealth" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jeB-Kl-7he" id="RCQ-Tf-ZtB">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79T-H4-J0A">
+                                            <rect key="frame" x="304" y="9" width="55" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="55" id="ggQ-xj-aNP"/>
+                                            </constraints>
+                                            <state key="normal" image="UIButtonBarAction">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="sharePressed:" destination="jeB-Kl-7he" eventType="touchUpInside" id="k6c-qJ-6UE"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUo-cc-xRE">
+                                            <rect key="frame" x="16" y="12" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="79T-H4-J0A" firstAttribute="centerY" secondItem="lUo-cc-xRE" secondAttribute="centerY" id="5jj-be-XM9"/>
+                                        <constraint firstItem="79T-H4-J0A" firstAttribute="trailing" secondItem="RCQ-Tf-ZtB" secondAttribute="trailingMargin" id="BQK-lA-Vgf"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="lUo-cc-xRE" secondAttribute="trailing" id="HyJ-Ti-j3L"/>
+                                        <constraint firstAttribute="trailing" secondItem="79T-H4-J0A" secondAttribute="trailing" constant="16" id="KIs-Cj-Iy1"/>
+                                        <constraint firstItem="lUo-cc-xRE" firstAttribute="leading" secondItem="RCQ-Tf-ZtB" secondAttribute="leadingMargin" id="iU9-hc-1mC"/>
+                                        <constraint firstItem="79T-H4-J0A" firstAttribute="centerY" secondItem="RCQ-Tf-ZtB" secondAttribute="centerY" id="toD-rN-8KX"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.074509803920000006" green="0.49803921569999998" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
@@ -616,6 +658,10 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="recordingLabel" destination="lUo-cc-xRE" id="2Se-Bn-SqX"/>
+                                    <outlet property="shareButton" destination="79T-H4-J0A" id="Kmd-S7-gb9"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <userDefinedRuntimeAttributes>
@@ -632,7 +678,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n6i-1t-93C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1284" y="1567"/>
+            <point key="canvasLocation" x="1284" y="1566.5667166416792"/>
         </scene>
         <!--Info-->
         <scene sceneID="SXL-cL-g9m">
@@ -1647,6 +1693,7 @@
     <resources>
         <image name="Tab_HomePage_Icon" width="24" height="24"/>
         <image name="Taunton_Map" width="1500" height="1015"/>
+        <image name="UIButtonBarAction" width="18" height="26"/>
         <image name="bbaHealthLogo" width="773" height="461"/>
         <image name="dots" width="300" height="300"/>
         <image name="dotsright" width="300" height="300"/>

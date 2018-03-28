@@ -9,7 +9,21 @@
 import UIKit
 import AVFoundation
 
-class RecordedTableViewController: UITableViewController, AVAudioRecorderDelegate {
+class RecordedTableViewController: UITableViewController, AVAudioRecorderDelegate, CustomCellDelegate {
+    
+    
+    func showActionSheet() {
+        print("test")
+        let vc = UIActivityViewController(activityItems: ["test"], applicationActivities: nil)
+        
+        if let popiverController = vc.popoverPresentationController{
+            popiverController.sourceView = self.view
+            popiverController.sourceRect = self.view.bounds
+        }
+        
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     
     var recordings : Recordings?
     
@@ -73,7 +87,7 @@ class RecordedTableViewController: UITableViewController, AVAudioRecorderDelegat
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RecordTVC
 
         let fileManager = FileManager.default
         let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as NSURL
@@ -85,15 +99,17 @@ class RecordedTableViewController: UITableViewController, AVAudioRecorderDelegat
                 let files = try fileManager.contentsOfDirectory(atPath: "\(documentPath)")
                 print("all files in cache after deleting recordings: \(files)")
                 
-                cell.textLabel?.text = String("\(files[indexPath.row])")
+                //cell.textLabel?.text = String("\(files[indexPath.row])")
                 //cell.textLabel?.text = String("rrr")
-                cell.textLabel?.textColor = UIColor.white
+                //cell.textLabel?.textColor = UIColor.white
                     //UIColor.init(red: 19/255, green: 127/255, blue: 122/255, alpha: 1)
-                
+                cell.recordingLabel.text =  String("\(files[indexPath.row])")
                 cell.layer.borderColor = UIColor.white.cgColor
                 cell.layer.borderWidth = 3
                 cell.layer.cornerRadius = 8
                 cell.clipsToBounds = true
+                
+              
                     
                 
             }
@@ -101,10 +117,15 @@ class RecordedTableViewController: UITableViewController, AVAudioRecorderDelegat
             
         }
         
+        cell.shareButton.tag = indexPath.row
+        cell.delegate = self
         
+        //cell.shareButton.addTarget(self, action: Selector(("logAction")), for: .touchUpInside)
         
         return cell
     }
+    
+
 
 
 
@@ -113,6 +134,11 @@ class RecordedTableViewController: UITableViewController, AVAudioRecorderDelegat
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
+    }
+    
+    public func shareButton(){
+        
+
     }
     
 

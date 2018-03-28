@@ -130,7 +130,7 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
         if audioRecorder == nil{
             numberOfRecord += 1
             recordings?.numberOfRecordings = (recordings?.numberOfRecordings)! + 1
-            let fileName = getDirectory().appendingPathComponent("\(numberOfRecord).m4a")
+            let fileName = getDirectory().appendingPathComponent("\(numberOfRecord)")
             
             let setting = [AVFormatIDKey: Int(kAudioFormatMPEG4AAC), AVSampleRateKey: 12000, AVNumberOfChannelsKey: 1, AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue]
             
@@ -203,7 +203,7 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
                             let filePathName = "\(documentPath)/\(fileName)"
                             var name = ""
                             if let newName = textField?.text{
-                                name = newName + ".m4a"
+                                name = newName + ""
                             }
                             let newFilePathName = "\(documentPath)/\(name)"
                             try FileManager.default.moveItem(atPath: filePathName, toPath: newFilePathName)

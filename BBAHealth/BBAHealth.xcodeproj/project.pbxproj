@@ -34,6 +34,7 @@
 		8390A3302061B3D60000C9EF /* gradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390A32F2061B3D60000C9EF /* gradientView.swift */; };
 		83966EB020505612005A6264 /* TableViewControllertest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83966EAF20505612005A6264 /* TableViewControllertest.swift */; };
 		83966EB42052C304005A6264 /* Pulsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83966EB32052C304005A6264 /* Pulsing.swift */; };
+		83F40EA0206BAD1400461E04 /* RecordTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F40E9F206BAD1400461E04 /* RecordTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		8390A32F2061B3D60000C9EF /* gradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gradientView.swift; sourceTree = "<group>"; };
 		83966EAF20505612005A6264 /* TableViewControllertest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllertest.swift; sourceTree = "<group>"; };
 		83966EB32052C304005A6264 /* Pulsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulsing.swift; sourceTree = "<group>"; };
+		83F40E9F206BAD1400461E04 /* RecordTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecordTVC.swift; path = BBAHealth/Cells/RecordTVC.swift; sourceTree = SOURCE_ROOT; };
 		9AF69F929CDDF29992DDC902 /* Pods-BBAHealthUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBAHealthUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BBAHealthUITests/Pods-BBAHealthUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E1FCCED21C3A045D9440EE5F /* Pods-BBAHealthTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBAHealthTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BBAHealthTests/Pods-BBAHealthTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E76038BA4F5E4EBBF455F008 /* Pods_BBAHealth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BBAHealth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +171,7 @@
 		83512379204EF1ED007D901A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				83F40E9F206BAD1400461E04 /* RecordTVC.swift */,
 				832B6BDC204C57F100790D7C /* CollectionViewCell.swift */,
 				8390A32D206173D20000C9EF /* SupportCollectionViewCell.swift */,
 			);
@@ -582,6 +585,7 @@
 				835C2033204CBE3B009D2DC4 /* MapViewController.swift in Sources */,
 				832B6BDF204C587400790D7C /* ViewController.swift in Sources */,
 				8311A5882063F3C70087903F /* SetupViewController.swift in Sources */,
+				83F40EA0206BAD1400461E04 /* RecordTVC.swift in Sources */,
 				830BBCC82067B36900944691 /* SetupTVC.swift in Sources */,
 				8351237B204EFE58007D901A /* recordViewController.swift in Sources */,
 				835DA6A6203C9F92007F89BC /* CustomView.swift in Sources */,

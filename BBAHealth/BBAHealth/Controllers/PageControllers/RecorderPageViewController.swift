@@ -54,6 +54,19 @@ class RecorderPageViewController: UIPageViewController, UIPageViewControllerDele
         // Do any additional setup after loading the view.
     }
     
+    public func shareButton(){
+        
+        
+        let activityViewController = UIActivityViewController(activityItems: ["imageToShare"], applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+        
+        // exclude some activity types from the list (optional)
+        //activityViewController.excludedActivityTypes = [ UIActivityType.airDrop, UIActivityType.postToFacebook ]
+        
+        // present the view controller
+        self.present(activityViewController, animated: true, completion: nil)
+    }
+    
 
     
     
