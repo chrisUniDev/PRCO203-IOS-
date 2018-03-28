@@ -57,6 +57,10 @@ class RecordedTableViewController: UITableViewController, AVAudioRecorderDelegat
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+
+        
+        
         super.viewWillAppear(animated)
         tableView.reloadData()
         
@@ -202,6 +206,9 @@ class RecordedTableViewController: UITableViewController, AVAudioRecorderDelegat
     
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+
+        
         
         let fileManager = FileManager.default
         let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as NSURL
