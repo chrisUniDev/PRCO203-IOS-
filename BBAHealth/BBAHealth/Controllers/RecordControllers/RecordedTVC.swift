@@ -45,7 +45,8 @@ class RecordedTableViewController: UITableViewController, AVAudioRecorderDelegat
         
         if let number: Int = UserDefaults.standard.object(forKey: "myNumber") as? Int{
             if recordings?.numberOfRecordings != 0{
-                recordings?.numberOfRecordings = (recordings?.numberOfRecordings)! - 1
+                //recordings?.numberOfRecordings = (recordings?.numberOfRecordings)! - 1
+                recordings?.numberOfRecordings = number
             }else{
                 recordings?.numberOfRecordings = number
             }
@@ -58,7 +59,15 @@ class RecordedTableViewController: UITableViewController, AVAudioRecorderDelegat
     
     override func viewWillAppear(_ animated: Bool) {
         
-
+        if let number: Int = UserDefaults.standard.object(forKey: "myNumber") as? Int{
+            if recordings?.numberOfRecordings != 0{
+                //recordings?.numberOfRecordings = (recordings?.numberOfRecordings)! - 1
+                recordings?.numberOfRecordings = number
+            }else{
+                recordings?.numberOfRecordings = number
+            }
+            
+        }
         
         
         super.viewWillAppear(animated)
@@ -225,6 +234,7 @@ class RecordedTableViewController: UITableViewController, AVAudioRecorderDelegat
             try recordingSession.setCategory(AVAudioSessionCategoryPlayback)
             auidoPlayer.prepareToPlay()
             auidoPlayer.play()
+            
             }
             
         }catch{
