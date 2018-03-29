@@ -26,7 +26,7 @@ class SideMenuVC: UITableViewController {
         let headerLabel = UILabel(frame: CGRect(x: 20, y: 10, width:
             tableView.bounds.size.width, height: tableView.bounds.size.height))
         headerLabel.font = UIFont(name: "Verdana", size: 30)
-        headerLabel.textColor = UIColor.white
+        headerLabel.textColor = UIColor.lightGray
         headerLabel.text = self.tableView(self.tableView, titleForHeaderInSection: section)
         headerLabel.sizeToFit()
         headerView.addSubview(headerLabel)

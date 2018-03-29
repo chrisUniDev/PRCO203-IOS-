@@ -27,7 +27,6 @@
 		835DA682203C7CCF007F89BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835DA680203C7CCF007F89BC /* LaunchScreen.storyboard */; };
 		835DA68D203C7CCF007F89BC /* BBAHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DA68C203C7CCF007F89BC /* BBAHealthTests.swift */; };
 		835DA698203C7CCF007F89BC /* BBAHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DA697203C7CCF007F89BC /* BBAHealthUITests.swift */; };
-		835DA6A6203C9F92007F89BC /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DA6A5203C9F92007F89BC /* CustomView.swift */; };
 		8390A32A2061291D0000C9EF /* JourneyTrackerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390A3292061291D0000C9EF /* JourneyTrackerVC.swift */; };
 		8390A32C2061720F0000C9EF /* SuppportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390A32B2061720F0000C9EF /* SuppportViewController.swift */; };
 		8390A32E206173D20000C9EF /* SupportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390A32D206173D20000C9EF /* SupportCollectionViewCell.swift */; };
@@ -37,6 +36,7 @@
 		83F40EA0206BAD1400461E04 /* RecordTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F40E9F206BAD1400461E04 /* RecordTVC.swift */; };
 		83F40EA4206D1F5C00461E04 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F40EA3206D1F5C00461E04 /* SideMenuVC.swift */; };
 		83F40EA6206D226200461E04 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F40EA5206D226200461E04 /* ContainerVC.swift */; };
+		83F40EA8206D47C400461E04 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F40EA7206D47C300461E04 /* CustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +86,6 @@
 		835DA693203C7CCF007F89BC /* BBAHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBAHealthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		835DA697203C7CCF007F89BC /* BBAHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBAHealthUITests.swift; sourceTree = "<group>"; };
 		835DA699203C7CCF007F89BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		835DA6A5203C9F92007F89BC /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomView.swift; path = "../../../Test Project/Test Project/CustomView.swift"; sourceTree = "<group>"; };
 		8390A3292061291D0000C9EF /* JourneyTrackerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyTrackerVC.swift; sourceTree = "<group>"; };
 		8390A32B2061720F0000C9EF /* SuppportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppportViewController.swift; sourceTree = "<group>"; };
 		8390A32D206173D20000C9EF /* SupportCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -96,6 +95,7 @@
 		83F40E9F206BAD1400461E04 /* RecordTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecordTVC.swift; path = BBAHealth/Cells/RecordTVC.swift; sourceTree = SOURCE_ROOT; };
 		83F40EA3206D1F5C00461E04 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SideMenuVC.swift; path = "/Users/Chris/Desktop/PRCO203-IOS-/BBAHealth/BBAHealth/Controllers/SideMenuVC.swift"; sourceTree = "<absolute>"; };
 		83F40EA5206D226200461E04 /* ContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
+		83F40EA7206D47C300461E04 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		9AF69F929CDDF29992DDC902 /* Pods-BBAHealthUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBAHealthUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BBAHealthUITests/Pods-BBAHealthUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E1FCCED21C3A045D9440EE5F /* Pods-BBAHealthTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBAHealthTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BBAHealthTests/Pods-BBAHealthTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E76038BA4F5E4EBBF455F008 /* Pods_BBAHealth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BBAHealth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,7 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				835DA677203C7CCF007F89BC /* AppDelegate.swift */,
-				835DA6A5203C9F92007F89BC /* CustomView.swift */,
+				83F40EA7206D47C300461E04 /* CustomView.swift */,
 				835DA67B203C7CCF007F89BC /* Main.storyboard */,
 				83CA0AB320691AF200D94477 /* Other */,
 				83512378204EF1B6007D901A /* Controllers */,
@@ -593,10 +593,10 @@
 				832B6BDF204C587400790D7C /* ViewController.swift in Sources */,
 				8311A5882063F3C70087903F /* SetupViewController.swift in Sources */,
 				83F40EA0206BAD1400461E04 /* RecordTVC.swift in Sources */,
+				83F40EA8206D47C400461E04 /* CustomView.swift in Sources */,
 				830BBCC82067B36900944691 /* SetupTVC.swift in Sources */,
 				8351237B204EFE58007D901A /* recordViewController.swift in Sources */,
 				83F40EA6206D226200461E04 /* ContainerVC.swift in Sources */,
-				835DA6A6203C9F92007F89BC /* CustomView.swift in Sources */,
 				8390A3302061B3D60000C9EF /* gradientView.swift in Sources */,
 				83512377204EABCC007D901A /* RecorderPageViewController.swift in Sources */,
 				8311A5862063E5840087903F /* OpenEveningVC.swift in Sources */,
