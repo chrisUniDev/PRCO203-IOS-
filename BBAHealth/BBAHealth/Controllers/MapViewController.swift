@@ -43,6 +43,11 @@ class MapViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    @IBAction func onMoreTapped() {
+        print("TOGGLE SIDE MENU")
+        NotificationCenter.default.post(name: NSNotification.Name("ToggleSideMenu"), object: nil)
+    }
+    
     @IBAction func howToGetHereNavTapped(_ sender: Any) {
         
         let latitude: CLLocationDegrees = 51.012121
