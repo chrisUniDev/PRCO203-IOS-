@@ -31,7 +31,7 @@ class SetupViewController: UIViewController {
         self.view.layer.insertSublayer(gradientLayer, at: 0)
         
         
-       animateup()
+       //animateup()
       
     }
     

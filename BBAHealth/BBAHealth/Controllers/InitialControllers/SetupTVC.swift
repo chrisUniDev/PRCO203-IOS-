@@ -33,6 +33,7 @@ class SetupTVC: UITableViewController, CALayerDelegate {
         button.setTitleColor(UIColor(red:(19/255.0), green:(127/255.0), blue:(122/255.0), alpha: 1), for: .normal)
         button.layer.cornerRadius = 10
         button.clipsToBounds = true
+        button.tag = 100
         
         button.addTarget(self, action: #selector(self.buttonClicked(sender:)), for: .touchUpInside)
         
@@ -41,6 +42,7 @@ class SetupTVC: UITableViewController, CALayerDelegate {
         bottomView.backgroundColor = bottomColour
         bottomView.layer.mask = gradient
         bottomView.isUserInteractionEnabled = false
+        bottomView.tag = 101
         
         
         self.navigationController?.view.addSubview(bottomView)
@@ -49,9 +51,6 @@ class SetupTVC: UITableViewController, CALayerDelegate {
 
 
         setTableViewBackgroundGradient(sender: self, topColour, bottomColour)
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
    
     
@@ -112,22 +111,35 @@ class SetupTVC: UITableViewController, CALayerDelegate {
             print("oh dear")
             createAlert()
         }else{
+
+            
+            if let viewWithTag1 = navigationController?.view.viewWithTag(100){
+                viewWithTag1.removeFromSuperview()
+                
+                print("Removed")
+            }else{
+                print("No")
+            }
+            
+            if let viewWithTag2 = navigationController?.view.viewWithTag(101){
+                viewWithTag2.removeFromSuperview()
+            }else{
+                print("No")
+            }
+            
+            navigationController?.dismiss(animated: true, completion: nil)
+            navigationController?.removeFromParentViewController()
             performSegue(withIdentifier: "StartTab", sender: self)
         }
         
     }
-    /*
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "StartTab"{
-            if let desVC = segue.destination as? UITabBarController {
-                
-            }
-        }
     
-    }*/
- 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "StartTab" {
+            var vc = segue.destination as! UITabBarController
+        }
+    }
 
-    // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -156,11 +168,6 @@ class SetupTVC: UITableViewController, CALayerDelegate {
         if let wordValues = wordDict[wordKey]{
              cell.textLabel?.text = wordValues[indexPath.row]
         }
-
-       
-
- 
-        
         // Configure the cell...
         cell.textLabel?.textColor = UIColor.white
         return cell
@@ -169,12 +176,7 @@ class SetupTVC: UITableViewController, CALayerDelegate {
     override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return wordsIndextitles
     }
-    /*
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        //let beforeHeader = "Select Cancer"
-        return wordsSelection[section]
 
-    }*/
     
     override func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
         guard let index = wordsSelection.index(of: title) else{
@@ -182,22 +184,7 @@ class SetupTVC: UITableViewController, CALayerDelegate {
         }
         return index
     }
-    /*
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView()
-        headerView.backgroundColor = UIColor.clear
-        
-        let headerLabel = UILabel(frame: CGRect(x: 17, y: -12.5, width:
-            tableView.bounds.size.width, height: tableView.bounds.size.height))
-        headerLabel.font = UIFont(name: "Verdana", size: 17)
-        headerLabel.textColor = UIColor.white
-        headerLabel.text = self.tableView(self.tableView, titleForHeaderInSection: section)
-        headerLabel.sizeToFit()
-        headerView.addSubview(headerLabel)
-        
-        return headerView
-    }
- */
+
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0.1
@@ -207,26 +194,12 @@ class SetupTVC: UITableViewController, CALayerDelegate {
         tableView.cellForRow(at: indexPath)?.contentView.backgroundColor = UIColor.clear
         let image = UIImage(named: "checkmark.png")
         let imageView = UIImageView(image: image)
-        
-        print(indexPath.row)
-        print(indexPath.section)
-        /*
-        let wordKey = wordsSelection[indexPath.section]
-        if wordDict[wordKey] != nil{
-            cell.accessoryView = imageView
-            
-        }*/
-        
-        
-   
-        //tableView.cellForRow(at: [indexPath.section,indexPath.row])?.accessoryView = imageView
+
+
         tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
         
         selectedArray.append(String((tableView.cellForRow(at: indexPath)?.textLabel?.text)!))
-        print(selectedArray)
-        
-        
-       
+
     }
     
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
@@ -236,50 +209,6 @@ class SetupTVC: UITableViewController, CALayerDelegate {
     }
     
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     func createAlert(){
         //1. Create the alert controller.

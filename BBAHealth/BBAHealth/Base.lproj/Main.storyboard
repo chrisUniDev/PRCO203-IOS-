@@ -600,7 +600,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="2Le-i1-2Kb">
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="2Le-i1-2Kb">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -1031,6 +1031,7 @@
                                             <constraint firstItem="e5J-fX-YvE" firstAttribute="bottom" secondItem="SVv-Tf-zAQ" secondAttribute="bottomMargin" constant="-5" id="0oK-vj-kyU"/>
                                             <constraint firstItem="e5J-fX-YvE" firstAttribute="centerY" secondItem="rPA-6v-GEY" secondAttribute="centerY" constant="55" id="2Am-F5-LrM"/>
                                             <constraint firstItem="BeP-ps-YH1" firstAttribute="top" secondItem="rPA-6v-GEY" secondAttribute="bottom" constant="34" id="7jV-zL-i9B"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BeP-ps-YH1" secondAttribute="trailing" constant="20" symbolic="YES" id="Ivy-MG-cyv"/>
                                             <constraint firstItem="e5J-fX-YvE" firstAttribute="leading" secondItem="bUB-cO-yrF" secondAttribute="leading" id="PI5-u8-MCL"/>
                                             <constraint firstAttribute="trailing" secondItem="bUB-cO-yrF" secondAttribute="trailing" constant="22" id="Xg1-EA-vKz"/>
                                             <constraint firstItem="rPA-6v-GEY" firstAttribute="centerY" secondItem="bUB-cO-yrF" secondAttribute="centerY" id="d5y-Nr-pEP"/>
@@ -1054,10 +1055,9 @@
                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open Evening" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAS-g5-dRh">
-                                                <rect key="frame" x="28" y="8" width="275" height="40"/>
+                                                <rect key="frame" x="28" y="8" width="157" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="m2D-6J-dqp"/>
-                                                    <constraint firstAttribute="width" constant="275" id="yWN-lk-h8F"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1078,6 +1078,7 @@
                                         <color key="backgroundColor" red="0.074509803920000006" green="0.49803921569999998" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="OXw-Go-wce" firstAttribute="leading" secondItem="ayb-a9-Txd" secondAttribute="leading" constant="28" id="9eB-ci-j5D"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rAS-g5-dRh" secondAttribute="trailingMargin" id="Mlu-eI-fBa"/>
                                             <constraint firstItem="1VK-UN-Hv3" firstAttribute="leading" secondItem="OXw-Go-wce" secondAttribute="trailing" constant="62" id="baN-qT-NRn"/>
                                             <constraint firstItem="rAS-g5-dRh" firstAttribute="top" secondItem="ayb-a9-Txd" secondAttribute="top" constant="8" id="faO-VN-LN1"/>
                                             <constraint firstItem="1VK-UN-Hv3" firstAttribute="bottom" secondItem="OXw-Go-wce" secondAttribute="bottom" constant="-13" id="waE-Ue-Q6E"/>
