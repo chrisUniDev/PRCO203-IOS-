@@ -12,6 +12,8 @@ class SetupViewController: UIViewController {
 
     @IBOutlet weak var logoImageView: DesignableImageView!
     
+    var isViewAcitive : Bool = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,27 +31,35 @@ class SetupViewController: UIViewController {
         
         gradientLayer.frame = self.view.bounds
         self.view.layer.insertSublayer(gradientLayer, at: 0)
-        
-        
-       //animateup()
-      
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        isViewAcitive = true
+        animateup()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        isViewAcitive = false
     }
     
     
     func animateup(){
+        if isViewAcitive == true{
         UIView.animate(withDuration: 1.0, delay: 0, animations: ({
             self.logoImageView.frame.origin.y -= 10
         }), completion: { (true) in
             self.aniatmeDown()
-        })
+        })}
     }
     
     func aniatmeDown(){
+        if isViewAcitive == true{
         UIView.animate(withDuration: 1.0, delay: 0, animations: ({
             self.logoImageView.frame.origin.y += 10
         }), completion: { (true) in
             self.animateup()
-        })
+        })}
     }
     
     override func didReceiveMemoryWarning() {
