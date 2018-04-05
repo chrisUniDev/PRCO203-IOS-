@@ -30,7 +30,7 @@ class SetupTVC: UITableViewController, CALayerDelegate {
         let button = UIButton(frame: CGRect(origin: CGPoint(x: self.view.frame.width / 2 - 50, y: self.view.frame.size.height - 110), size: CGSize(width: 100, height: 40)))
         button.backgroundColor = UIColor.white
         button.setTitle("Done", for: .normal)
-        button.setTitleColor(UIColor(red:(19/255.0), green:(127/255.0), blue:(122/255.0), alpha: 1), for: .normal)
+        button.setTitleColor(UIColor(red:(22/255.0), green:(160/255.0), blue:(206/255.0), alpha: 1), for: .normal)
         button.layer.cornerRadius = 10
         button.clipsToBounds = true
         button.tag = 100
@@ -80,7 +80,7 @@ class SetupTVC: UITableViewController, CALayerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    let beforeArray = ["Anal","Adrenortical","Bladder","Bone","Brain","Breast","Carcinoid","Carcinoma","Cervical","Colorectal","Head & Neck","Kidney","Liver","Prostate","Skin","Uterine"]
+    let beforeArray = ["Bladder","Breast","Gynae","Head & Neck","Lower GI","Prostate","Skin","Upper GI"]
     var selectedArray : [String] = []
     
     let wordsIndextitles = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
