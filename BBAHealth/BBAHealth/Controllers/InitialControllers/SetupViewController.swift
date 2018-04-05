@@ -17,10 +17,10 @@ class SetupViewController: UIViewController {
         super.viewDidLoad()
         
         
-        let topColour = UIColor(red:(15/255.0), green:(118/255.0), blue:(128/255.0), alpha: 1)
-        let buttomColour = UIColor(red:(19/255.0), green:(127/255.0), blue:(122/255.0), alpha: 1)
+        let topColour = UIColor(red:(22/255.0), green:(111/255.0), blue:(206/255.0), alpha: 1)
+        let bottomColour = UIColor(red:(22/255.0), green:(160/255.0), blue:(206/255.0), alpha: 1)
         
-        let gradientColours: [CGColor] = [topColour.cgColor, buttomColour.cgColor]
+        let gradientColours: [CGColor] = [topColour.cgColor, bottomColour.cgColor]
         let gradientLocation: [Float] = [0.0,1.0]
         
         let gradientLayer: CAGradientLayer = CAGradientLayer()

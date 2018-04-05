@@ -23,8 +23,8 @@ class SetupTVC: UITableViewController, CALayerDelegate {
         gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor]
         gradient.locations = [0, 0.1, 0.9, 1]
         
-        let topColour = UIColor(red:(15/255.0), green:(118/255.0), blue:(128/255.0), alpha: 1)
-        let bottomColour = UIColor(red:(19/255.0), green:(127/255.0), blue:(122/255.0), alpha: 1)
+        let topColour = UIColor(red:(22/255.0), green:(111/255.0), blue:(206/255.0), alpha: 1)
+        let bottomColour = UIColor(red:(22/255.0), green:(160/255.0), blue:(206/255.0), alpha: 1)
         
         
         let button = UIButton(frame: CGRect(origin: CGPoint(x: self.view.frame.width / 2 - 50, y: self.view.frame.size.height - 110), size: CGSize(width: 100, height: 40)))
