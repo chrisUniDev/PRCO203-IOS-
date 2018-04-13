@@ -545,7 +545,7 @@
                         <viewLayoutGuide key="safeArea" id="W7t-nK-dJ4"/>
                     </view>
                     <navigationItem key="navigationItem" title="Map" largeTitleDisplayMode="always" id="0eS-fw-Fb7">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="bookmarks" id="H0O-zJ-rs8">
+                        <barButtonItem key="rightBarButtonItem" image="ic_help_outline" style="plain" id="H0O-zJ-rs8">
                             <color key="tintColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="onMoreTapped" destination="95R-7s-8a7" id="ILq-ey-LnH"/>
@@ -2683,7 +2683,7 @@
         <image name="Map_hellypad_icon" width="50" height="50"/>
         <image name="Map_payPark_icon" width="50" height="50"/>
         <image name="Tab_HomePage_Icon" width="24" height="24"/>
-        <image name="Taunton_Map" width="1500" height="1015"/>
+        <image name="Taunton_Map" width="1381" height="1015"/>
         <image name="UIButtonBarAction" width="18" height="26"/>
         <image name="WC_Map_icon" width="50" height="50"/>
         <image name="bbaHealthLogo" width="773" height="461"/>
@@ -2691,6 +2691,7 @@
         <image name="dotsright" width="300" height="300"/>
         <image name="ic_cancel" width="48" height="48"/>
         <image name="ic_fiber_manual_record" width="24" height="24"/>
+        <image name="ic_help_outline" width="24" height="24"/>
         <image name="ic_near_me" width="24" height="24"/>
         <image name="ic_people" width="24" height="24"/>
         <image name="ic_settings" width="24" height="24"/>
