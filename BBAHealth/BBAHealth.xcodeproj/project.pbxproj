@@ -20,6 +20,7 @@
 		83512377204EABCC007D901A /* RecorderPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83512376204EABCC007D901A /* RecorderPageViewController.swift */; };
 		8351237B204EFE58007D901A /* recordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8351237A204EFE58007D901A /* recordViewController.swift */; };
 		8351D53E2080D43E002BA0F1 /* SetupPathwayTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8351D53D2080D43E002BA0F1 /* SetupPathwayTVC.swift */; };
+		8351D5402080E787002BA0F1 /* SettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8351D53F2080E787002BA0F1 /* SettingsTVC.swift */; };
 		835C202F204C7094009D2DC4 /* DetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835C202E204C7094009D2DC4 /* DetialViewController.swift */; };
 		835C2033204CBE3B009D2DC4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835C2032204CBE3B009D2DC4 /* MapViewController.swift */; };
 		835DA678203C7CCF007F89BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DA677203C7CCF007F89BC /* AppDelegate.swift */; };
@@ -74,6 +75,7 @@
 		83512376204EABCC007D901A /* RecorderPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderPageViewController.swift; sourceTree = "<group>"; };
 		8351237A204EFE58007D901A /* recordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recordViewController.swift; sourceTree = "<group>"; };
 		8351D53D2080D43E002BA0F1 /* SetupPathwayTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPathwayTVC.swift; sourceTree = "<group>"; };
+		8351D53F2080E787002BA0F1 /* SettingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTVC.swift; sourceTree = "<group>"; };
 		835C202E204C7094009D2DC4 /* DetialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetialViewController.swift; sourceTree = "<group>"; };
 		835C2032204CBE3B009D2DC4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		835DA674203C7CCF007F89BC /* BBAHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBAHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +214,7 @@
 		835DA676203C7CCF007F89BC /* BBAHealth */ = {
 			isa = PBXGroup;
 			children = (
+				8351D53F2080E787002BA0F1 /* SettingsTVC.swift */,
 				835DA677203C7CCF007F89BC /* AppDelegate.swift */,
 				83F40EA7206D47C300461E04 /* CustomView.swift */,
 				835DA67B203C7CCF007F89BC /* Main.storyboard */,
@@ -598,6 +601,7 @@
 				83F40EA0206BAD1400461E04 /* RecordTVC.swift in Sources */,
 				83F40EA8206D47C400461E04 /* CustomView.swift in Sources */,
 				830BBCC82067B36900944691 /* SetupTVC.swift in Sources */,
+				8351D5402080E787002BA0F1 /* SettingsTVC.swift in Sources */,
 				8351237B204EFE58007D901A /* recordViewController.swift in Sources */,
 				83F40EA6206D226200461E04 /* ContainerVC.swift in Sources */,
 				8390A3302061B3D60000C9EF /* gradientView.swift in Sources */,

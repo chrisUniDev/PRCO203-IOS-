@@ -27,6 +27,17 @@ class SuppportViewController: UIViewController, UICollectionViewDelegate, UIColl
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == indexPath.first{
+            if let url = URL(string: "http://www.tsft.nhs.uk/wards-and-departments/wards/beacon/") {
+                UIApplication.shared.open(url, options: [:])
+            }}else{
+            if let url = URL(string: "http://www.tsft.nhs.uk") {
+                UIApplication.shared.open(url, options: [:])
+            }
+        }
+    }
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
