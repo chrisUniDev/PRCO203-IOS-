@@ -66,7 +66,7 @@ class SuppportViewController: UIViewController, UICollectionViewDelegate, UIColl
         // Configure the fields of the interface.
         composeVC.setToRecipients(["chrislehrer@icloud.com"])
         composeVC.setSubject("Hello!")
-        composeVC.setMessageBody("Hello from California!", isHTML: false)
+        composeVC.setMessageBody("Hello There!", isHTML: false)
         
         // Present the view controller modally.
         self.present(composeVC, animated: true, completion: nil)
