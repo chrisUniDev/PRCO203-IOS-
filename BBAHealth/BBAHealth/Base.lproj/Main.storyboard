@@ -305,15 +305,11 @@
                         <viewLayoutGuide key="safeArea" id="WP5-uQ-z12"/>
                     </view>
                     <navigationItem key="navigationItem" title="Radiotherapy" id="Uqc-a1-YOO">
-                        <barButtonItem key="rightBarButtonItem" id="jbJ-HE-s9T">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ugU-05-0bh">
-                                <rect key="frame" x="335" y="10" width="24" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="ic_settings"/>
-                                <connections>
-                                    <segue destination="mZY-8k-hrs" kind="show" id="1Qr-A5-aGT"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" image="ic_settings" id="jbJ-HE-s9T">
+                            <color key="tintColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="mZY-8k-hrs" kind="show" id="bZz-fQ-yQx"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
