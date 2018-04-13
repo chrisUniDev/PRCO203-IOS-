@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import WebKit
 
 class DetialViewController: UIViewController {
 
     @IBOutlet weak var imgImage: UIImageView!
     @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var myWebView: WKWebView!
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -23,7 +25,7 @@ class DetialViewController: UIViewController {
         super.viewDidLoad()
         
        
-        
+        getVideo(videoCode: "JN-suUcRdqQ")
         imgImage.image = titleimage
         //imgImage.clipsToBounds = true
         
@@ -50,6 +52,13 @@ class DetialViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+
+    func getVideo(videoCode: String){
+        let url = URL(string: "https://www.youtube.com/embed/\(videoCode)")
+        myWebView.load(URLRequest(url: url!))
+        
     }
     
 

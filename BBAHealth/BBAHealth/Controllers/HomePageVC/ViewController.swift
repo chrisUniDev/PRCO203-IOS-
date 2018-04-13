@@ -15,6 +15,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     let mainMenu = ["Treatment Plan Infomation", "Side Effects Of RadioTherapy", "How RadioTherapy Works?", "Side Effects Of RadioTherapy"]
     
+    let menuTextColourIndex = ["light","dark","dark","dark"]
+    
     var imageToPass = UIImage()
     var titleToPass = ""
     
@@ -33,12 +35,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         UIApplication.shared.isStatusBarHidden = false
     }
     
-    
-
-    
-    
-   
-    
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return mainMenu.count
     }
@@ -49,6 +45,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCell", for: indexPath) as! CollectionViewCell
         
         cell.imageCell.image = UIImage(named: mainMenu[indexPath.row])
+        if menuTextColourIndex[indexPath.row] == "light"{
+            cell.lblTitleCell.textColor = .white
+        }else{
+            cell.lblTitleCell.textColor = .darkGray
+        }
         cell.lblTitleCell.text = mainMenu[indexPath.row].capitalized
         
         return cell

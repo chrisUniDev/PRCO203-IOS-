@@ -1,12 +1,15 @@
 PODS:
   - MBCircularProgressBar (0.3.5)
+  - SwiftSiriWaveformView (2.4.0)
 
 DEPENDENCIES:
   - MBCircularProgressBar
+  - SwiftSiriWaveformView
 
 SPEC CHECKSUMS:
   MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
+  SwiftSiriWaveformView: baa04ed2089e854af00ea54c38a7700ca43d7ae0
 
-PODFILE CHECKSUM: a24f0f72b356b700a1099ec97ccc0077edde5f9f
+PODFILE CHECKSUM: ae5926a1e741865226b3dc5b58a8fcd947fc5e3d
 
 COCOAPODS: 1.4.0

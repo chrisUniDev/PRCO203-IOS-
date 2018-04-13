@@ -54,6 +54,19 @@ class RecorderPageViewController: UIPageViewController, UIPageViewControllerDele
         // Do any additional setup after loading the view.
     }
     
+    public func shareButton(){
+        
+        
+        let activityViewController = UIActivityViewController(activityItems: ["imageToShare"], applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+        
+        // exclude some activity types from the list (optional)
+        //activityViewController.excludedActivityTypes = [ UIActivityType.airDrop, UIActivityType.postToFacebook ]
+        
+        // present the view controller
+        self.present(activityViewController, animated: true, completion: nil)
+    }
+    
 
     
     
@@ -64,8 +77,8 @@ class RecorderPageViewController: UIPageViewController, UIPageViewControllerDele
         self.pageControl.numberOfPages = orderedViewControllers.count
         self.pageControl.currentPage = 0
         self.pageControl.tintColor = UIColor.black
-        self.pageControl.pageIndicatorTintColor = UIColor.darkGray
-        self.pageControl.currentPageIndicatorTintColor = UIColor.white
+        self.pageControl.pageIndicatorTintColor = UIColor.lightGray
+        self.pageControl.currentPageIndicatorTintColor = UIColor.darkGray
         self.pageControl.isUserInteractionEnabled = false
         
         self.view.addSubview(pageControl)
@@ -130,8 +143,8 @@ class RecorderPageViewController: UIPageViewController, UIPageViewControllerDele
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.tabBarController?.tabBar.barStyle = UIBarStyle.black
-        UIApplication.shared.statusBarStyle = .lightContent
+        //self.tabBarController?.tabBar.barStyle = UIBarStyle.black
+        //UIApplication.shared.statusBarStyle = .lightContent
     }
     
     override func viewWillDisappear(_ animated: Bool) {

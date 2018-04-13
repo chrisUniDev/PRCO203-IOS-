@@ -8,11 +8,26 @@
 
 import UIKit
 import AVFoundation
+import SwiftSiriWaveformView
 
 
 class recordViewController: UIViewController, AVAudioRecorderDelegate {
+    
+    
+    @IBOutlet weak var audioView: SwiftSiriWaveformView!
+    
+    var timer:Timer?
+    var change:CGFloat = 0.01
+    
+    var clockTimer: Timer?
+    var seconds: Int = 0
+    var minutes: Int = 0
+    var hours: Int = 0
+    var fractions: Int = 0
+    
+    var stopWatchString : String = ""
 
-
+    @IBOutlet weak var stopWatchlbl: UILabel!
     var recordings : Recordings?
     
     @IBOutlet weak var buttonLabel: UIButton!
@@ -21,12 +36,12 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
     
-    var pulse: Pulsing!
     
     var numberOfRecord: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.audioView.density = 1
         
         recordingSession = AVAudioSession.sharedInstance()
         do {
@@ -41,25 +56,71 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
         } catch {
         
         }
-        // Do any additional setup after loading the view.
-        
-     
-   
-        
         if let number: Int = UserDefaults.standard.object(forKey: "myNumber") as? Int{
             numberOfRecord = number
         }
-        
-      
     }
     
-   
+    func startTimer(){
+        if timer == nil{
+            timer = Timer.scheduledTimer(timeInterval: 0.009, target: self, selector: #selector(recordViewController.refreshAudioView(_:)), userInfo: nil, repeats: true)
+        }
+    }
     
-    func addPulse(numberOfPulses: Float){
-        pulse = Pulsing(numberOfPulses: numberOfPulses, radius: 150, position: buttonLabel.center)
-        pulse.animationDuration = 0.8
-        pulse.backgroundColor = UIColor.red.cgColor
-        self.view.layer.insertSublayer(pulse, below: buttonLabel.layer)
+    func stopTimer(){
+        if timer != nil {
+            self.audioView.amplitude = 0
+            timer?.invalidate()
+            timer = nil
+        }
+    }
+    
+    func startClock(){
+        
+        clockTimer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(recordViewController.updateStopWatch), userInfo: nil, repeats: true)
+        fractions = 0
+        seconds = 0
+        hours = 0
+    }
+    
+    func stopClock(){
+        clockTimer?.invalidate()
+    }
+    
+    @objc func updateStopWatch(){
+        fractions += 1
+        if fractions == 100{
+            seconds += 1
+            fractions = 0
+        }
+        
+        if seconds == 60{
+            minutes += 1
+            seconds = 0
+        }
+        if minutes == 60{
+            hours += 1
+            minutes = 0
+        }
+        
+        let secondsString = seconds > 9 ? "\(seconds)" : "0\(seconds)"
+        let minutesString = minutes > 9 ? "\(minutes)" : "0\(minutes)"
+        let hoursString = hours > 9 ? "\(hours)" : "0\(hours)"
+        stopWatchString = "\(hoursString) : \(minutesString) : \(secondsString)"
+        stopWatchlbl.text = stopWatchString
+    }
+    
+    
+   
+
+    
+    @objc internal func refreshAudioView(_:Timer) {
+        if self.audioView.amplitude <= self.audioView.idleAmplitude || self.audioView.amplitude > 1.0 {
+            self.change *= -1.0
+        }
+        
+        // Simply set the amplitude to whatever you need and the view will update itself.
+        self.audioView.amplitude += self.change
     }
 
 
@@ -69,7 +130,7 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
         if audioRecorder == nil{
             numberOfRecord += 1
             recordings?.numberOfRecordings = (recordings?.numberOfRecordings)! + 1
-            let fileName = getDirectory().appendingPathComponent("\(numberOfRecord).m4a")
+            let fileName = getDirectory().appendingPathComponent("\(numberOfRecord)")
             
             let setting = [AVFormatIDKey: Int(kAudioFormatMPEG4AAC), AVSampleRateKey: 12000, AVNumberOfChannelsKey: 1, AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue]
             
@@ -82,8 +143,12 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
                 try recordingSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
                 audioRecorder.record()
                 buttonLabel.setImage(#imageLiteral(resourceName: "stopRecoringButton"), for: .normal)
-                addPulse(numberOfPulses: Float.infinity)
+                //addPulse(numberOfPulses: Float.infinity)
                 //buttonLabel.setTitle("Stop Recording", for: .normal)
+             
+                startTimer()
+                startClock()
+                
             }catch{
                 displayAlert(title: "Opps!", message: "Recording failed")
               
@@ -98,12 +163,14 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
                 
             }
             audioRecorder = nil
-            addPulse(numberOfPulses: 0)
+            //addPulse(numberOfPulses: 0)
             //myTableView.reloadData()
             UserDefaults.standard.set(numberOfRecord, forKey: "myNumber")
             buttonLabel.setImage(#imageLiteral(resourceName: "recordButton"), for: .normal)
             //buttonLabel.setTitle("Start Recording", for: .normal)
             createAlert()
+            stopTimer()
+            stopClock()
         }
     }
     
@@ -121,7 +188,6 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
             let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
             print("Text field: \(String(describing: textField?.text))")
             
-            
             let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as NSURL
             let documentsPath = documentsUrl.path
             let fileManager = FileManager.default
@@ -137,7 +203,7 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
                             let filePathName = "\(documentPath)/\(fileName)"
                             var name = ""
                             if let newName = textField?.text{
-                                name = newName + ".m4a"
+                                name = newName + ""
                             }
                             let newFilePathName = "\(documentPath)/\(name)"
                             try FileManager.default.moveItem(atPath: filePathName, toPath: newFilePathName)
@@ -150,12 +216,6 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
             }catch{
                 
             }
-            
-  
-            
-            
-            
-            
         }))
         
         // 4. Present the alert.
@@ -175,34 +235,5 @@ class recordViewController: UIViewController, AVAudioRecorderDelegate {
         alert.addAction(UIAlertAction(title: "dismiss", style: .default, handler: nil))
         present(alert,animated: true,completion: nil)
     }
-    
-    
-    //TableView//
-    /*
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return numberOfRecord
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = String(indexPath.row + 1)
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let path = getDirectory().appendingPathComponent("\(indexPath.row + 1).m4a")
-        do{
-            auidoPlayer = try AVAudioPlayer(contentsOf: path)
-            auidoPlayer.play()
-            print(indexPath.row + 1)
-           
-        }catch{
-            print("NotWorking")
-        }
-    }
- */
-    
-
 
 }
