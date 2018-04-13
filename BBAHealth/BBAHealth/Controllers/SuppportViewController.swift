@@ -7,10 +7,10 @@
 //
 
 import UIKit
+import MessageUI
 
 
-
-class SuppportViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class SuppportViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, MFMailComposeViewControllerDelegate {
     
     let supportArray = ["SupportBlank1","NHSSupport"]
     
@@ -46,7 +46,38 @@ class SuppportViewController: UIViewController, UICollectionViewDelegate, UIColl
         collectionView.dataSource = self
         
     }
+    
+    let phoneNumber = "07760299823"
 
+    @IBAction func callButtonTapped(_ sender: Any) {
+        if let url = URL(string: "tel://\(phoneNumber)"), UIApplication.shared.canOpenURL(url) {
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(url)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
+    }
 
-
+    @IBAction func emailButtonTapped(_ sender: Any) {
+        let composeVC = MFMailComposeViewController()
+        composeVC.mailComposeDelegate = self
+        
+        // Configure the fields of the interface.
+        composeVC.setToRecipients(["chrislehrer@icloud.com"])
+        composeVC.setSubject("Hello!")
+        composeVC.setMessageBody("Hello from California!", isHTML: false)
+        
+        // Present the view controller modally.
+        self.present(composeVC, animated: true, completion: nil)
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController,
+                               didFinishWith result: MFMailComposeResult, error: Error?) {
+        // Check the result or perform other tasks.
+        
+        // Dismiss the mail compose view controller.
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
 }
