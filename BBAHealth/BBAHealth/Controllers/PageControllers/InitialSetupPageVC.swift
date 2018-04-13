@@ -17,7 +17,7 @@ class InitialSetupPageVC: UIPageViewController,  UIPageViewControllerDelegate, U
         
         lazy var orderedViewControllers: [UIViewController] = {
             return [self.newVc(viewController: "initial1"),
-                    self.newVc(viewController: "initial2")]
+                    self.newVc(viewController: "initial2"),self.newVc(viewController: "initial3")]
     
 
         }()
