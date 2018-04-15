@@ -12,6 +12,8 @@ class SetupTVC: UITableViewController, CALayerDelegate {
     
     @IBOutlet weak var myTableView: UITableView!
     private var gradient: CAGradientLayer!
+    
+    let targetSavings = "targetSavings"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +50,9 @@ class SetupTVC: UITableViewController, CALayerDelegate {
         self.navigationController?.view.addSubview(bottomView)
         self.navigationController?.view.addSubview(button)
         
+        if let targetSavings = UserDefaults.standard.value(forKey: targetSavings){
+            setupComplete = targetSavings as! Bool
+        }
 
 
         setTableViewBackgroundGradient(sender: self, topColour, bottomColour)
@@ -104,7 +109,7 @@ class SetupTVC: UITableViewController, CALayerDelegate {
         wordsSelection = wordsSelection.sorted(by: { $0 < $1 })
     }
   
-    
+    var setupComplete = false
     @objc func buttonClicked(sender: UIButton){
     
         if selectedArray.count == 0 {
@@ -112,6 +117,7 @@ class SetupTVC: UITableViewController, CALayerDelegate {
             createAlert()
         }else{
 
+           
             
             if let viewWithTag1 = navigationController?.view.viewWithTag(100){
                 viewWithTag1.removeFromSuperview()
@@ -126,6 +132,9 @@ class SetupTVC: UITableViewController, CALayerDelegate {
             }else{
                 print("No")
             }
+            
+            setupComplete = true
+            UserDefaults.standard.set(setupComplete, forKey: targetSavings)
             
             navigationController?.dismiss(animated: true, completion: nil)
             navigationController?.removeFromParentViewController()
