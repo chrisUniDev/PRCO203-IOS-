@@ -12,6 +12,13 @@ class SettingsTVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SettingsTVC.dismissKeyboard))
+        
+        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+        //tap.cancelsTouchesInView = false
+        
+        view.addGestureRecognizer(tap)
     }
 
     @IBAction func aboutBtnTapped(_ sender: Any) {
@@ -27,5 +34,10 @@ class SettingsTVC: UITableViewController {
         dismiss(animated: true, completion: nil)
         performSegue(withIdentifier: "backToInitial", sender: nil)
         
+    }
+    
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
 }
