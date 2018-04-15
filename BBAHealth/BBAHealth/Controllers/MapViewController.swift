@@ -15,6 +15,8 @@ class MapViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var scrollview: UIScrollView!
     
+    @IBOutlet weak var transportView: UIView!
+    
     let imageArray = [#imageLiteral(resourceName: "Taunton_Map"),#imageLiteral(resourceName: "floor_map")]
     
     @IBOutlet weak var segmentController: UISegmentedControl!
@@ -34,12 +36,19 @@ class MapViewController: UIViewController, UIScrollViewDelegate {
         switch segmentController.selectedSegmentIndex {
         case 0:
             mapImageview.image = imageArray[0]
+            mapImageview.isHidden = false
+            transportView.isHidden = true
         case 1:
             mapImageview.image = imageArray[1]
+            mapImageview.isHidden = false
+            transportView.isHidden = true
         case 2:
-            mapImageview.image = imageArray[1]
+            mapImageview.isHidden = true
+            transportView.isHidden = false
         default:
             mapImageview.image = imageArray[0]
+            mapImageview.isHidden = false
+            transportView.isHidden = true
         }
     }
     

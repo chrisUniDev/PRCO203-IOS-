@@ -20,4 +20,12 @@ class SettingsTVC: UITableViewController {
         }
     }
     
+
+    @IBAction func resetButtonTapped(_ sender: Any) {
+        
+        UserDefaults.standard.set(false, forKey: "targetSavings")
+        dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "backToInitial", sender: nil)
+        
+    }
 }
