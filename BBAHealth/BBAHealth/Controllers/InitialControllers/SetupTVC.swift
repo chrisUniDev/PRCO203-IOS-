@@ -118,7 +118,7 @@ class SetupTVC: UITableViewController, CALayerDelegate {
         }else{
 
            
-            
+            /*
             if let viewWithTag1 = navigationController?.view.viewWithTag(100){
                 viewWithTag1.removeFromSuperview()
                 
@@ -131,7 +131,7 @@ class SetupTVC: UITableViewController, CALayerDelegate {
                 viewWithTag2.removeFromSuperview()
             }else{
                 print("No")
-            }
+            }*/
             
             setupComplete = true
             UserDefaults.standard.set(setupComplete, forKey: targetSavings)

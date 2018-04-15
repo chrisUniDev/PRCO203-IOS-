@@ -13,9 +13,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
    
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let mainMenu = ["Treatment Plan Infomation", "Side Effects Of RadioTherapy", "How RadioTherapy Works?", "Side Effects Of RadioTherapy"]
+    let mainMenu = ["Treatment Plan Information", "Side Effects Of RadioTherapy", "How RadioTherapy Works?", "Finances"]
     
-    let menuTextColourIndex = ["light","dark","dark","dark"]
+    let menuTextColourIndex = ["light","light","light","light"]
     
     var imageToPass = UIImage()
     var titleToPass = ""
