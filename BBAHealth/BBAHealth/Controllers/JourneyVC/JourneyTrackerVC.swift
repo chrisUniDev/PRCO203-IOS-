@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBCircularProgressBar
 
 class JourneyTrackerVC: UIViewController {
 
@@ -14,6 +15,41 @@ class JourneyTrackerVC: UIViewController {
     @IBOutlet weak var stage1View: UIView!
     @IBOutlet weak var stage2View: UIView!
     @IBOutlet weak var stage3View: UIView!
+    
+    
+    @IBOutlet weak var waitProgressBar: MBCircularProgressBarView!
+    @IBOutlet weak var overallProgressBar: MBCircularProgressBarView!
+    
+    //Stage 1 switchs
+    @IBOutlet weak var ResultsMeetingSwitch: UISwitch!
+    @IBOutlet weak var MRISwitch: UISwitch!
+    
+    
+    @IBAction func ResultsMeetingToggled(_ sender: Any) {
+        if ResultsMeetingSwitch.isOn{
+            [UIView .animate(withDuration: 1.0, animations: {
+                self.overallProgressBar.value += 5.0
+            })]
+        }else{
+            [UIView .animate(withDuration: 1.0, animations: {
+                self.overallProgressBar.value -= 5.0
+            })]
+        }
+    }
+    
+    @IBAction func MRISwtichToggled(_ sender: Any) {
+        if MRISwitch.isOn{
+            [UIView .animate(withDuration: 1.0, animations: {
+                self.overallProgressBar.value += 10.0
+                })]
+            
+        }else{
+            [UIView .animate(withDuration: 1.0, animations: {
+                self.overallProgressBar.value -= 10.0
+            })]
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

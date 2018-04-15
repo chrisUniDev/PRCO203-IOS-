@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bug-Wc-uTZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="baz-p6-R64">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -188,7 +188,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1M-sW-phS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2961" y="-695"/>
+            <point key="canvasLocation" x="3984.8000000000002" y="-689.5052473763119"/>
         </scene>
         <!--Radiotherapy-->
         <scene sceneID="Gq3-EG-ubC">
@@ -455,7 +455,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYM-lz-uVx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4578.3999999999996" y="-30.584707646176913"/>
+            <point key="canvasLocation" x="5517.6000000000004" y="-30.584707646176913"/>
         </scene>
         <!--Map-->
         <scene sceneID="ICY-zH-jZJ">
@@ -836,7 +836,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="d0p-RQ-jjR">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fwl-d2-PVd" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="StartAppTab" automaticallyAdjustsScrollViewInsets="NO" id="fwl-d2-PVd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="tjj-b7-GKE"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="otU-y0-Ido">
@@ -987,9 +987,52 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x3G-PE-FtH" customClass="DesignableView" customModule="BBAHealth" customModuleProvider="target">
+                                        <rect key="frame" x="21" y="606" width="333" height="212"/>
+                                        <subviews>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kOp-ko-6wA" customClass="DesignableView" customModule="BBAHealth" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="-6" width="333" height="212"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stage 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0b-kc-6qC">
+                                                        <rect key="frame" x="18" y="23" width="60" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="14"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="212" id="FOY-md-lzQ"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="vma-td-iZ2" firstAttribute="trailing" secondItem="Qc8-tA-jP1" secondAttribute="trailing" id="2hM-po-tIP"/>
+                                    <constraint firstItem="x3G-PE-FtH" firstAttribute="top" secondItem="vma-td-iZ2" secondAttribute="bottom" constant="37" id="FW8-hZ-zFV"/>
                                     <constraint firstItem="fiY-MR-bua" firstAttribute="leading" secondItem="BZ9-jJ-YZc" secondAttribute="leading" constant="26" id="Hdo-yt-oVM"/>
                                     <constraint firstItem="vma-td-iZ2" firstAttribute="leading" secondItem="Qc8-tA-jP1" secondAttribute="leading" id="IeF-d1-EZr"/>
                                     <constraint firstItem="Qc8-tA-jP1" firstAttribute="leading" secondItem="BZ9-jJ-YZc" secondAttribute="leading" constant="21" id="N0w-18-MY4"/>
@@ -997,6 +1040,8 @@
                                     <constraint firstItem="fiY-MR-bua" firstAttribute="top" secondItem="BZ9-jJ-YZc" secondAttribute="top" constant="18" id="Xlc-02-nTg"/>
                                     <constraint firstItem="fiY-MR-bua" firstAttribute="trailing" secondItem="Qc8-tA-jP1" secondAttribute="trailing" id="esy-xe-HIO"/>
                                     <constraint firstAttribute="trailing" secondItem="fiY-MR-bua" secondAttribute="trailing" constant="21" id="kb8-4G-e85"/>
+                                    <constraint firstItem="x3G-PE-FtH" firstAttribute="trailing" secondItem="vma-td-iZ2" secondAttribute="trailing" id="nhF-PD-DHh"/>
+                                    <constraint firstItem="x3G-PE-FtH" firstAttribute="leading" secondItem="vma-td-iZ2" secondAttribute="leading" id="uf6-Aa-KHZ"/>
                                     <constraint firstAttribute="bottom" secondItem="Qc8-tA-jP1" secondAttribute="bottom" constant="343" id="uuU-qW-Nvr"/>
                                     <constraint firstItem="vma-td-iZ2" firstAttribute="top" secondItem="Qc8-tA-jP1" secondAttribute="bottom" constant="33" id="zGK-Pg-ydP"/>
                                     <constraint firstItem="Qc8-tA-jP1" firstAttribute="centerX" secondItem="BZ9-jJ-YZc" secondAttribute="centerX" id="zWS-3g-m54"/>
@@ -1194,6 +1239,9 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bUB-cO-yrF">
                                                 <rect key="frame" x="288" y="18" width="51" height="31"/>
                                                 <color key="onTintColor" red="0.61615662640000002" green="0.83707091970000003" blue="0.5565307505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="ResultsMeetingToggled:" destination="xMw-AA-9JD" eventType="valueChanged" id="Zk2-uM-vUy"/>
+                                                </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results Meeting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPA-6v-GEY">
                                                 <rect key="frame" x="30" y="23" width="123" height="21"/>
@@ -1204,6 +1252,9 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e5J-fX-YvE">
                                                 <rect key="frame" x="288" y="73" width="51" height="31"/>
                                                 <color key="onTintColor" red="0.61615662640000002" green="0.83707091970000003" blue="0.5565307505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="MRISwtichToggled:" destination="xMw-AA-9JD" eventType="valueChanged" id="12d-pT-XhB"/>
+                                                </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MRI Scan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeP-ps-YH1">
                                                 <rect key="frame" x="30" y="78" width="72" height="21"/>
@@ -1479,10 +1530,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="MRISwitch" destination="e5J-fX-YvE" id="XxF-lr-3Kz"/>
+                        <outlet property="ResultsMeetingSwitch" destination="bUB-cO-yrF" id="LpY-gN-eVO"/>
+                        <outlet property="overallProgressBar" destination="ODe-qg-ZUS" id="q7n-pC-Xon"/>
                         <outlet property="segmentedControl" destination="WG1-0j-Px4" id="Ywt-4i-fzY"/>
                         <outlet property="stage1View" destination="34R-Oy-7Dp" id="F63-w1-eBM"/>
                         <outlet property="stage2View" destination="zj2-zO-Vjf" id="RME-u4-mgj"/>
                         <outlet property="stage3View" destination="Kcq-P8-jpv" id="uJT-3e-MoV"/>
+                        <outlet property="waitProgressBar" destination="ZFh-He-nJK" id="n3R-Vp-e0K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="srS-9z-Nhj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1853,10 +1908,15 @@
         <!--Initial Setup PageVC-->
         <scene sceneID="Y93-8U-Cuf">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="bug-Wc-uTZ" customClass="InitialSetupPageVC" customModule="BBAHealth" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="bug-Wc-uTZ" customClass="InitialSetupPageVC" customModule="BBAHealth" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dty-zo-UYo"/>
+                    <connections>
+                        <segue destination="fwl-d2-PVd" kind="presentation" identifier="StartAppTab" modalTransitionStyle="crossDissolve" id="COT-FK-7uC"/>
+                    </connections>
+                </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TYT-TY-10E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1423" y="-744"/>
+            <point key="canvasLocation" x="-484" y="-744.3778110944528"/>
         </scene>
         <!--Map-->
         <scene sceneID="qRz-yh-8Px">
@@ -2674,6 +2734,24 @@
             </objects>
             <point key="canvasLocation" x="-1961" y="16"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TCd-Wc-Xbm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="baz-p6-R64" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kb7-QP-l22">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bug-Wc-uTZ" kind="relationship" relationship="rootViewController" id="Abg-Af-ahW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FHp-gg-8k9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1423.2" y="-744.3778110944528"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Infomation_Map_icon" width="50" height="50"/>
@@ -2717,4 +2795,7 @@
         <image name="ic_track_changes" width="24" height="24"/>
         <image name="recordButton" width="110" height="110"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="COT-FK-7uC"/>
+    </inferredMetricsTieBreakers>
 </document>
