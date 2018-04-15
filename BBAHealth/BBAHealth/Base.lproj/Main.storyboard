@@ -1226,18 +1226,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TXN-sH-PAq">
-                                <rect key="frame" x="0.0" y="129" width="375" height="187"/>
+                                <rect key="frame" x="0.0" y="129" width="375" height="187.5"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WG1-0j-Px4">
-                                        <rect key="frame" x="8" y="145" width="359" height="43"/>
+                                        <rect key="frame" x="8" y="145.5" width="359" height="43"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="qGU-D2-wsH"/>
                                         </constraints>
                                         <segments>
-                                            <segment title="Stage 1"/>
-                                            <segment title="Stage 2"/>
-                                            <segment title="Stage 3"/>
-                                            <segment title="Stage 4"/>
+                                            <segment title="1"/>
+                                            <segment title="2"/>
+                                            <segment title="3"/>
+                                            <segment title="4"/>
+                                            <segment title="5"/>
+                                            <segment title="6"/>
+                                            <segment title="7"/>
+                                            <segment title="8"/>
                                         </segments>
                                         <color key="tintColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
@@ -1245,7 +1249,7 @@
                                         </connections>
                                     </segmentedControl>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODe-qg-ZUS" customClass="MBCircularProgressBarView">
-                                        <rect key="frame" x="193" y="-6" width="162" height="112"/>
+                                        <rect key="frame" x="193" y="-6" width="162" height="112.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
@@ -1277,6 +1281,13 @@
                                             <constraint firstAttribute="height" constant="40" id="rsr-aL-ohh"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3E-tB-Jae">
+                                        <rect key="frame" x="15" y="116" width="58" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1407,16 +1418,16 @@
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zj2-zO-Vjf" userLabel="Stage2View">
-                                <rect key="frame" x="0.0" y="335" width="375" height="283"/>
+                                <rect key="frame" x="0.0" y="335.5" width="375" height="282.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Riu-c3-fVx">
-                                        <rect key="frame" x="8" y="8" width="359" height="261"/>
+                                        <rect key="frame" x="8" y="8" width="359" height="260.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZFh-He-nJK" customClass="MBCircularProgressBarView">
-                                                <rect key="frame" x="47" y="33" width="264" height="209"/>
+                                                <rect key="frame" x="47" y="33" width="264" height="208.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Looking at Scans" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tde-3d-fXU">
-                                                        <rect key="frame" x="85" y="87" width="95" height="50"/>
+                                                        <rect key="frame" x="85" y="87" width="95" height="49.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1455,13 +1466,13 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Week wait procress..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvV-Uy-TXg">
-                                                <rect key="frame" x="90" y="8" width="178" height="21"/>
+                                                <rect key="frame" x="90.5" y="8" width="178" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4K-p6-175">
-                                                <rect key="frame" x="319" y="221" width="22" height="22"/>
+                                                <rect key="frame" x="319" y="220.5" width="22" height="22"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
                                                     <segue destination="ued-aX-cuw" kind="show" id="MXK-hY-xsB"/>
@@ -1494,41 +1505,19 @@
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kcq-P8-jpv" userLabel="Stage3View">
-                                <rect key="frame" x="0.0" y="335" width="375" height="273"/>
+                                <rect key="frame" x="0.0" y="335.5" width="375" height="272.5"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xzv-Zt-xDt">
-                                        <rect key="frame" x="8" y="62" width="359" height="212"/>
-                                        <color key="backgroundColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="sectionIndexBackgroundColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="fQC-Yk-b0l">
-                                                <rect key="frame" x="0.0" y="28" width="359" height="44"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fQC-Yk-b0l" id="fi6-sY-oy8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                                <color key="backgroundColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </tableViewCell>
-                                        </prototypes>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </tableView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TyC-cK-bZn">
-                                        <rect key="frame" x="8" y="8" width="359" height="38"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TyC-cK-bZn" customClass="DesignableView" customModule="BBAHealth" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="8" width="359" height="37.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rounds of treatment (W/days)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb4-hr-N9T">
-                                                <rect key="frame" x="8" y="7" width="230" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total rounds of treatment (W/days)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb4-hr-N9T">
+                                                <rect key="frame" x="8" y="7" width="266.5" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="36r-Wr-1jR">
-                                                <rect key="frame" x="262" y="4" width="89" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="36r-Wr-1jR">
+                                                <rect key="frame" x="304" y="4" width="52" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -1539,28 +1528,76 @@
                                             <constraint firstItem="Xb4-hr-N9T" firstAttribute="top" secondItem="TyC-cK-bZn" secondAttribute="top" constant="7" id="0Ar-T9-cct"/>
                                             <constraint firstItem="Xb4-hr-N9T" firstAttribute="leading" secondItem="TyC-cK-bZn" secondAttribute="leadingMargin" id="9At-om-APD"/>
                                             <constraint firstAttribute="bottom" secondItem="36r-Wr-1jR" secondAttribute="bottom" constant="3.5" id="Tob-IY-xvF"/>
-                                            <constraint firstItem="36r-Wr-1jR" firstAttribute="trailing" secondItem="TyC-cK-bZn" secondAttribute="trailingMargin" id="YA0-Ma-Hgp"/>
+                                            <constraint firstItem="36r-Wr-1jR" firstAttribute="trailing" secondItem="TyC-cK-bZn" secondAttribute="trailingMargin" constant="5" id="YA0-Ma-Hgp"/>
                                             <constraint firstItem="Xb4-hr-N9T" firstAttribute="centerY" secondItem="36r-Wr-1jR" secondAttribute="centerY" constant="-1.5" id="jRM-c9-dth"/>
-                                            <constraint firstItem="36r-Wr-1jR" firstAttribute="leading" secondItem="Xb4-hr-N9T" secondAttribute="trailing" constant="24" id="xpw-mK-1qn"/>
+                                            <constraint firstItem="36r-Wr-1jR" firstAttribute="leading" secondItem="Xb4-hr-N9T" secondAttribute="trailing" constant="29.5" id="xpw-mK-1qn"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AWR-gy-b6Z" customClass="DesignableView" customModule="BBAHealth" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="63" width="359" height="202"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Treastment sessions left!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQA-5m-k5y">
+                                                <rect key="frame" x="83" y="136" width="192" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysM-8u-1oW">
+                                                <rect key="frame" x="115" y="8" width="128" height="120"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="100"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="14"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="TyC-cK-bZn" secondAttribute="bottom" constant="227.5" id="Joy-4l-NSL"/>
-                                    <constraint firstItem="xzv-Zt-xDt" firstAttribute="top" secondItem="TyC-cK-bZn" secondAttribute="bottom" constant="16" id="Yb0-ex-2kS"/>
                                     <constraint firstItem="TyC-cK-bZn" firstAttribute="leading" secondItem="Kcq-P8-jpv" secondAttribute="leadingMargin" id="aKw-kd-lSz"/>
-                                    <constraint firstItem="TyC-cK-bZn" firstAttribute="leading" secondItem="xzv-Zt-xDt" secondAttribute="leading" id="bhU-1Q-2Vc"/>
                                     <constraint firstItem="TyC-cK-bZn" firstAttribute="top" secondItem="Kcq-P8-jpv" secondAttribute="topMargin" id="bx9-Tk-20J"/>
                                     <constraint firstItem="TyC-cK-bZn" firstAttribute="trailing" secondItem="Kcq-P8-jpv" secondAttribute="trailingMargin" id="fiQ-Ww-1pd"/>
                                     <constraint firstAttribute="bottom" secondItem="TyC-cK-bZn" secondAttribute="bottom" constant="227.5" id="jSd-2b-thP"/>
-                                    <constraint firstItem="TyC-cK-bZn" firstAttribute="trailing" secondItem="xzv-Zt-xDt" secondAttribute="trailing" id="kLN-4m-eB1"/>
-                                    <constraint firstAttribute="bottom" secondItem="xzv-Zt-xDt" secondAttribute="bottom" constant="-1" id="vwf-o7-yhK"/>
                                 </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qu0-Oe-8Zz" userLabel="Stage4View" customClass="DesignableView" customModule="BBAHealth" customModuleProvider="target">
+                                <rect key="frame" x="8" y="342" width="360" height="259"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Information Coming Soon!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1y-Eg-JaV">
+                                        <rect key="frame" x="71" y="64" width="200" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WIP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQJ-wS-EOS">
+                                        <rect key="frame" x="138" y="149" width="71" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1602,12 +1639,13 @@
                         <outlet property="stage1View" destination="34R-Oy-7Dp" id="F63-w1-eBM"/>
                         <outlet property="stage2View" destination="zj2-zO-Vjf" id="RME-u4-mgj"/>
                         <outlet property="stage3View" destination="Kcq-P8-jpv" id="uJT-3e-MoV"/>
+                        <outlet property="stage4View" destination="Qu0-Oe-8Zz" id="NAf-rp-9uO"/>
                         <outlet property="waitProgressBar" destination="ZFh-He-nJK" id="n3R-Vp-e0K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="srS-9z-Nhj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2045" y="839"/>
+            <point key="canvasLocation" x="2044" y="838.83058470764627"/>
         </scene>
         <!--Support-->
         <scene sceneID="LYe-gd-oIR">
