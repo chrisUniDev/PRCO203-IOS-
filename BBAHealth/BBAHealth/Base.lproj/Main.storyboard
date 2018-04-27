@@ -1371,8 +1371,6 @@
                                             <segment title="4"/>
                                             <segment title="5"/>
                                             <segment title="6"/>
-                                            <segment title="7"/>
-                                            <segment title="8"/>
                                         </segments>
                                         <color key="tintColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
