@@ -47,7 +47,7 @@ class SuppportViewController: UIViewController, UICollectionViewDelegate, UIColl
         
     }
     
-    let phoneNumber = "07760299823"
+    let phoneNumber = "01823344202"
 
     @IBAction func callButtonTapped(_ sender: Any) {
         if let url = URL(string: "tel://\(phoneNumber)"), UIApplication.shared.canOpenURL(url) {
@@ -64,9 +64,9 @@ class SuppportViewController: UIViewController, UICollectionViewDelegate, UIColl
         composeVC.mailComposeDelegate = self
         
         // Configure the fields of the interface.
-        composeVC.setToRecipients(["chrislehrer@icloud.com"])
-        composeVC.setSubject("Hello!")
-        composeVC.setMessageBody("Hello There!", isHTML: false)
+        composeVC.setToRecipients(["pal@tst.nhs.uk"])
+        composeVC.setSubject("Treatment enquiry")
+        composeVC.setMessageBody("To whom this may concern", isHTML: false)
         
         // Present the view controller modally.
         self.present(composeVC, animated: true, completion: nil)
