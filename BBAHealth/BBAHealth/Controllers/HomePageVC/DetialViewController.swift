@@ -13,7 +13,17 @@ class DetialViewController: UIViewController {
 
     @IBOutlet weak var imgImage: UIImageView!
     @IBOutlet weak var lblName: UILabel!
+    
+    @IBOutlet weak var visualEffectBlur: UIVisualEffectView!
+    @IBOutlet weak var myscrollview: UIScrollView!
+    
+    //video outlets
     @IBOutlet weak var myWebView: WKWebView!
+    @IBOutlet weak var myWebView1: WKWebView!
+    @IBOutlet weak var myWebView2: WKWebView!
+    
+    
+    let weblinks : [String] = ["Ek4tnoiH0z8", "_moypMx05Fw","Hz0D_OV5wP4"]
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -24,15 +34,23 @@ class DetialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-        getVideo(videoCode: "JN-suUcRdqQ")
+        let webviews = [myWebView, myWebView1, myWebView2]
+        var count = 0
+        for webview in webviews{
+            getVideo(videoCode: weblinks[count], webview: webview!)
+            count += 1
+        }
+
         imgImage.image = titleimage
-        //imgImage.clipsToBounds = true
-        
-        //imgImage.contentMode = UIViewContentMode.scaleAspectFill
         lblName.text = name
         
+
+        
     }
+    
+ 
+    
+   
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -47,20 +65,15 @@ class DetialViewController: UIViewController {
     }
     
 
-    
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    func getVideo(videoCode: String){
+    func getVideo(videoCode: String, webview: WKWebView){
         let url = URL(string: "https://www.youtube.com/embed/\(videoCode)")
-        myWebView.load(URLRequest(url: url!))
+        webview.load(URLRequest(url: url!))
         
     }
     
 
 
 }
+
+

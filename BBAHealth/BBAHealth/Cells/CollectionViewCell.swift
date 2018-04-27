@@ -12,6 +12,6 @@ class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageCell: UIImageView!
     @IBOutlet weak var lblTitleCell: UILabel!
-
+    
 
 }

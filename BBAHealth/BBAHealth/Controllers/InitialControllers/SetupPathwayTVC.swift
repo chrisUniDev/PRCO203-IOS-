@@ -131,6 +131,10 @@ class SetupPathwayTVC: UITableViewController, CALayerDelegate {
             
             
             tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+            //
+            if tableView.cellForRow(at: indexPath)?.textLabel?.text == "Palliative"{
+                createAlert()
+            }
             
             selectedArray.append(String((tableView.cellForRow(at: indexPath)?.textLabel?.text)!))
             
@@ -141,6 +145,40 @@ class SetupPathwayTVC: UITableViewController, CALayerDelegate {
             
             selectedArray = selectedArray.filter(){$0 != String((tableView.cellForRow(at: indexPath)?.textLabel?.text)!)}
         }
+    
+    func createAlert(){
+        //1. Create the alert controller.
+        let alert = UIAlertController(title: "You selected palliative!", message: "Is this correct?", preferredStyle: .alert)
+        
+  
+        
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            self.performSegue(withIdentifier: "PalliativePush", sender: self)
+
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { [weak alert] (_) in
+            
+            self.tableView.cellForRow(at: IndexPath.init(row: 0, section: 0))?.accessoryType = .none
+            
+            self.selectedArray = self.selectedArray.filter(){$0 != String((self.tableView.cellForRow(at: IndexPath.init(row: 0, section: 0))?.textLabel?.text)!)}
+            
+            self.tableView.deselectRow(at: IndexPath.init(row: 0, section: 0), animated: true)
+            
+        }))
+        
+        // 4. Present the alert.
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    func displayAlert(title:String, message:String)
+    {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "dismiss", style: .default, handler: nil))
+        present(alert,animated: true,completion: nil)
+    }
         
         
         
