@@ -17,6 +17,8 @@ class JourneyTrackerVC: UIViewController {
     @IBOutlet weak var stage3View: UIView!
     @IBOutlet weak var stage4View: DesignableView!
     
+    @IBOutlet var countdownSessions: UILabel!
+    @IBOutlet var entercountdown: UITextField!
     
     @IBOutlet weak var waitProgressBar: MBCircularProgressBarView!
     @IBOutlet weak var overallProgressBar: MBCircularProgressBarView!
@@ -116,6 +118,7 @@ class JourneyTrackerVC: UIViewController {
     
     @objc func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        countdownSessions.text = entercountdown.text
         view.endEditing(true)
     }
     

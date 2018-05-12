@@ -1459,6 +1459,17 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9M0-Jq-b0v">
+                                                <rect key="frame" x="302" y="21" width="49" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </switch>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Auto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTM-iC-HbC">
+                                                <rect key="frame" x="307" y="0.0" width="36" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.98799355239999997" green="0.99805240910000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
@@ -1537,6 +1548,8 @@
                     <connections>
                         <outlet property="MRISwitch" destination="e5J-fX-YvE" id="XxF-lr-3Kz"/>
                         <outlet property="ResultsMeetingSwitch" destination="bUB-cO-yrF" id="LpY-gN-eVO"/>
+                        <outlet property="countdownSessions" destination="ysM-8u-1oW" id="ZJ1-sY-uw6"/>
+                        <outlet property="entercountdown" destination="36r-Wr-1jR" id="IZT-Xy-sH0"/>
                         <outlet property="overallProgressBar" destination="ODe-qg-ZUS" id="q7n-pC-Xon"/>
                         <outlet property="segmentedControl" destination="WG1-0j-Px4" id="Ywt-4i-fzY"/>
                         <outlet property="stage1View" destination="34R-Oy-7Dp" id="F63-w1-eBM"/>
@@ -3864,17 +3877,6 @@ If you experience any side effects from your treatment please discuss it with th
                                             <constraint firstAttribute="height" constant="1583" id="OS6-N7-bQd"/>
                                         </constraints>
                                     </view>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" editable="NO" textAlignment="justified" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9F-TZ-qGz">
-                                        <rect key="frame" x="10" y="407" width="340" height="209"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <string key="text">Looking at a 3D picture can be very useful, as it can be rotated and looked at from different angles. This is very helpful when planning treatment.
-It helps the radiotherapy doctor (clinical oncologist) to work out the best way to arrange the radiotherapy beams to cover the whole cancer and miss the major organs.
-
-In the above image radiation dosage has been carefully planned to target the cancer, with green showing the highest dosage.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="XzU-fY-h9a" secondAttribute="trailing" id="3PL-YE-YkS"/>
@@ -3965,41 +3967,23 @@ In the above image radiation dosage has been carefully planned to target the can
                                         <rect key="frame" x="0.0" y="397" width="375" height="509"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" editable="NO" usesAttributedText="YES" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjD-Z1-WVy">
-                                                <rect key="frame" x="17" y="8" width="340" height="481"/>
+                                                <rect key="frame" x="17" y="8" width="340" height="360"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <attributedString key="attributedText">
                                                     <fragment>
-                                                        <string key="content">Our aim is to provide high standards of care for all our patients and visitors.
-Treatment for each patient is planned individually, taking into account age,
-
-health and the type of cancer. Patients with the same type of cancer may not
-receive identical treatment.The radiotherapy service at Musgrove Park
-Hospital is operational from Monday - Friday, 9.00am - 5.00pm (excluding
-bank holidays). The team comprises radiographers, assistant practitioners,
-physicists and dosimetrists. Overarching medical leadership is provided by
-consultants in clinical oncology.
-</string>
+                                                        <mutableString key="content">Our aim is to provide high standards of care for all our patients and visitors. Treatment for each patient is planned individually, taking into account age, health and the type of cancer. Patients with the same type of cancer may not receive identical treatment.The radiotherapy service at Musgrove Park Hospital is operational from Monday - Friday, 9.00am - 5.00pm (excluding bank holidays). The team comprises radiographers, assistant practitioners, physicists and dosimetrists. Overarching medical leadership is provided by consultants in clinical oncology.
+</mutableString>
                                                         <attributes>
-                                                            <font key="NSFont" metaFont="system" size="14"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                    <fragment content="Beacon Centre Café">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.2438892758283826" green="0.77290131243857618" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <font key="NSFont" metaFont="system" size="14"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment>
-                                                        <string key="content"> The Beacon Centre Café serves fresh bean-to- cup coffee, fair
-trade tea, sandwiches, cakes and snacks. Set in calming surroundings in the Beacon
-Centre's main entrance, the Beacon Centre Cafe is open from Monday - Friday
-between 9am and 4pm, and is available for staff, patients and visitors.</string>
+                                                        <string key="content">The Beacon Centre Café serves fresh bean-to- cup coffee, fair trade tea, sandwiches, cakes and snacks. Set in calming surroundings in the Beacon Centre's main entrance, the Beacon Centre Cafe is open from Monday - Friday between 9am and 4pm, and is available for staff, patients and visitors.</string>
                                                         <attributes>
                                                             <font key="NSFont" metaFont="system" size="14"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacingBefore="14" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
@@ -4059,7 +4043,7 @@ between 9am and 4pm, and is available for staff, patients and visitors.</strin
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iM0-NB-hR5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6754" y="-1481"/>
+            <point key="canvasLocation" x="6752.8000000000002" y="-1481.5592203898052"/>
         </scene>
     </scenes>
     <resources>
