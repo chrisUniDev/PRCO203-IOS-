@@ -20,10 +20,10 @@ class DetialViewController: UIViewController {
     //video outlets
     @IBOutlet weak var myWebView: WKWebView!
     @IBOutlet weak var myWebView1: WKWebView!
-    @IBOutlet weak var myWebView2: WKWebView!
+    //@IBOutlet weak var myWebView2: WKWebView!
     
     
-    let weblinks : [String] = ["Ek4tnoiH0z8", "_moypMx05Fw","Hz0D_OV5wP4"]
+    let weblinks : [String] = ["x7OAR3oJknY", "xIn6eqbHs2g"]
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -33,24 +33,22 @@ class DetialViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let webviews = [myWebView, myWebView1, myWebView2]
-        var count = 0
-        for webview in webviews{
-            getVideo(videoCode: weblinks[count], webview: webview!)
-            count += 1
-        }
+     
 
         imgImage.image = titleimage
         lblName.text = name
         
+        if lblName.text == "Treatment Plan Information"{
+            let webviews = [myWebView, myWebView1]
+            var count = 0
+            for webview in webviews{
+                getVideo(videoCode: weblinks[count], webview: webview!)
+                count += 1
+            }}
+        
 
         
     }
-    
- 
-    
-   
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

@@ -13,9 +13,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
    
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let mainMenu = ["Treatment Plan Information", "Side Effects Of RadioTherapy", "How RadioTherapy Works?", "Finances"]
+    let mainMenu = ["What is RadioTherapy?", "CT Plan", "Treatment Plan Information", "Side Effects Of RadioTherapy", "The Centre"]
     
-    let menuTextColourIndex = ["light","light","light","light"]
+    let menuTextColourIndex = ["light","light","light","light","light"]
     
     var imageToPass = UIImage()
     var titleToPass = ""
@@ -68,7 +68,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
        
         imageToPass = UIImage(named: mainMenu[indexPath.row])!
         titleToPass = mainMenu[indexPath.row]
-        performSegue(withIdentifier: "DetialViewController", sender: indexPath)
+        if titleToPass == "Treatment Plan Information"{
+            performSegue(withIdentifier: "DetialViewController", sender: indexPath)
+            
+        }else if titleToPass == "CT Plan"{
+            performSegue(withIdentifier: "CTPlanView", sender: indexPath)
+            
+        }else if titleToPass == "The Centre" {
+            performSegue(withIdentifier: "TheCenterView", sender: indexPath)
+        }
+        else{
+            performSegue(withIdentifier: "SideEffectsView", sender: indexPath)
+        }
+        
 
     }
 
