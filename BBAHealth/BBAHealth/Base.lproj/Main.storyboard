@@ -4220,11 +4220,219 @@ If you experience any side effects from your treatment please discuss it with th
                         <outlet property="collectionView" destination="w0a-Nc-6uN" id="1at-mz-oCt"/>
                         <segue destination="ZDr-dC-0YP" kind="show" identifier="QuickLinks" id="Eu8-Fw-DXS"/>
                         <segue destination="X7d-1x-Qg5" kind="show" identifier="comingSoon" id="99b-vC-Aq3"/>
+                        <segue destination="MHn-Ew-NCt" kind="show" identifier="CompTherapy" id="JCv-rN-Vdw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="txP-2b-MU8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3030" y="2272"/>
+        </scene>
+        <!--Complementary Therapy-->
+        <scene sceneID="WIi-CF-LsU">
+            <objects>
+                <viewController storyboardIdentifier="CompTherapy" title="Complementary Therapy" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MHn-Ew-NCt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bFw-dZ-sgC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ik-RW-SbP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1951"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnw-4L-v2m">
+                                        <rect key="frame" x="23" y="12" width="81.5" height="79"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="79" id="eiE-NG-kyr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yhb-ya-pKj">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2807"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" editable="NO" usesAttributedText="YES" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heg-hc-XIM">
+                                                <rect key="frame" x="18" y="775" width="340" height="532"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment>
+                                                        <string key="content">Complementary therapy covers a wide range of practices used alongside conventional treatments for illnesses including cancer. They can help some people cope with the symptoms of disease and its treatment, aid relaxation, and reduce tension and anxiety.
+We know that they are used by more than one in three cancer patients</string>
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="9.5999999999999996" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="[1]">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="9.5999999999999996" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <integer key="NSSuperScript" value="1"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <mutableString key="content"> and many report finding them helpful.
+However, we also know that too often patients do not report their use of complementary therapies to health care professionals. We consider it a priority that patients report the use of any complementary therapies to the health team responsible for their care in order to enable them to discuss any harmful effects.
+We know that the scientific evidence base is growing for the use of some therapies in cancer care. However, we would like to see more high-quality research into complementary therapies in order to support patients, health professionals and commissioners to make informed decisions on the application of these therapies.
+We make a clear distinction between supportive therapies used in conjunction with anti-cancer treatment and so-called alternative treatments, which are promoted as having an effect on the illness to be used instead of conventional treatment.</mutableString>
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="9.5999999999999996" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Psychological And Self-Help Therapies" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltR-6J-Rhq">
+                                                <rect key="frame" x="19" y="187" width="339" height="94"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" red="0.0" green="0.63144432110000004" blue="0.082876895079999999" alpha="0.87930757709999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0JJ-Ej-Oh9" customClass="DesignableView" customModule="BBAHealth" customModuleProvider="target">
+                                                <rect key="frame" x="17" y="277" width="343" height="121"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhD-Ik-vtV">
+                                                        <rect key="frame" x="8" y="10" width="327" height="111"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <string key="text">Need to talk? Call us free*0808 808 00 00Monday to Friday, 9am-8pm
+</string>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.4926405345" green="0.71357471449999998" blue="0.36248364459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Completmentary Therapies" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sO-VS-WhU">
+                                                <rect key="frame" x="17" y="422" width="339" height="94"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NIW-U2-V39" customClass="DesignableView" customModule="BBAHealth" customModuleProvider="target">
+                                                <rect key="frame" x="15" y="512" width="343" height="230"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwH-FP-mCv">
+                                                        <rect key="frame" x="8" y="10" width="327" height="212"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <string key="text">The Beacon Centre offers reflexology and aromatherapy for patients during their inpatient stay and outpatient visits.
+For more information please contact the Complementary Therapy Service on 01823 342648 between 9am - 5pm
+</string>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" editable="NO" usesAttributedText="YES" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXZ-jL-c0r">
+                                                <rect key="frame" x="20" y="1347" width="340" height="532"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment>
+                                                        <mutableString key="content">When choosing a complementary therapy it can help to think about what you want to get out of it. Some therapies aim to relax you or make you feel generally better. Others may help you cope with the symptoms of cancer or the side effects of treatment.
+Always tell your doctor if you are thinking about using complementary therapies. Although many complementary therapies are safe to use alongside conventional treatment, some may not be suitable. Your doctor can help you choose a complementary therapy that is safe for you.
+You may be able to get some complementary therapies free on the NHS or from some large cancer charities. Private therapists can be expensive so make sure you find out the cost before you start.
+If you want to know about the therapies other people with cancer have found helpful you can contact a local cancer support group or join an online community. The Macmillan Support Line can also give you information on complementary and alternative therapies, and how to find a suitable therapist.
+</mutableString>
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="9.5999999999999996" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="Energy-based therapies aim to improve your physical and emotional health using little, if any, physical contact.">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="comtherapy" translatesAutoresizingMaskIntoConstraints="NO" id="HJW-Sk-GRU" customClass="DesignableImageView" customModule="BBAHealth" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="26" width="341" height="153"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="14"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2807" id="G2V-nv-mJX"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hnw-4L-v2m" firstAttribute="leading" secondItem="3ik-RW-SbP" secondAttribute="leading" constant="23" id="Du0-Z4-O28"/>
+                                    <constraint firstItem="yhb-ya-pKj" firstAttribute="top" secondItem="3ik-RW-SbP" secondAttribute="top" constant="44" id="URz-Pc-kH5"/>
+                                    <constraint firstItem="yhb-ya-pKj" firstAttribute="leading" secondItem="3ik-RW-SbP" secondAttribute="leading" id="VBW-ZB-C1X"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hnw-4L-v2m" secondAttribute="trailing" constant="20" symbolic="YES" id="l8b-ZM-ksY"/>
+                                    <constraint firstAttribute="trailing" secondItem="yhb-ya-pKj" secondAttribute="trailing" id="n0W-6p-Mqe"/>
+                                    <constraint firstAttribute="bottom" secondItem="yhb-ya-pKj" secondAttribute="bottom" id="pWk-ei-8dB"/>
+                                    <constraint firstItem="yhb-ya-pKj" firstAttribute="centerX" secondItem="3ik-RW-SbP" secondAttribute="centerX" id="ruI-f7-bxq"/>
+                                    <constraint firstItem="hnw-4L-v2m" firstAttribute="top" secondItem="3ik-RW-SbP" secondAttribute="top" constant="12" id="tCH-UF-WqG"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3ik-RW-SbP" firstAttribute="leading" secondItem="14K-7E-WOg" secondAttribute="leading" id="QU5-xQ-l03"/>
+                            <constraint firstItem="3ik-RW-SbP" firstAttribute="trailing" secondItem="14K-7E-WOg" secondAttribute="trailing" id="TJJ-tv-d9Z"/>
+                            <constraint firstItem="3ik-RW-SbP" firstAttribute="bottom" secondItem="14K-7E-WOg" secondAttribute="bottom" id="bTh-VO-t2W"/>
+                            <constraint firstItem="3ik-RW-SbP" firstAttribute="top" secondItem="bFw-dZ-sgC" secondAttribute="top" id="eUY-VH-7CU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="14K-7E-WOg"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Complementary Therapy" largeTitleDisplayMode="never" id="WTX-oR-ur4"/>
+                    <size key="freeformSize" width="375" height="2000"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JHE-vO-cEy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3047.1999999999998" y="4029.0854572713647"/>
         </scene>
     </scenes>
     <resources>
@@ -4265,6 +4473,7 @@ If you experience any side effects from your treatment please discuss it with th
         <image name="UIButtonBarAction" width="18" height="26"/>
         <image name="WC_Map_icon" width="50" height="50"/>
         <image name="beaconicon" width="1024" height="1024"/>
+        <image name="comtherapy" width="320" height="120"/>
         <image name="dots" width="300" height="300"/>
         <image name="dotsright" width="300" height="300"/>
         <image name="headnecksideeffect" width="512" height="385"/>

@@ -84,6 +84,8 @@ class SupportVeiwController: UIViewController, UICollectionViewDelegate, UIColle
         titleToPass = mainmenuText[indexPath.row]
         if titleToPass == "Links & web resources"{
             performSegue(withIdentifier: "QuickLinks", sender: indexPath)
+        }else if titleToPass == "Complimentary Therapy"{
+            performSegue(withIdentifier: "CompTherapy", sender: indexPath)
         }else{
             performSegue(withIdentifier: "comingSoon", sender: indexPath)
         }
