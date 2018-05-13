@@ -30,6 +30,7 @@
 		835DA68D203C7CCF007F89BC /* BBAHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DA68C203C7CCF007F89BC /* BBAHealthTests.swift */; };
 		835DA698203C7CCF007F89BC /* BBAHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835DA697203C7CCF007F89BC /* BBAHealthUITests.swift */; };
 		838B55B220A71BBD00805209 /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B55B120A71BBD00805209 /* CardData.swift */; };
+		838B55B420A859E900805209 /* supportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B55B320A859E900805209 /* supportController.swift */; };
 		8390A32A2061291D0000C9EF /* JourneyTrackerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390A3292061291D0000C9EF /* JourneyTrackerVC.swift */; };
 		8390A32C2061720F0000C9EF /* SuppportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390A32B2061720F0000C9EF /* SuppportViewController.swift */; };
 		8390A32E206173D20000C9EF /* SupportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390A32D206173D20000C9EF /* SupportCollectionViewCell.swift */; };
@@ -92,6 +93,7 @@
 		835DA697203C7CCF007F89BC /* BBAHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBAHealthUITests.swift; sourceTree = "<group>"; };
 		835DA699203C7CCF007F89BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		838B55B120A71BBD00805209 /* CardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
+		838B55B320A859E900805209 /* supportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = supportController.swift; sourceTree = "<group>"; };
 		8390A3292061291D0000C9EF /* JourneyTrackerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyTrackerVC.swift; sourceTree = "<group>"; };
 		8390A32B2061720F0000C9EF /* SuppportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppportViewController.swift; sourceTree = "<group>"; };
 		8390A32D206173D20000C9EF /* SupportCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				835DA677203C7CCF007F89BC /* AppDelegate.swift */,
 				83F40EA7206D47C300461E04 /* CustomView.swift */,
 				835DA67B203C7CCF007F89BC /* Main.storyboard */,
+				838B55B320A859E900805209 /* supportController.swift */,
 				83CA0AB320691AF200D94477 /* Other */,
 				83512378204EF1B6007D901A /* Controllers */,
 				83512379204EF1ED007D901A /* Cells */,
@@ -609,6 +612,7 @@
 				83F40EA6206D226200461E04 /* ContainerVC.swift in Sources */,
 				8390A3302061B3D60000C9EF /* gradientView.swift in Sources */,
 				83512377204EABCC007D901A /* RecorderPageViewController.swift in Sources */,
+				838B55B420A859E900805209 /* supportController.swift in Sources */,
 				838B55B220A71BBD00805209 /* CardData.swift in Sources */,
 				8311A5862063E5840087903F /* OpenEveningVC.swift in Sources */,
 				8311A58E20640EEA0087903F /* CanSelectVC.swift in Sources */,

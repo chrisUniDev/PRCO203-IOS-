@@ -1592,7 +1592,7 @@ up appointments.</string>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="ZDr-dC-0YP" kind="relationship" relationship="rootViewController" id="vTC-yu-az3"/>
+                        <segue destination="fLh-mu-uOA" kind="relationship" relationship="rootViewController" id="CfN-Rm-Hg2"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RDw-Mf-beg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1623,7 +1623,7 @@ up appointments.</string>
             </objects>
             <point key="canvasLocation" x="-1423" y="1567"/>
         </scene>
-        <!--Support-->
+        <!--Links & Web Resources-->
         <scene sceneID="fJq-7H-LWL">
             <objects>
                 <viewController id="ZDr-dC-0YP" customClass="SuppportViewController" customModule="BBAHealth" customModuleProvider="target" sceneMemberID="viewController">
@@ -1632,7 +1632,7 @@ up appointments.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sEO-7F-2O3">
-                                <rect key="frame" x="0.0" y="201" width="375" height="257"/>
+                                <rect key="frame" x="0.0" y="149" width="375" height="309"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nE8-Qp-qZb">
                                     <size key="itemSize" width="321" height="117"/>
@@ -1740,7 +1740,7 @@ up appointments.</string>
                                 </connections>
                             </button>
                             <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rgf-qg-qbR" customClass="DesignableView" customModule="BBAHealth" customModuleProvider="target">
-                                <rect key="frame" x="16" y="143" width="343" height="41"/>
+                                <rect key="frame" x="16" y="93" width="343" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Web Links" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdE-24-mtD">
@@ -1768,14 +1768,52 @@ up appointments.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fno-3L-HIO"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Support" id="IMq-N5-IHe"/>
+                    <navigationItem key="navigationItem" title="Links &amp; Web Resources" largeTitleDisplayMode="never" id="IMq-N5-IHe"/>
                     <connections>
                         <outlet property="collectionView" destination="sEO-7F-2O3" id="Tdq-Dp-xWl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="srx-yc-673" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3420" y="1566.5667166416792"/>
+            <point key="canvasLocation" x="3720.8000000000002" y="2271.8140929535234"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TiQ-RP-xHk">
+            <objects>
+                <viewController id="X7d-1x-Qg5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="egF-BJ-2cf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This information is not available yet." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omW-Lp-atP">
+                                <rect key="frame" x="33" y="110" width="308" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We appologise for any inconvenience!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7u-w6-Yyb">
+                                <rect key="frame" x="33" y="246" width="308" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="However Web links and resources does. :)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAc-0Z-sMf">
+                                <rect key="frame" x="33" y="394" width="308" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eYp-zL-YTG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QCZ-9x-HVM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3709.5999999999999" y="2943.7781109445282"/>
         </scene>
         <!--Documents-->
         <scene sceneID="tCP-VA-dTm">
@@ -3867,13 +3905,13 @@ Lots of people who receive radiotherapy experience skin problems, for example, b
                                                         </attributes>
                                                     </fragment>
                                                     <fragment>
-                                                        <mutableString key="content"> 
+                                                        <string key="content"> 
 
 Hair loss. Your hair might fall out in the area you’re having treated. So if you’re having treatment on your head or neck, there’s a good chance you’ll lose the hair on your head – and this can be tough. Hair usually starts growing back a few weeks after treatment ends, but while you wait – and if you decide the bald look isn’t for you – you could always expand your hat collection or try a super-realistic wig from our team at the hospital.
 
 Some Head and Neck patients experience trouble with a dry mouth, swallowing and even eating. 
 
-If you experience any side effects from your treatment please discuss it with the staff here, there are usually ways to manage these side effects and our team here are the experts.</mutableString>
+If you experience any side effects from your treatment please discuss it with the staff here, there are usually ways to manage these side effects and our team here are the experts.</string>
                                                         <attributes>
                                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3989,8 +4027,8 @@ If you experience any side effects from your treatment please discuss it with th
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <attributedString key="attributedText">
                                                     <fragment>
-                                                        <mutableString key="content">Our aim is to provide high standards of care for all our patients and visitors. Treatment for each patient is planned individually, taking into account age, health and the type of cancer. Patients with the same type of cancer may not receive identical treatment.The radiotherapy service at Musgrove Park Hospital is operational from Monday - Friday, 9.00am - 5.00pm (excluding bank holidays). The team comprises radiographers, assistant practitioners, physicists and dosimetrists. Overarching medical leadership is provided by consultants in clinical oncology.
-</mutableString>
+                                                        <string key="content">Our aim is to provide high standards of care for all our patients and visitors. Treatment for each patient is planned individually, taking into account age, health and the type of cancer. Patients with the same type of cancer may not receive identical treatment.The radiotherapy service at Musgrove Park Hospital is operational from Monday - Friday, 9.00am - 5.00pm (excluding bank holidays). The team comprises radiographers, assistant practitioners, physicists and dosimetrists. Overarching medical leadership is provided by consultants in clinical oncology.
+</string>
                                                         <attributes>
                                                             <font key="NSFont" metaFont="system" size="14"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -4061,6 +4099,132 @@ If you experience any side effects from your treatment please discuss it with th
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iM0-NB-hR5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6752.8000000000002" y="-1481.5592203898052"/>
+        </scene>
+        <!--Top Tips-->
+        <scene sceneID="J8S-mq-u3B">
+            <objects>
+                <viewController id="fLh-mu-uOA" customClass="SupportVeiwController" customModule="BBAHealth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f7V-6D-9lG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="w0a-Nc-6uN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="150" id="kl2-9G-N7u">
+                                    <size key="itemSize" width="330" height="117"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="20" maxX="0.0" maxY="40"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="customCell" id="VKH-br-sJO" customClass="CollectionViewCell" customModule="BBAHealth" customModuleProvider="target">
+                                        <rect key="frame" x="22.5" y="20" width="330" height="117"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="330" height="117"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WUW-kl-XwS" customClass="DesignableImageView" customModule="BBAHealth" customModuleProvider="target">
+                                                    <rect key="frame" x="-1" y="0.0" width="330" height="117"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="117" id="7gM-iT-bUV"/>
+                                                        <constraint firstAttribute="width" constant="330" id="UEe-uq-8tm"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="14"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igZ-pw-QLX" customClass="DesignableBlur" customModule="BBAHealth" customModuleProvider="target">
+                                                    <rect key="frame" x="-1" y="0.0" width="330" height="45"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6gi-Cq-hOe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="45"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How RadioTherapy Works?" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AkD-f8-5Mv">
+                                                                <rect key="frame" x="23" y="0.0" width="284" height="45"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottomMargin" secondItem="AkD-f8-5Mv" secondAttribute="bottom" constant="-8" id="V29-eq-loD"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="AkD-f8-5Mv" secondAttribute="trailing" constant="15" id="qzt-7T-Lhl"/>
+                                                            <constraint firstItem="AkD-f8-5Mv" firstAttribute="leading" secondItem="6gi-Cq-hOe" secondAttribute="leadingMargin" constant="15" id="rT0-Bc-kUd"/>
+                                                            <constraint firstItem="AkD-f8-5Mv" firstAttribute="top" secondItem="6gi-Cq-hOe" secondAttribute="topMargin" constant="-8" id="yIP-sa-Qic"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="14"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <color key="backgroundColor" red="0.98324648059320252" green="1" blue="0.97577076855215239" alpha="0.40349422089999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="9LD-a8-75b"/>
+                                                    </constraints>
+                                                    <blurEffect style="light"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="14"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </visualEffectView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="igZ-pw-QLX" firstAttribute="top" secondItem="WUW-kl-XwS" secondAttribute="top" id="9FD-nZ-Eos"/>
+                                            <constraint firstItem="igZ-pw-QLX" firstAttribute="trailing" secondItem="WUW-kl-XwS" secondAttribute="trailing" id="JYH-oe-Dhq"/>
+                                            <constraint firstItem="WUW-kl-XwS" firstAttribute="top" secondItem="VKH-br-sJO" secondAttribute="top" id="UMB-nw-061"/>
+                                            <constraint firstAttribute="bottom" secondItem="WUW-kl-XwS" secondAttribute="bottom" id="Upu-q8-q4w"/>
+                                            <constraint firstAttribute="trailing" secondItem="WUW-kl-XwS" secondAttribute="trailing" constant="1" id="msm-hb-YOF"/>
+                                            <constraint firstItem="WUW-kl-XwS" firstAttribute="leading" secondItem="VKH-br-sJO" secondAttribute="leading" constant="-1" id="rEN-R0-aFh"/>
+                                            <constraint firstItem="igZ-pw-QLX" firstAttribute="leading" secondItem="WUW-kl-XwS" secondAttribute="leading" id="u8C-Hb-2Aw"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="imageCell" destination="WUW-kl-XwS" id="UlJ-f1-YoK"/>
+                                            <outlet property="lblTitleCell" destination="AkD-f8-5Mv" id="2au-tl-CZy"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="w0a-Nc-6uN" firstAttribute="leading" secondItem="CdB-pg-t1X" secondAttribute="leading" id="COu-kf-1pz"/>
+                            <constraint firstItem="w0a-Nc-6uN" firstAttribute="bottom" secondItem="CdB-pg-t1X" secondAttribute="bottom" id="SwI-5t-LwD"/>
+                            <constraint firstItem="w0a-Nc-6uN" firstAttribute="trailing" secondItem="CdB-pg-t1X" secondAttribute="trailing" id="dXn-wf-Bht"/>
+                            <constraint firstItem="w0a-Nc-6uN" firstAttribute="top" secondItem="f7V-6D-9lG" secondAttribute="top" id="sBB-Pj-dpZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CdB-pg-t1X"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Top Tips" id="0o2-Ap-l8g"/>
+                    <connections>
+                        <outlet property="collectionView" destination="w0a-Nc-6uN" id="1at-mz-oCt"/>
+                        <segue destination="ZDr-dC-0YP" kind="show" identifier="QuickLinks" id="Eu8-Fw-DXS"/>
+                        <segue destination="X7d-1x-Qg5" kind="show" identifier="comingSoon" id="99b-vC-Aq3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="txP-2b-MU8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3030" y="2272"/>
         </scene>
     </scenes>
     <resources>
