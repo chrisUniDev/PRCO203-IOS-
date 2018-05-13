@@ -325,6 +325,7 @@
                         <segue destination="H0a-wl-oGd" kind="presentation" identifier="CTPlanView" id="Hnf-6N-SYl"/>
                         <segue destination="c6U-1b-Eco" kind="presentation" identifier="SideEffectsView" id="4c2-P1-r8v"/>
                         <segue destination="bEE-U3-hIt" kind="presentation" identifier="TheCenterView" id="oX6-BN-rKl"/>
+                        <segue destination="1KQ-zn-qYQ" kind="presentation" identifier="radio" id="Pqo-dB-xAb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kUE-AT-vSy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1799,7 +1800,7 @@ up appointments.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="However Web links and resources does. :)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAc-0Z-sMf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="However Web links and resources does. :) &amp; complementary therapy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAc-0Z-sMf">
                                 <rect key="frame" x="33" y="394" width="308" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
@@ -4247,8 +4248,8 @@ If you experience any side effects from your treatment please discuss it with th
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yhb-ya-pKj">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2807"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yhb-ya-pKj">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="1907"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" editable="NO" usesAttributedText="YES" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heg-hc-XIM">
                                                 <rect key="frame" x="18" y="775" width="340" height="532"/>
@@ -4312,7 +4313,7 @@ We make a clear distinction between supportive therapies used in conjunction wit
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhD-Ik-vtV">
                                                         <rect key="frame" x="8" y="10" width="327" height="111"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <string key="text">Need to talk? Call us free*0808 808 00 00Monday to Friday, 9am-8pm
+                                                        <string key="text">Need to talk? Call us free* 080880 80000 Monday to Friday, 9am-8pm
 </string>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4402,7 +4403,7 @@ If you want to know about the therapies other people with cancer have found help
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="2807" id="G2V-nv-mJX"/>
+                                            <constraint firstAttribute="height" constant="1907" id="G2V-nv-mJX"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -4432,7 +4433,209 @@ If you want to know about the therapies other people with cancer have found help
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JHE-vO-cEy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3047.1999999999998" y="4029.0854572713647"/>
+            <point key="canvasLocation" x="3029.5999999999999" y="3663.8680659670167"/>
+        </scene>
+        <!--Detial View Controller-->
+        <scene sceneID="BrD-MO-yUE">
+            <objects>
+                <viewController storyboardIdentifier="radio" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1KQ-zn-qYQ" customClass="DetialViewController" customModule="BBAHealth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4dh-cd-dWi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yci-CF-OFB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GL8-TN-xsU">
+                                        <rect key="frame" x="0.0" y="-20" width="375" height="400"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="400" id="ai6-Ij-jcL"/>
+                                        </constraints>
+                                    </imageView>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Be-aM-6HO">
+                                        <rect key="frame" x="0.0" y="-20" width="375" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="mOj-ua-asI">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.096282614190000004" green="0.77269138989999997" blue="1" alpha="0.40349422089999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <blurEffect style="light"/>
+                                    </visualEffectView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZo-dn-gTp">
+                                        <rect key="frame" x="23" y="12" width="81.5" height="79"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="79" id="FaX-CG-v5u"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fCv-dc-E0c">
+                                        <rect key="frame" x="0.0" y="397" width="375" height="783"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" editable="NO" usesAttributedText="YES" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rh-2p-Wa3">
+                                                <rect key="frame" x="17" y="8" width="340" height="511"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment>
+                                                        <string key="content">Radiotherapy uses high-energy rays to treat disease. It can be given both externally and internally.
+</string>
+                                                        <attributes>
+                                                            <font key="NSFont" size="15" name="Helvetica"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">	•	</string>
+                                                        <attributes>
+                                                            <font key="NSFont" size="15" name="Helvetica"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" headIndent="36" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="11">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="natural" location="36">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">External radiotherapy aims high-energy x-rays at the affected area using a large machine.
+</string>
+                                                        <attributes>
+                                                            <font key="NSFont" size="15" name="Helvetica"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" headIndent="36" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="11">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="natural" location="36">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">	•	</string>
+                                                        <attributes>
+                                                            <font key="NSFont" size="15" name="Helvetica"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" headIndent="36" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="11">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="natural" location="36">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <string key="content">Internal radiotherapy involves having radioactive material placed inside the body.
+</string>
+                                                        <attributes>
+                                                            <font key="NSFont" size="15" name="Helvetica"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" headIndent="36" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops>
+                                                                    <textTab alignment="left" location="11">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                    <textTab alignment="natural" location="36">
+                                                                        <options/>
+                                                                    </textTab>
+                                                                </tabStops>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment>
+                                                        <mutableString key="content">Radiotherapy works by destroying cancer cells in the area that’s being treated. Normal cells can also be damaged by radiotherapy, which may cause side effects. Cancer cells cannot repair themselves after radiotherapy, but normal cells usually can.
+You can be given radiotherapy for different reasons. Doctors can give radiotherapy to try and destroy a tumour and cure the cancer. This is called curative treatment. It may be used with other treatments, such as surgery or chemotherapy.
+If it’s not possible to cure the cancer, doctors may give you radiotherapy to help relieve symptoms you have. This is called palliative treatment.
+Radiotherapy is sometimes given with chemotherapy. This is called chemoradiation.
+The type of radiotherapy you’re given will depend on the type of cancer you have and your individual situation.</mutableString>
+                                                        <attributes>
+                                                            <font key="NSFont" size="15" name="Helvetica"/>
+                                                            <real key="NSKern" value="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                <tabStops/>
+                                                            </paragraphStyle>
+                                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="783" id="bcf-d6-cYB"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="GL8-TN-xsU" firstAttribute="leading" secondItem="yci-CF-OFB" secondAttribute="leading" id="6qu-vI-9oM"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pZo-dn-gTp" secondAttribute="trailing" constant="20" symbolic="YES" id="6yP-7P-4Uj"/>
+                                    <constraint firstItem="GL8-TN-xsU" firstAttribute="top" secondItem="yci-CF-OFB" secondAttribute="top" id="8WU-Kt-qwV"/>
+                                    <constraint firstItem="fCv-dc-E0c" firstAttribute="leading" secondItem="yci-CF-OFB" secondAttribute="leading" id="92Z-p7-qQA"/>
+                                    <constraint firstAttribute="trailing" secondItem="GL8-TN-xsU" secondAttribute="trailing" id="DFH-vs-pIv"/>
+                                    <constraint firstItem="fCv-dc-E0c" firstAttribute="top" secondItem="yci-CF-OFB" secondAttribute="top" constant="417" id="DYG-Lh-KK8"/>
+                                    <constraint firstItem="GL8-TN-xsU" firstAttribute="leading" secondItem="yci-CF-OFB" secondAttribute="leading" id="Egj-86-eXB"/>
+                                    <constraint firstItem="pZo-dn-gTp" firstAttribute="top" secondItem="yci-CF-OFB" secondAttribute="top" constant="12" id="MNh-Vt-utr"/>
+                                    <constraint firstItem="GL8-TN-xsU" firstAttribute="centerX" secondItem="yci-CF-OFB" secondAttribute="centerX" id="MaA-wM-bL1"/>
+                                    <constraint firstAttribute="bottom" secondItem="fCv-dc-E0c" secondAttribute="bottom" id="RC3-o2-Vg1"/>
+                                    <constraint firstAttribute="trailing" secondItem="fCv-dc-E0c" secondAttribute="trailing" id="gsG-5p-VR3"/>
+                                    <constraint firstItem="pZo-dn-gTp" firstAttribute="leading" secondItem="yci-CF-OFB" secondAttribute="leading" constant="23" id="nbN-T4-C2j"/>
+                                    <constraint firstItem="GL8-TN-xsU" firstAttribute="top" secondItem="yci-CF-OFB" secondAttribute="top" id="o8M-NY-hnl"/>
+                                    <constraint firstAttribute="trailing" secondItem="GL8-TN-xsU" secondAttribute="trailing" id="ols-pZ-TMh"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syb-bL-Bhd">
+                                <rect key="frame" x="326" y="20" width="33" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ic_cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="1KQ-zn-qYQ" eventType="touchUpInside" id="Vkl-W3-y8m"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yci-CF-OFB" firstAttribute="bottom" secondItem="ocz-QT-GIn" secondAttribute="bottom" id="hSJ-8F-cYH"/>
+                            <constraint firstItem="yci-CF-OFB" firstAttribute="top" secondItem="4dh-cd-dWi" secondAttribute="top" id="kzX-W5-Gpt"/>
+                            <constraint firstItem="yci-CF-OFB" firstAttribute="leading" secondItem="ocz-QT-GIn" secondAttribute="leading" id="n96-LZ-QVq"/>
+                            <constraint firstItem="yci-CF-OFB" firstAttribute="trailing" secondItem="ocz-QT-GIn" secondAttribute="trailing" id="p1B-pi-hCu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ocz-QT-GIn"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <size key="freeformSize" width="375" height="1200"/>
+                    <connections>
+                        <outlet property="imgImage" destination="GL8-TN-xsU" id="1Bu-OV-DHB"/>
+                        <outlet property="lblName" destination="pZo-dn-gTp" id="bNe-b9-vaC"/>
+                        <outlet property="myscrollview" destination="yci-CF-OFB" id="ght-jz-iiQ"/>
+                        <outlet property="visualEffectBlur" destination="2Be-aM-6HO" id="FpX-XW-xj7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZWK-0W-CKM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7460" y="-1346"/>
         </scene>
     </scenes>
     <resources>

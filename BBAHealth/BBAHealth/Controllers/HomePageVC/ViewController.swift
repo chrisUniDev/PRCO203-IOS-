@@ -76,6 +76,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
         }else if titleToPass == "The Centre" {
             performSegue(withIdentifier: "TheCenterView", sender: indexPath)
+        }else if titleToPass == "What is RadioTherapy?"{
+            performSegue(withIdentifier: "radio", sender: indexPath)
         }
         else{
             performSegue(withIdentifier: "SideEffectsView", sender: indexPath)
