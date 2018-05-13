@@ -20,6 +20,10 @@ class JourneyTrackerVC: UIViewController {
     @IBOutlet var countdownSessions: UILabel!
     @IBOutlet var entercountdown: UITextField!
     
+    
+    @IBOutlet var followupSlider: UISlider!
+    @IBOutlet var followupLbl: UILabel!
+    
     @IBOutlet weak var waitProgressBar: MBCircularProgressBarView!
     @IBOutlet weak var overallProgressBar: MBCircularProgressBarView!
     
@@ -120,6 +124,20 @@ class JourneyTrackerVC: UIViewController {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         countdownSessions.text = entercountdown.text
         view.endEditing(true)
+    }
+    
+    @IBAction func sliderChanged(_ sender: Any) {
+        if followupSlider.value >= 0 && followupSlider.value < 0.25 {
+            followupLbl.text = "No follow up"
+        }else if followupSlider.value >= 0.25 && followupSlider.value < 0.5{
+            followupLbl.text = "Two week follow-up"
+        }else if followupSlider.value >= 0.5 && followupSlider.value < 0.75{
+            followupLbl.text = "Four week follow-up"
+        }else if followupSlider.value >= 0.75 && followupSlider.value < 1{
+            followupLbl.text = "Two months follow-up"
+        }else{
+            followupLbl.text = "Four months follow-up"
+        }
     }
     
 

@@ -13,7 +13,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
    
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let mainMenu = ["What is RadioTherapy?", "CT Plan", "Treatment Plan Information", "Side Effects Of RadioTherapy", "The Centre"]
+    let mainMenu = ["What is RadioTherapy?", "C.T Plan", "Treatment Plan Information", "Side Effects Of RadioTherapy", "The Centre"]
     
     let menuTextColourIndex = ["light","light","light","light","light"]
     
@@ -71,7 +71,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         if titleToPass == "Treatment Plan Information"{
             performSegue(withIdentifier: "DetialViewController", sender: indexPath)
             
-        }else if titleToPass == "CT Plan"{
+        }else if titleToPass == "C.T Plan"{
             performSegue(withIdentifier: "CTPlanView", sender: indexPath)
             
         }else if titleToPass == "The Centre" {
