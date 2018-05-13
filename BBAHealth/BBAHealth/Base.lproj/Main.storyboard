@@ -1485,7 +1485,7 @@
                                     <constraint firstAttribute="bottom" secondItem="TyC-cK-bZn" secondAttribute="bottom" constant="227.5" id="jSd-2b-thP"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qu0-Oe-8Zz" userLabel="Stage4View" customClass="DesignableView" customModule="BBAHealth" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qu0-Oe-8Zz" userLabel="Stage4View" customClass="DesignableView" customModule="BBAHealth" customModuleProvider="target">
                                 <rect key="frame" x="8" y="342" width="360" height="259"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
